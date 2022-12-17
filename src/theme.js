@@ -27,4 +27,10 @@ export default extendTheme({
             200: "#EE3442",
         },
     },
+    textStyles: (props) => ({
+        title: {
+            color: props.colorMode === "dark" ? "brand.100" : "brand.200",
+            fontSize: "4rem",
+        },
+    }),
 });

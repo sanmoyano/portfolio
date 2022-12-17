@@ -1,20 +1,36 @@
-import { Button, Stack, Text, useColorMode, useColorModeValue, useTheme } from "@chakra-ui/react";
+import React from "react";
+import { useLocation, useRoutes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-import TextColorChange from "./TextColorChange";
+import { Home, Projects } from "./Routes";
+import Root from "./Routes/Root";
+
 const App = () => {
-    const { toggleColorMode } = useColorMode();
+    const element = useRoutes([
+        {
+            path: "/",
+            element: <Root />,
+            children: [
+                {
+                    path: "/",
+                    element: <Home />,
+                },
+                {
+                    path: "/projects",
+                    element: <Projects />,
+                },
+            ],
+        },
+    ]);
 
-    const colorChange = useColorModeValue("brand.200", "brand.100");
+    const location = useLocation();
+
+    if (!element) return null;
 
     return (
-        <Stack>
-            <Text fontSize={"4rem"}>App</Text>
-            <Text color={colorChange} fontSize={"4rem"} textStyle={"h1"}>
-                Cambio color
-            </Text>
-            <TextColorChange text={"Componente TextColorChange"} />
-            <Button onClick={toggleColorMode}>CHANGE</Button>
-        </Stack>
+        <AnimatePresence mode="wait">
+            {React.cloneElement(element, { key: location.pathname })}
+        </AnimatePresence>
     );
 };
 
