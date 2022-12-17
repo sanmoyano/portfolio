@@ -1,5 +1,8 @@
-import { ColorModeContext, ColorModeProvider, extendTheme, theme } from "@chakra-ui/react";
-import { mode } from "@chakra-ui/theme-tools";
+import { extendTheme } from "@chakra-ui/react";
+import "@fontsource/roboto";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import "@fontsource/roboto/900.css";
 
 export default extendTheme({
     config: {
@@ -27,10 +30,14 @@ export default extendTheme({
             200: "#EE3442",
         },
     },
-    textStyles: (props) => ({
-        title: {
-            color: props.colorMode === "dark" ? "brand.100" : "brand.200",
+    textStyles: {
+        robotos: {
             fontSize: "4rem",
+            fontFamily: "Roboto",
         },
-    }),
+        neusa: {
+            fontSize: "4rem",
+            fontFamily: " neusa-next-std-wide",
+        },
+    },
 });
