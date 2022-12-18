@@ -1,6 +1,8 @@
-import { Text } from "@chakra-ui/react";
+import { Button, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 const HomeLayout = () => {
+    const changeColor = useColorModeValue("brand.200", "brand.100");
+
     return (
         <>
             <Text textStyle={"robotos"}>Roboto 400</Text>
@@ -13,7 +15,7 @@ const HomeLayout = () => {
             <Text fontWeight={900} textStyle={"robotos"}>
                 Roboto 900
             </Text>
-            <Text fontWeight={700} textStyle={"neusa"}>
+            <Text color={changeColor} fontWeight={700} textStyle={"neusa"}>
                 Neusa, PROJECTS
             </Text>
         </>
