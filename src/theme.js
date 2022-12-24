@@ -1,4 +1,5 @@
-import { extendTheme, transition } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 import "@fontsource/roboto";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
@@ -41,6 +42,36 @@ export default extendTheme({
         neusa: {
             fontSize: "4rem",
             fontFamily: " neusa-next-std-wide",
+        },
+        robotoBoldWhite: {
+            fontFamily: "Roboto",
+            fontWeight: 500,
+            fontSize: "1.6rem",
+            textTransform: "uppercase",
+            letterSpacing: 2,
+        },
+        robotoBoldGreen: {
+            fontFamily: "Roboto",
+            fontWeight: 500,
+            fontSize: "1.6rem",
+            textTransform: "uppercase",
+            letterSpacing: 2,
+            color: "brand.200",
+        },
+        robotoBoldRed: {
+            fontFamily: "Roboto",
+            fontWeight: 500,
+            fontSize: "1.6rem",
+            textTransform: "uppercase",
+            letterSpacing: 2,
+            color: "brand.100",
+        },
+        neusaBoldWhite: {
+            fontFamily: "neusa-next-std-wide",
+            fontWeight: 700,
+            fontSize: "4rem",
+            letterSpacing: 1,
+            transform: "scaleY(.8)",
         },
     },
 });

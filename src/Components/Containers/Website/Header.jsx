@@ -1,20 +1,21 @@
-import { Button, Stack, useColorMode } from "@chakra-ui/react";
+import { Button, Stack, useColorModeValue } from "@chakra-ui/react";
 
-import { NavBar } from "./Components";
+import { NavBar, Logo } from "./Components";
 
 const Header = () => {
-    const { toggleColorMode } = useColorMode();
+    const changeColor = useColorModeValue("2px solid black", "2px solid white");
 
     return (
         <Stack
             alignItems={"center"}
+            borderBottom={changeColor}
             direction={"row"}
             justifyContent={"space-between"}
             paddingInline={24}
             width={"100%"}
         >
+            <Logo />
             <NavBar />
-            <Button onClick={toggleColorMode}>color</Button>
         </Stack>
     );
 };
