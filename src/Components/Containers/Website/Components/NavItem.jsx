@@ -5,7 +5,7 @@ const NavItem = ({ item }) => {
     const fill = useColorModeValue(`${colors.black}`, `${colors.white}`);
 
     return (
-        <Stack s alignItems={"center"} direction={"row"}>
+        <Stack alignItems={"center"} direction={"row"}>
             <Box boxSize={"20px"} sx={{ display: "flex", alignItems: "center" }}>
                 <svg fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_41_56)">

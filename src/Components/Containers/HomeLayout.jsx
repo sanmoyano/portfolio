@@ -1,5 +1,7 @@
 import { Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
+import { Section1 } from "./Website/Sections";
+
 const HomeLayout = () => {
     const changeColor = useColorModeValue("brand.200", "brand.100");
 
@@ -15,6 +17,7 @@ const HomeLayout = () => {
 
     return (
         <>
+            <Section1 />
             <Text textStyle={"robotos"}>Roboto 400</Text>
             <Text fontWeight={500} textStyle={"robotos"}>
                 Roboto 500
