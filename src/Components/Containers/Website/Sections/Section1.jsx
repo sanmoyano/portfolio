@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
-// import { Slider } from "antd";
+import { Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
-function Box() {
+const Box = () => {
     const [size, set] = useState(0.5);
     const [hidden, setVisible] = useState(false);
 
@@ -20,35 +20,16 @@ function Box() {
                     transition: "all 0.2s",
                     opacity: hidden ? 0 : 1,
                     transform: `scale(${hidden ? 0.5 : 1})`,
+                    background: "red",
                 }}
                 onOcclude={setVisible}
             >
+                <Text>ACA ESTA</Text>
                 <span>Size</span>
-                {/* <Slider
-                    max={1}
-                    min={0.5}
-                    step={0.01}
-                    style={{ width: 100 }}
-                    value={size}
-                    onChange={set}
-                /> */}
             </Html>
         </mesh>
     );
-}
-
-// function Sphere(props) {
-//     const ref = useRef();
-
-//     useFrame((state) => (ref.current.position.x = Math.sin(state.clock.getElapsedTime())));
-
-//     return (
-//         <mesh ref={ref} {...props}>
-//             <sphereGeometry args={[0.3, 32, 32]} />
-//             <meshStandardMaterial color="orange" />
-//         </mesh>
-//     );
-// }
+};
 
 const Section1 = () => {
     return (
@@ -57,7 +38,6 @@ const Section1 = () => {
             <pointLight position={[10, 10, 5]} />
             <pointLight position={[-10, -10, -10]} />
             <Box />
-            {/* <Sphere position={[0, 0, 1]} /> */}
             <OrbitControls />
         </Canvas>
     );

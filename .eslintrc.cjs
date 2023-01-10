@@ -15,6 +15,7 @@ module.exports = {
     plugins: ["react", "prettier", "import"],
     rules: {
         "no-console": "warn",
+        "react/no-unknown-property": [0, { ignore: "react-three" }],
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
         "react/prop-types": "off",
