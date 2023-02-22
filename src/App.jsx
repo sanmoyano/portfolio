@@ -1,37 +1,37 @@
-import React from "react";
-import { useLocation, useRoutes } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import React from "react"
+import { useLocation, useRoutes } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 
-import { Home, Projects } from "./Routes";
-import Root from "./Routes/Root";
+import { Home, Projects } from "./Routes"
+import Root from "./Routes/Root"
 
 const App = () => {
-    const element = useRoutes([
+  const element = useRoutes([
+    {
+      path: "/",
+      element: <Root />,
+      children: [
         {
-            path: "/",
-            element: <Root />,
-            children: [
-                {
-                    path: "/",
-                    element: <Home />,
-                },
-                {
-                    path: "/projects",
-                    element: <Projects />,
-                },
-            ],
+          path: "/",
+          element: <Home />,
         },
-    ]);
+        {
+          path: "/projects",
+          element: <Projects />,
+        },
+      ],
+    },
+  ])
 
-    const location = useLocation();
+  const location = useLocation()
 
-    if (!element) return null;
+  if (!element) return null
 
-    return (
-        <AnimatePresence mode="wait">
-            {React.cloneElement(element, { key: location.pathname })}
-        </AnimatePresence>
-    );
-};
+  return (
+    <AnimatePresence mode="wait">
+      {React.cloneElement(element, { key: location.pathname })}
+    </AnimatePresence>
+  )
+}
 
-export default App;
+export default App
