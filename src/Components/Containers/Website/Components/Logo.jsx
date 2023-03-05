@@ -9,7 +9,7 @@ const Logo = () => {
     <Link to={"/"}>
       <Stack alignItems={"center"} direction={"row"} justifyContent={"center"} p={4}>
         <Text textStyle={"neusaBoldWhite"}>#SM</Text>
-        <Box
+        {/* <Box
           height={"auto"}
           sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
           width={"55px"}
@@ -22,7 +22,7 @@ const Logo = () => {
               strokeWidth={1}
             />
           </svg>
-        </Box>
+        </Box> */}
       </Stack>
     </Link>
   )

@@ -1,6 +1,6 @@
-import { Button, Stack, useColorModeValue } from "@chakra-ui/react"
+import { Stack, useColorModeValue } from "@chakra-ui/react"
 
-import { NavBar, Logo } from "./Components"
+import { Logo, DesktopNavBar } from "./Components"
 
 const Header = () => {
   const changeColor = useColorModeValue("2px solid black", "2px solid white")
@@ -15,7 +15,7 @@ const Header = () => {
       width={"100%"}
     >
       <Logo />
-      <NavBar />
+      <DesktopNavBar />
     </Stack>
   )
 }
