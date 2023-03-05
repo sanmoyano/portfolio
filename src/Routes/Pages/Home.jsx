@@ -1,7 +1,7 @@
-import { HomeLayout } from "../../Components/Containers";
+import { HomeLayout } from "../../Components/Containers"
 
 const Home = () => {
-    return <HomeLayout />;
-};
+  return <HomeLayout />
+}
 
-export default Home;
+export default Home

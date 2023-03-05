@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 const ProjectsLayout = () => {
-    return <div>ProjectsLayout</div>;
-};
+  return <div>ProjectsLayout</div>
+}
 
-export default ProjectsLayout;
+export default ProjectsLayout

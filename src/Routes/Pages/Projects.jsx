@@ -1,7 +1,7 @@
-import { ProjectsLayout } from "../../Components/Containers";
+import { ProjectsLayout } from "../../Components/Containers"
 
 const Projects = () => {
-    return <ProjectsLayout />;
-};
+  return <ProjectsLayout />
+}
 
-export default Projects;
+export default Projects
