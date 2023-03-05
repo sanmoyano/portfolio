@@ -4,7 +4,7 @@ import { NavBar } from "."
 
 const DesktopNavBar = () => {
   return (
-    <Stack alignItems={"center"} direction={"row"} marginBlock={20} spacing={10}>
+    <Stack alignItems={"center"} direction={"row"} display={{ base: "none", lg: "flex" }} gap={10}>
       <NavBar />
     </Stack>
   )
