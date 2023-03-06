@@ -1,7 +1,7 @@
-import { Box, IconButton, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
+import { IconButton } from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
-import { Link } from "react-router-dom"
 import { VscColorMode } from "react-icons/vsc"
+import { motion } from "framer-motion"
 
 import { NavItem } from "./"
 

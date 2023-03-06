@@ -1,4 +1,5 @@
 import { Box, Stack, Text, useTheme, useColorModeValue } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
 const NavItem = ({ item, route }) => {
@@ -6,7 +7,7 @@ const NavItem = ({ item, route }) => {
   const fill = useColorModeValue(`${colors.black}`, `${colors.white}`)
 
   return (
-    <Link to={!route ? "" : route}>
+    <Link as={motion.li} to={!route ? "" : route}>
       <Stack alignItems={"center"} direction={"row"}>
         <Box boxSize={"20px"} sx={{ display: "flex", alignItems: "center" }}>
           <svg fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">

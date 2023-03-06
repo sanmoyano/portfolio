@@ -1,13 +1,10 @@
 import { Stack } from "@chakra-ui/react"
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
-// import { useDimensions } from "./use-dimensions"
+import { NavBar, ToggleMenu } from "./"
 
-import { NavBar, ToggleMenu } from "."
-
-const MobileNavBar = ({ height }) => {
+const MobileNavBar = ({ topPosition }) => {
   const [isOpen, setIsOpen] = useCycle(false, true)
-
   const variants = {
     open: { opacity: 1, x: "0" },
     closed: { opacity: 0, x: "-100%" },
@@ -15,9 +12,9 @@ const MobileNavBar = ({ height }) => {
 
   return (
     <Stack display={{ base: "flex", lg: "none" }}>
-      <motion.nav animate={isOpen ? "open" : "closed"} initial={false}>
+      <Stack animate={isOpen ? "open" : "closed"} as={motion.div} initial={false}>
         <ToggleMenu toggle={() => setIsOpen()} />
-      </motion.nav>
+      </Stack>
       <AnimatePresence>
         <Stack
           alignItems={"center"}
@@ -32,7 +29,7 @@ const MobileNavBar = ({ height }) => {
           p={6}
           position={"absolute"}
           right={"0px"}
-          top={height}
+          top={topPosition}
           variants={variants}
           width={"100%"}
         >

@@ -1,6 +1,6 @@
 import { Stack } from "@chakra-ui/react"
 
-import { NavBar } from "."
+import { NavBar } from "./"
 
 const DesktopNavBar = () => {
   return (

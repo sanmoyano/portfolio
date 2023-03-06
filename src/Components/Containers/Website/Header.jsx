@@ -5,20 +5,20 @@ import { Logo, DesktopNavBar, MobileNavBar } from "./Components"
 
 const Header = () => {
   const changeColor = useColorModeValue("2px solid black", "2px solid white")
-  const heigth = "80px"
+  const headerHeigth = "80px"
 
   return (
     <Stack
       alignItems={"center"}
       borderBottom={changeColor}
       direction={"row"}
-      height={heigth}
+      height={headerHeigth}
       justifyContent={"space-between"}
       paddingInline={{ base: 3, md: 6, lg: 12 }}
       width={"100%"}
     >
       <Logo />
-      <MobileNavBar height={heigth} />
+      <MobileNavBar topPosition={headerHeigth} />
       <DesktopNavBar />
     </Stack>
   )
