@@ -1,6 +1,6 @@
 import { useColorMode, useColorModeValue, Stack, Text } from "@chakra-ui/react"
 
-import { Section1, Section1Temporary } from "./Website/Sections"
+import { Section1, Section1Temporary, Section2 } from "./Website/Sections"
 
 const HomeLayout = () => {
   const changeColor = useColorModeValue("brand.200", "brand.100")
@@ -14,8 +14,9 @@ const HomeLayout = () => {
   // }
 
   return (
-    <Stack marginBlock={{ base: 18, md: 24 }} paddingInline={12}>
+    <Stack gap={32} marginBlock={{ base: 18, md: 24 }}>
       <Section1Temporary />
+      <Section2 />
       {/* <Section1 />
       <Text textStyle={"robotos"}>Roboto 400</Text>
       <Text fontWeight={500} textStyle={"robotos"}>

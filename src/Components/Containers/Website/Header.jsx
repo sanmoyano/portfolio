@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react"
-import { Stack, useColorModeValue, Skeleton, Spinner } from "@chakra-ui/react"
+import { Stack, useColorModeValue, Spinner } from "@chakra-ui/react"
 
 import { Logo } from "./Components"
 const Mobile = lazy(() => import("./Components/MobileNavBar"))

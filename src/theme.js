@@ -23,17 +23,19 @@ export default extendTheme({
         color: props.colorMode === "dark" ? "white" : "black",
         transitionProperty: "background-color",
         transitionDuration: ".5s",
-        overflow: "hidden",
+        overflowX: "hidden",
       },
     }),
   },
   colors: {
     black: "#0d0d0d",
     white: "#f5f5f5",
-    brand: {
-      100: "#CAF824",
-      200: "#EE3442",
-    },
+    green: "#CAF825",
+    red: "#EE3442",
+    // brand: {
+    //   100: "#CAF824",
+    //   200: "#EE3442",
+    // },
   },
   textStyles: {
     robotos: {
@@ -57,7 +59,7 @@ export default extendTheme({
       fontSize: "1.6rem",
       textTransform: "uppercase",
       letterSpacing: 2,
-      color: "brand.200",
+      color: "red",
     },
     robotoBoldRed: {
       fontFamily: "Roboto",
@@ -65,7 +67,7 @@ export default extendTheme({
       fontSize: "1.6rem",
       textTransform: "uppercase",
       letterSpacing: 2,
-      color: "brand.100",
+      color: "green",
     },
     neusaBoldWhite: {
       fontFamily: "neusa-next-std-wide",
