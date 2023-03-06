@@ -14,7 +14,7 @@ const HomeLayout = () => {
   // }
 
   return (
-    <Stack height={"100%"} marginBlock={12} paddingInline={12} width={"100%"}>
+    <Stack marginBlock={{ base: 18, md: 24 }} paddingInline={12}>
       <Section1Temporary />
       {/* <Section1 />
       <Text textStyle={"robotos"}>Roboto 400</Text>
