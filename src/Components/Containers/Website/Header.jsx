@@ -1,7 +1,9 @@
-import { useLayoutEffect, useRef } from "react"
+import { lazy, Suspense } from "react"
 import { Stack, useColorModeValue } from "@chakra-ui/react"
 
-import { Logo, DesktopNavBar, MobileNavBar } from "./Components"
+import { Logo } from "./Components"
+const Mobile = lazy(() => import("./Components/MobileNavBar"))
+const Desktop = lazy(() => import("./Components/DesktopNavBar"))
 
 const Header = () => {
   const changeColor = useColorModeValue("2px solid black", "2px solid white")
@@ -18,8 +20,10 @@ const Header = () => {
       width={"100%"}
     >
       <Logo />
-      <MobileNavBar topPosition={headerHeigth} />
-      <DesktopNavBar />
+      <Suspense>
+        <Mobile topPosition={headerHeigth} />
+        <Desktop />
+      </Suspense>
     </Stack>
   )
 }
