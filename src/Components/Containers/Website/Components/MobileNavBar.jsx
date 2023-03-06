@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
@@ -20,7 +21,7 @@ const MobileNavBar = ({ topPosition }) => {
           alignItems={"center"}
           animate={isOpen ? "open" : "closed"}
           as={motion.div}
-          backdropFilter={"blur(2px)"}
+          backdropFilter={"blur(5px)"}
           bgColor={"transparent"}
           gap={10}
           height={"100vh"}

@@ -7,7 +7,7 @@ const HeroLogo = () => {
   )
 
   return (
-    <Box maxW={"400px"} sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
+    <Box maxW={"350px"} sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
       <Image src={logo} />
     </Box>
   )

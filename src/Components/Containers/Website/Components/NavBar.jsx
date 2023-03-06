@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { IconButton } from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
 import { VscColorMode } from "react-icons/vsc"
@@ -6,7 +7,6 @@ import { motion } from "framer-motion"
 import { NavItem } from "./"
 
 const NavBar = () => {
-  const { toggleColorMode } = useColorMode()
   const navItems = [
     {
       name: "home",
@@ -26,6 +26,7 @@ const NavBar = () => {
       name: "contact",
     },
   ]
+  const { toggleColorMode } = useColorMode()
 
   return (
     <>
@@ -38,7 +39,9 @@ const NavBar = () => {
         onClick={toggleColorMode}
       />
       {navItems?.map((item, i) => (
-        <NavItem key={i} item={item.name} route={item.route} />
+        <motion.li key={i} style={{ listStyleType: "none" }} whileTap={{ scale: 0.95 }}>
+          <NavItem item={item.name} route={item.route} />
+        </motion.li>
       ))}
     </>
   )
