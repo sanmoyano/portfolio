@@ -20,7 +20,6 @@ const NavItem = ({ item, route }) => {
 
   return (
     <Link
-      as={motion.div}
       to={!route ? "" : route}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

@@ -23,14 +23,13 @@ export default extendTheme({
         color: props.colorMode === "dark" ? "white" : "black",
         transitionProperty: "background-color",
         transitionDuration: ".5s",
+        overflow: "hidden",
       },
     }),
   },
   colors: {
     black: "#0d0d0d",
     white: "#f5f5f5",
-    green: "#CAF824",
-    red: "#EE3442",
     brand: {
       100: "#CAF824",
       200: "#EE3442",
