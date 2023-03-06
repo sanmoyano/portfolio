@@ -29,6 +29,8 @@ export default extendTheme({
   colors: {
     black: "#0d0d0d",
     white: "#f5f5f5",
+    green: "#CAF824",
+    red: "#EE3442",
     brand: {
       100: "#CAF824",
       200: "#EE3442",

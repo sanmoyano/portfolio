@@ -1,4 +1,4 @@
-import { useColorMode, useColorModeValue, Stack } from "@chakra-ui/react"
+import { useColorMode, useColorModeValue, Stack, Text } from "@chakra-ui/react"
 
 import { Section1, Section1Temporary } from "./Website/Sections"
 
@@ -7,19 +7,17 @@ const HomeLayout = () => {
 
   const { colorMode } = useColorMode()
 
-  const colorChange = () => {
-    if (colorMode === "dark") {
-      return "robotoBoldRed"
-    } else {
-      return "robotoBoldGreen"
-    }
-  }
+  // if (colorMode === "dark") {
+  //   ;("robotoBoldRed")
+  // } else {
+  //   ;("robotoBoldGreen")
+  // }
 
   return (
-    <Stack padding={12}>
+    <Stack height={"100%"} marginBlock={12} paddingInline={12} width={"100%"}>
       <Section1Temporary />
-      {/* <Section1 /> */}
-      {/* <Text textStyle={"robotos"}>Roboto 400</Text>
+      {/* <Section1 />
+      <Text textStyle={"robotos"}>Roboto 400</Text>
       <Text fontWeight={500} textStyle={"robotos"}>
         Roboto 500
       </Text>

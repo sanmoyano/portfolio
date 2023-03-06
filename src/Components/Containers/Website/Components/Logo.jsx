@@ -1,8 +1,9 @@
-import { Box, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
+import { Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
 const Logo = () => {
   const { colors } = useTheme()
+
   const logoFill = useColorModeValue(`${colors.black}`, `${colors.white}`)
 
   return (
