@@ -23,7 +23,6 @@ export default extendTheme({
         color: props.colorMode === "dark" ? "white" : "black",
         transitionProperty: "background-color",
         transitionDuration: ".5s",
-        overflowX: "hidden",
       },
     }),
   },
@@ -32,10 +31,6 @@ export default extendTheme({
     white: "#f5f5f5",
     green: "#CAF825",
     red: "#EE3442",
-    // brand: {
-    //   100: "#CAF824",
-    //   200: "#EE3442",
-    // },
   },
   textStyles: {
     robotos: {

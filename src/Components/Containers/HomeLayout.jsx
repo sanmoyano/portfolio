@@ -14,7 +14,7 @@ const HomeLayout = () => {
   // }
 
   return (
-    <Stack gap={32} marginBlock={{ base: 18, md: 24 }}>
+    <Stack gap={32} marginBlock={24}>
       <Section1Temporary />
       <Section2 />
       {/* <Section1 />

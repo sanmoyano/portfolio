@@ -4,7 +4,13 @@ import { HeroLogo } from "../Components/"
 
 const Section1Temporary = () => {
   return (
-    <Stack alignItems={"center"} justifyContent={"center"} minH={"100%"} paddingInline={12}>
+    <Stack
+      alignItems={"center"}
+      justifyContent={"center"}
+      minH={"100%"}
+      overflow={"hidden"}
+      paddingInline={12}
+    >
       <HeroLogo />
     </Stack>
   )

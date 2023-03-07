@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Box, Stack, Text, useTheme, useColorModeValue } from "@chakra-ui/react"
+import { Stack, Text, useTheme, useColorModeValue } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
@@ -7,7 +7,7 @@ import { StarIcon } from "../Decorators"
 
 const NavItem = ({ item, route }) => {
   const { colors } = useTheme()
-  const fill = useColorModeValue("black", "white")
+  const fill = useColorModeValue(`${colors.black}`, `${colors.white}`)
 
   const variants = {
     hover: {
