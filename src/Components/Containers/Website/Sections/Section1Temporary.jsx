@@ -1,17 +1,19 @@
+import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 
 import { HeroLogo } from "../Components/"
 
 const Section1Temporary = () => {
+  const [imageLoading, setImageLoading] = useState(false)
+
   return (
     <Stack
       alignItems={"center"}
-      justifyContent={"center"}
-      minH={"100%"}
+      minH={imageLoading ? "" : "100vh"}
       overflow={"hidden"}
       paddingInline={12}
     >
-      <HeroLogo />
+      <HeroLogo loadingHandlersImage={{ imageLoading, setImageLoading }} />
     </Stack>
   )
 }
