@@ -1,16 +1,16 @@
-import { ApolloClient, InMemoryCache, gql, HttpLink } from "@apollo/client";
+// import { ApolloClient, InMemoryCache, gql, HttpLink } from "@apollo/client"
 
-const client = new ApolloClient({
-    cache: new InMemoryCache(),
-    link: new HttpLink({
-        // uri: "http://localhost:4000/graphql",
-        uri: "https://flyby-gateway.herokuapp.com/",
-        fetch,
-    }),
-    headers: {
-        "Content-Type": "aplication/json",
-    },
-});
+// const client = new ApolloClient({
+//   cache: new InMemoryCache(),
+//   link: new HttpLink({
+//     // uri: "http://localhost:4000/graphql",
+//     uri: "https://flyby-gateway.herokuapp.com/",
+//     fetch,
+//   }),
+//   headers: {
+//     "Content-Type": "aplication/json",
+//   },
+// })
 
 // client
 //     .query({
@@ -39,4 +39,4 @@ const client = new ApolloClient({
 //     })
 //     .then((result) => console.log(result));
 
-export default client;
+export default client
