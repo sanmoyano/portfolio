@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { Box, Image, useColorModeValue, Skeleton } from "@chakra-ui/react"
+import { Box, Image, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const HeroLogo = ({ loadingHandlersImage }) => {
@@ -20,15 +19,12 @@ const HeroLogo = ({ loadingHandlersImage }) => {
     >
       <Image
         animate={{
-          height: imageLoading ? "100%" : "auto",
           opacity: imageLoading ? 1 : 0,
         }}
         as={motion.img}
         initial={{ height: "100%", opacity: 0 }}
         src={logo}
-        transition={
-          ({ height: { delay: 0, duration: 0.4 } }, { opacity: { delay: 0.5, duration: 0.4 } })
-        }
+        transition={{ opacity: { delay: 0.5, duration: 0.4 } }}
         width="100%"
         onLoad={imageLoaded}
       />
