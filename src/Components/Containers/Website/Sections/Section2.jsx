@@ -1,13 +1,22 @@
-import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { StarIcon } from "../Decorators"
 
 const Section2 = () => {
-  const changeColor = useColorModeValue("red", "green")
+  const { colors } = useTheme()
+  const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
+
+  const getYearsSinceIstartedDeveloping = () => {
+    const sinceYear = new Date(2021, 7)
+    const today = new Date()
+    const totalYearsDeveloping = today.getFullYear() - sinceYear.getFullYear()
+
+    return totalYearsDeveloping
+  }
 
   return (
     <Stack
-      borderBottomColor={changeColor}
+      borderBottomColor={fill}
       borderBottomStyle={"solid"}
       borderBottomWidth={"2px"}
       width={"100%"}
@@ -19,10 +28,10 @@ const Section2 = () => {
         marginBottom={8}
         paddingInline={12}
       >
-        <Text>item1</Text>
-        <StarIcon fill={"white"} />
+        <Text>{`Developing for ${getYearsSinceIstartedDeveloping()} years`}</Text>
+        <StarIcon fill={fill} />
         <Text>item2</Text>
-        <StarIcon fill={"white"} />
+        <StarIcon fill={fill} />
         <Text>item3</Text>
       </Stack>
     </Stack>
