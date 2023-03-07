@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 const HeroLogo = ({ loadingHandlersImage }) => {
   const { imageLoading, setImageLoading } = loadingHandlersImage
   const imageLoaded = () => {
-    setTimeout(() => setImageLoading(true), 1000)
+    setTimeout(() => setImageLoading(true), 600)
   }
   const logo = useColorModeValue(
     "../../../../../assets/logo_red.svg",
