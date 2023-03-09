@@ -38,7 +38,7 @@ const Section2 = () => {
         <Text textAlign={"center"} textStyle={setTextStyle} width={"150px"}>
           9 projects published
         </Text>
-        {/**la cantidad de proyectos va ser el length del array de proyectos */}
+        {/**la cantidad de proyectos va ser el length del array de proyectos de la api */}
         <StarIcon fill={fill} />
         <Text textAlign={"right"} textStyle={setTextStyle} width={{ base: "120px", md: "150px" }}>
           worked with XX business

@@ -20,7 +20,7 @@ const ToggleMenu = ({ toggle }) => {
   }
 
   return (
-    <Button p={8} variant={"ghost"} onClick={toggle}>
+    <Button _hover={{ background: "none" }} p={8} variant={"ghost"} onClick={toggle}>
       <svg height="30" width="50">
         <Path closedPath={"M 0 10 L 50 10"} openPath={"M 0 0 L 50 30"} />
         <Path closedPath={"M 0 15 L 50 15"} openPath={""} />
