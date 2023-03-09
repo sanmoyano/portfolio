@@ -51,18 +51,18 @@ export default extendTheme({
     robotoBoldGreen: {
       fontFamily: "Roboto",
       fontWeight: 500,
-      fontSize: "1.6rem",
+      fontSize: { base: ".9rem", md: "1.6rem" },
       textTransform: "uppercase",
       letterSpacing: 2,
-      color: "red",
+      color: "green",
     },
     robotoBoldRed: {
       fontFamily: "Roboto",
       fontWeight: 500,
-      fontSize: "1.6rem",
+      fontSize: { base: ".9rem", md: "1.6rem" },
       textTransform: "uppercase",
       letterSpacing: 2,
-      color: "green",
+      color: "red",
     },
     neusaBoldWhite: {
       fontFamily: "neusa-next-std-wide",

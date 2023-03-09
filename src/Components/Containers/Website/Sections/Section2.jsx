@@ -5,6 +5,7 @@ import { StarIcon } from "../Decorators"
 const Section2 = () => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
+  const setTextStyle = useColorModeValue("robotoBoldRed", "robotoBoldGreen")
 
   const getYearsSinceIstartedDeveloping = () => {
     const sinceYear = new Date(2021, 7)
@@ -26,13 +27,22 @@ const Section2 = () => {
         direction={"row"}
         justifyContent={"space-between"}
         marginBottom={8}
-        paddingInline={12}
+        paddingInline={{ base: 6, md: 12 }}
       >
-        <Text>{`Developing for ${getYearsSinceIstartedDeveloping()} years`}</Text>
+        <Text
+          textAlign={"left"}
+          textStyle={setTextStyle}
+          width={{ base: "120px", md: "150px" }}
+        >{`Developing for ${getYearsSinceIstartedDeveloping()} years`}</Text>
         <StarIcon fill={fill} />
-        <Text>item2</Text>
+        <Text textAlign={"center"} textStyle={setTextStyle} width={"150px"}>
+          9 projects published
+        </Text>
+        {/**la cantidad de proyectos va ser el length del array de proyectos */}
         <StarIcon fill={fill} />
-        <Text>item3</Text>
+        <Text textAlign={"right"} textStyle={setTextStyle} width={{ base: "120px", md: "150px" }}>
+          worked with XX business
+        </Text>
       </Stack>
     </Stack>
   )
