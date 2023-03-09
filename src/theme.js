@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react"
+import { mode } from "@chakra-ui/theme-tools"
 import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
@@ -34,7 +35,7 @@ export default extendTheme({
   },
   textStyles: {
     robotos: {
-      fontSize: "4rem",
+      fontSize: { base: "4rem", md: "8rem" },
       fontFamily: "Roboto",
     },
     neusa: {
