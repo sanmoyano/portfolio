@@ -1,5 +1,7 @@
 import { extendTheme } from "@chakra-ui/react"
-// import { mode } from "@chakra-ui/theme-tools"
+import { mode } from "@chakra-ui/theme-tools"
+import type { StyleFunctionProps } from '@chakra-ui/styled-system'
+
 import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
@@ -12,7 +14,7 @@ export default extendTheme({
     disableTransitionOnChange: false,
   },
   styles: {
-    global: (props) => ({
+    global: (props: StyleFunctionProps) => ({
       "html, body, #root": {
         height: "100%",
         width: "100%",
@@ -20,8 +22,8 @@ export default extendTheme({
         padding: 0,
         boxSizing: "border-box",
         fontSize: "62.5%",
-        bgColor: props.colorMode === "dark" ? "black" : "white",
-        color: props.colorMode === "dark" ? "white" : "black",
+        bgColor: mode("white", "black")(props),
+        color: mode("black","white")(props),
         transitionProperty: "background-color",
         transitionDuration: ".5s",
       },
@@ -33,6 +35,7 @@ export default extendTheme({
     green: "#CAF825",
     red: "#EE3442",
   },
+ 
   textStyles: {
     robotos: {
       fontSize: { base: "4rem", md: "8rem" },
@@ -65,12 +68,24 @@ export default extendTheme({
       letterSpacing: 2,
       color: "red",
     },
+    
     neusaBoldWhite: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
       fontSize: "4rem",
       letterSpacing: 1,
       transform: "scaleY(.8)",
+    },
+  },
+  components: {
+    Divider: {
+      variants: {
+        solid:(props: StyleFunctionProps) => ({
+          borderWidth:2,
+          borderColor: mode("red", "green")(props),
+          opacity:1
+        })
+      },
     },
   },
 })
