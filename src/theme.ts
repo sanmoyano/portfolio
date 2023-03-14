@@ -45,7 +45,7 @@ export default extendTheme({
       fontSize: "4rem",
       fontFamily: " neusa-next-std-wide",
     },
-    robotoBoldWhite: {
+    robotoBold: {
       fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: "1.6rem",
@@ -69,7 +69,7 @@ export default extendTheme({
       color: "red",
     },
     
-    neusaBoldWhite: {
+    neusaBold: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
       fontSize: "4rem",

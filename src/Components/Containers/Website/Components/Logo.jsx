@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <Link to={"/"}>
       <Stack alignItems={"center"} direction={"row"} justifyContent={"center"} p={4}>
-        <Text textStyle={"neusaBoldWhite"}>#SM</Text>
+        <Text textStyle={"neusaBold"}>#SM</Text>
         {/* <Box
           height={"auto"}
           sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}

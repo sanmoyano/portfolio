@@ -30,7 +30,7 @@ const NavItem = ({ item, route }) => {
         <motion.div animate={isHovered ? "hover" : "initial"} variants={variants}>
           <StarIcon fill={fill} />
         </motion.div>
-        <Text textStyle={"robotoBoldWhite"}>{item}</Text>
+        <Text textStyle={"robotoBold"}>{item}</Text>
       </Stack>
     </Link>
   )
