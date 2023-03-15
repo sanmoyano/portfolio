@@ -76,6 +76,15 @@ export default extendTheme({
       letterSpacing: 1,
       transform: "scaleY(.8)",
     },
+    neusaBoldUpper: {
+      fontFamily:"neusa-next-std-wide",
+      fontWeight: 700,
+      fontSize: "6rem",
+      letterSpacing: 1,
+      transform: "scaleY(.8)",
+      textTransform:"uppercase",
+      lineHeight:.7,
+    }
   },
   components: {
     Divider: {

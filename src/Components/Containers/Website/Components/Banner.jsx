@@ -9,16 +9,25 @@ const Banner = ({ dimensionRef }) => {
       width={"100%"}
     >
       <Stack
-        bgColor={"blue.500"}
+        // bgColor={"blue.500"}
         height={`${dimensionRef.width}px`}
         justifyContent={"center"}
+        spacing={0}
         transform={{ base: "rotate(0deg)", lg: "rotate(-90deg)" }}
         width={{ base: "100%", lg: `${dimensionRef.height}px` }}
       >
-        <Text textAlign={"right"}>developer</Text>
-        <Text textAlign={"left"}>developer</Text>
-        <Text textAlign={"right"}>designer</Text>
-        <Text textAlign={"left"}>designer</Text>
+        <Text textAlign={"right"} textStyle={"neusaBoldUpper"}>
+          developer
+        </Text>
+        <Text textAlign={"left"} textStyle={"neusaBoldUpper"}>
+          designer
+        </Text>
+        <Text textAlign={"right"} textStyle={"neusaBoldUpper"}>
+          developer
+        </Text>
+        <Text textAlign={"left"} textStyle={"neusaBoldUpper"}>
+          designer
+        </Text>
       </Stack>
     </Stack>
   )
