@@ -25,12 +25,7 @@ const Section3 = () => {
       paddingInline={{ base: 6, lg: 12 }}
       width={"100%"}
     >
-      <Stack
-        ref={heightRef}
-        justifyContent={"space-between"}
-        marginBottom={{ base: 6, lg: 0 }}
-        // width={{ base: "100%", lg: "60%" }}
-      >
+      <Stack ref={heightRef} justifyContent={"space-between"} paddingRight={{ base: 6, lg: 12 }}>
         <Text
           fontWeight={700}
           lineHeight={1}
@@ -56,9 +51,7 @@ const Section3 = () => {
       <Stack display={{ base: "block", lg: "none" }} width={`${dimensions.width}px`}>
         <Divider orientation={"horizontal"} variant={"solid"} />
       </Stack>
-      <Stack paddingInline={{ base: 6, lg: 12 }}>
-        <Banner />
-      </Stack>
+      <Banner dimensionRef={dimensions} />
     </Stack>
   )
 }
