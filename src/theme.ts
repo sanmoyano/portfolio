@@ -79,7 +79,7 @@ export default extendTheme({
     neusaBoldUpper: {
       fontFamily:"neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: "6rem",
+      fontSize: {base:"5rem", md:"11rem", lg:"6rem"},
       letterSpacing: 1,
       transform: "scaleY(.8)",
       textTransform:"uppercase",

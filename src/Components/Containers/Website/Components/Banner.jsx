@@ -4,15 +4,15 @@ const Banner = ({ dimensionRef }) => {
   return (
     <Stack
       alignItems={"center"}
+      bgColor={"red"}
       height={`${dimensionRef.height}`}
       justifyContent={"center"}
       width={"100%"}
     >
       <Stack
-        // bgColor={"blue.500"}
+        bgColor={"blue.500"}
         height={`${dimensionRef.width}px`}
         justifyContent={"center"}
-        spacing={0}
         transform={{ base: "rotate(0deg)", lg: "rotate(-90deg)" }}
         width={{ base: "100%", lg: `${dimensionRef.height}px` }}
       >
