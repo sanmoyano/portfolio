@@ -1,5 +1,5 @@
 import { useRef, useLayoutEffect, useState } from "react"
-import { Divider, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Divider, Stack, Text } from "@chakra-ui/react"
 
 import { Banner } from "../Components"
 
@@ -15,7 +15,6 @@ const Section3 = () => {
       })
     }
   }, [])
-  const colorValue = useColorModeValue("solidRed", "solidGreen")
 
   return (
     <Stack
@@ -23,10 +22,15 @@ const Section3 = () => {
       direction={{ base: "column", lg: "row" }}
       height={"100%"}
       justifyContent={"space-between"}
-      paddingInline={12}
+      paddingInline={{ base: 6, lg: 12 }}
       width={"100%"}
     >
-      <Stack ref={heightRef} justifyContent={"space-between"}>
+      <Stack
+        ref={heightRef}
+        justifyContent={"space-between"}
+        marginBottom={{ base: 6, lg: 0 }}
+        // width={{ base: "100%", lg: "60%" }}
+      >
         <Text
           fontWeight={700}
           lineHeight={1}
@@ -46,10 +50,13 @@ const Section3 = () => {
           and explore unique UX/UI solutions for the users.
         </Text>
       </Stack>
-      <Stack height={`${dimensions.height}px`}>
-        <Divider orientation="vertical" variant={"solid"} />
+      <Stack display={{ base: "none", lg: "block" }} height={`${dimensions.height}px`}>
+        <Divider orientation={"vertical"} variant={"solid"} />
       </Stack>
-      <Stack>
+      <Stack display={{ base: "block", lg: "none" }} width={`${dimensions.width}px`}>
+        <Divider orientation={"horizontal"} variant={"solid"} />
+      </Stack>
+      <Stack paddingInline={{ base: 6, lg: 12 }}>
         <Banner />
       </Stack>
     </Stack>
