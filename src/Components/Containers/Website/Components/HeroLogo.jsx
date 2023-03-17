@@ -1,4 +1,4 @@
-import { Box, Image, useColorModeValue } from "@chakra-ui/react"
+import { Box, Container, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const HeroLogo = ({ loadingHandlersImage }) => {
@@ -12,23 +12,20 @@ const HeroLogo = ({ loadingHandlersImage }) => {
   )
 
   return (
-    <Box
-      height={"100%"}
-      maxW={"350px"}
-      sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}
-    >
-      <Image
-        animate={{
-          opacity: imageLoading ? 1 : 0,
-        }}
-        as={motion.img}
-        initial={{ height: "100%", opacity: 0 }}
-        src={logo}
-        transition={{ opacity: { delay: 0.5, duration: 0.4 } }}
-        width="100%"
-        onLoad={imageLoaded}
-      />
-    </Box>
+    <Container centerContent maxW={"xl"}>
+      <Box>
+        <Image
+          animate={{
+            opacity: imageLoading ? 1 : 0,
+          }}
+          as={motion.img}
+          initial={{ opacity: 0 }}
+          src={logo}
+          transition={{ opacity: { delay: 0.5, duration: 0.4 } }}
+          onLoad={imageLoaded}
+        />
+      </Box>
+    </Container>
   )
 }
 

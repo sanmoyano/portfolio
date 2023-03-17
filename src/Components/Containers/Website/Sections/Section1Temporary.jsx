@@ -9,9 +9,11 @@ const Section1Temporary = () => {
   return (
     <Stack
       alignItems={"center"}
-      minH={imageLoading ? "" : "100vh"}
+      height={"90vh"}
+      justifyContent={"center"}
       overflow={"hidden"}
       paddingInline={12}
+      width={"100%"}
     >
       <HeroLogo loadingHandlersImage={{ imageLoading, setImageLoading }} />
     </Stack>

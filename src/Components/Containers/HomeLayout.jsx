@@ -4,7 +4,7 @@ import { Section1, Section1Temporary, Section2, Section3 } from "./Website/Secti
 
 const HomeLayout = () => {
   return (
-    <Stack gap={{ base: 20, md: 36 }} marginBlock={24}>
+    <Stack gap={{ base: 20, md: 36 }}>
       {/* <Section1 /> */}
       <Section1Temporary />
       <Section2 />
