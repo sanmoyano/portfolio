@@ -23,6 +23,7 @@ const Section3 = () => {
       height={"100%"}
       justifyContent={"space-between"}
       paddingInline={{ base: 6, lg: 12 }}
+      spacing={{ base: 12, md: 24 }}
       width={"100%"}
     >
       <Stack ref={heightRef} justifyContent={"space-between"} paddingRight={{ base: 6, lg: 12 }}>

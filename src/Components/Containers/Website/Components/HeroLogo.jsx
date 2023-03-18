@@ -1,4 +1,4 @@
-import { Box, Container, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Container, Image, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const HeroLogo = ({ loadingHandlersImage }) => {

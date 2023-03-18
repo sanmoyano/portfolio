@@ -1,31 +1,57 @@
-import { Stack, Text } from "@chakra-ui/react"
+import { Stack, Text, Container } from "@chakra-ui/react"
 
 const Banner = ({ dimensionRef }) => {
   return (
     <Stack
-      alignItems={"center"}
-      bgColor={"red"}
-      height={`${dimensionRef.height}`}
-      justifyContent={"center"}
-      width={"100%"}
+      bgColor={"blue"}
+      height={"auto"}
+      maxW={"100%"}
+      width={{ base: `${dimensionRef.width}px`, lg: "auto" }}
     >
       <Stack
-        bgColor={"blue.500"}
-        height={`${dimensionRef.width}px`}
+        direction={{ base: "column", lg: "row" }}
+        height={"100%"}
         justifyContent={"center"}
-        transform={{ base: "rotate(0deg)", lg: "rotate(-90deg)" }}
-        width={{ base: "100%", lg: `${dimensionRef.height}px` }}
+        width={"100%"}
       >
-        <Text textAlign={"right"} textStyle={"neusaBoldUpper"}>
-          developer
-        </Text>
-        <Text textAlign={"left"} textStyle={"neusaBoldUpper"}>
+        <Text
+          sx={{
+            writingMode: { base: "horizontal-tb", lg: "vertical-lr" },
+            textOrientation: "mixed",
+          }}
+          textAlign={"right"}
+          textStyle={"neusaBoldUpper"}
+        >
           designer
         </Text>
-        <Text textAlign={"right"} textStyle={"neusaBoldUpper"}>
-          developer
+        <Text
+          sx={{
+            writingMode: { base: "horizontal-tb", lg: "vertical-lr" },
+            textOrientation: "mixed",
+          }}
+          textAlign={"left"}
+          textStyle={"neusaBoldUpper"}
+        >
+          designer
         </Text>
-        <Text textAlign={"left"} textStyle={"neusaBoldUpper"}>
+        <Text
+          sx={{
+            writingMode: { base: "horizontal-tb", lg: "vertical-lr" },
+            textOrientation: "mixed",
+          }}
+          textAlign={"right"}
+          textStyle={"neusaBoldUpper"}
+        >
+          designer
+        </Text>
+        <Text
+          sx={{
+            writingMode: { base: "horizontal-tb", lg: "vertical-lr" },
+            textOrientation: "mixed",
+          }}
+          textAlign={"left"}
+          textStyle={"neusaBoldUpper"}
+        >
           designer
         </Text>
       </Stack>
