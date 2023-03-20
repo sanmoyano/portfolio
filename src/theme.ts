@@ -7,6 +7,14 @@ import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 import "@fontsource/roboto/900.css"
 
+const breakpoints = {
+  sm: '30em',//480px
+  md: '48em',//786px
+  lg: '62em',//992px
+  xl: '80em',//1280
+  '2xl': '96em',//1536
+}
+
 export default extendTheme({
   config: {
     initialColorMode: "dark",
@@ -79,12 +87,14 @@ export default extendTheme({
     neusaBoldUpper: {
       fontFamily:"neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: {base:"5rem", md:"11rem", lg:"5rem"},
+      fontSize: {base:"4.5rem", md:"11rem", lg:"6rem"},
       letterSpacing: 1,
       transform: {base:"scaleY(.7)", lg:"scaleX(.8)"},
       textTransform:"uppercase",
-      lineHeight:1,
-    }
+      lineHeight:.7,
+     
+    },
+    
   },
   components: {
     Divider: {

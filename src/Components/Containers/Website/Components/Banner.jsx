@@ -1,29 +1,24 @@
-import { Stack, Text } from "@chakra-ui/react"
+import { Stack, useColorModeValue } from "@chakra-ui/react"
 
-import { HorizontalText } from "../Decorators"
+import { BannerGenerator } from "../Decorators"
 
-const Banner = ({ dimensionRef }) => {
+const Banner = () => {
+  const color = useColorModeValue("red", "green")
   const textGenerator = () => {
     let words = []
 
     for (let i = 0; i < 4; i++) {
-      if (i % 2 === 0) {
-        words.push(<HorizontalText text={"developer"} textAlign={"left"} />)
-      } else {
-        words.push(<HorizontalText text={"designer"} textAlign={"right"} />)
-      }
+      const textContent = i % 2 === 0 ? "developer " : "designer "
+      const colorText = i % 2 === 0 ? "" : `${color}`
+
+      words.push(<BannerGenerator key={i} color={colorText} text={textContent} />)
     }
 
     return words
   }
 
   return (
-    <Stack
-      bgColor={"blue"}
-      height={"auto"}
-      maxW={"100%"}
-      width={{ base: `${dimensionRef.width}px`, lg: "auto" }}
-    >
+    <Stack height={"auto"} maxW={"100%"} width={{ base: `100%`, lg: "auto" }}>
       <Stack
         direction={{ base: "column", lg: "row" }}
         height={"100%"}

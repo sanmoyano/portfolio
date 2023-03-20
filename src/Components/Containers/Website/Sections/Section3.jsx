@@ -49,10 +49,10 @@ const Section3 = () => {
       <Stack display={{ base: "none", lg: "block" }} height={`${dimensions.height}px`}>
         <Divider orientation={"vertical"} variant={"solid"} />
       </Stack>
-      <Stack display={{ base: "block", lg: "none" }} width={`${dimensions.width}px`}>
+      <Stack display={{ base: "block", lg: "none" }} width={`100%`}>
         <Divider orientation={"horizontal"} variant={"solid"} />
       </Stack>
-      <Banner dimensionRef={dimensions} />
+      <Banner />
     </Stack>
   )
 }
