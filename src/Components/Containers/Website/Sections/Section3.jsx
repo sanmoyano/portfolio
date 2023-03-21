@@ -20,13 +20,18 @@ const Section3 = () => {
     <Stack
       alignItems={"center"}
       direction={{ base: "column", lg: "row" }}
-      height={"100%"}
+      height={{ lg: "500px" }}
       justifyContent={"space-between"}
       paddingInline={{ base: 6, lg: 12 }}
       spacing={{ base: 12, md: 24 }}
       width={"100%"}
     >
-      <Stack ref={heightRef} justifyContent={"space-between"} paddingRight={{ base: 6, lg: 12 }}>
+      <Stack
+        ref={heightRef}
+        h={"100%"}
+        justifyContent={"space-between"}
+        // paddingRight={{ base: 6, lg: 12 }}
+      >
         <Text
           fontWeight={700}
           lineHeight={1}
@@ -38,7 +43,7 @@ const Section3 = () => {
         </Text>
         <Text
           fontFamily={"Roboto"}
-          fontSize={{ base: "2rem", md: "4rem" }}
+          fontSize={{ base: "2rem", md: "7rem" }}
           lineHeight={1}
           textAlign={"justify"}
           textTransform={"uppercase"}
@@ -52,7 +57,7 @@ const Section3 = () => {
       <Stack display={{ base: "block", lg: "none" }} width={`100%`}>
         <Divider orientation={"horizontal"} variant={"solid"} />
       </Stack>
-      <Banner />
+      <Banner height={dimensions.height} />
     </Stack>
   )
 }

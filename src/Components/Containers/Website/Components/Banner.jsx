@@ -2,7 +2,7 @@ import { Stack, useColorModeValue } from "@chakra-ui/react"
 
 import { BannerGenerator } from "../Decorators"
 
-const Banner = () => {
+const Banner = ({ height }) => {
   const color = useColorModeValue("red", "green")
   const textGenerator = () => {
     let words = []
@@ -11,7 +11,7 @@ const Banner = () => {
       const textContent = i % 2 === 0 ? "developer " : "designer "
       const colorText = i % 2 === 0 ? "" : `${color}`
 
-      words.push(<BannerGenerator key={i} color={colorText} text={textContent} />)
+      words.push(<BannerGenerator key={i} color={colorText} height={height} text={textContent} />)
     }
 
     return words

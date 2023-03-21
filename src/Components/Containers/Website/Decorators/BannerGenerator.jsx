@@ -1,38 +1,52 @@
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Text, useMediaQuery } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
-const marqueeVariants = {
-  animate: {
-    x: [0, -1035],
+const marqueeVariantsHorizontal = {
+  vertical: {
+    x: [-1035, 0],
     transition: {
       x: {
         repeat: Infinity,
-        repeatType: "loop",
-        duration: 6,
-        ease: "linear",
+        repeatType: "mirror",
+        duration: 8,
+        // ease: "linear",
+      },
+    },
+  },
+  horizontal: {
+    y: [-1035, 0],
+    transition: {
+      y: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 8,
+        // ease: "linear",
       },
     },
   },
 }
 
-const BannerGenerator = ({ text, color }) => {
+const BannerGenerator = ({ text, color, height }) => {
+  const isLargerThanMd = useMediaQuery("(max-width: 800px)")
+
   return (
     <Box
       sx={{
         display: "grid",
         placeContent: "center",
         position: "relative",
-        width: "100vw",
-        maxW: "100%",
-        h: "100%",
+        width: { base: "100%" },
+        maxW: { base: "100%" },
+        height: { lg: `${height}px` },
         overflow: "hidden",
       }}
     >
       <Box
-        animate={"animate"}
+        animate={isLargerThanMd ? "horizontal" : "vertical"}
         as={motion.div}
+        // initial={"vertical"}
         sx={{ display: "grid", placeContent: "center", whiteSpace: "nowrap" }}
-        variants={marqueeVariants}
+        variants={marqueeVariantsHorizontal}
         w={"100%"}
       >
         <Text
@@ -46,7 +60,7 @@ const BannerGenerator = ({ text, color }) => {
           textStyle={"neusaBoldUpper"}
           w={"100%"}
         >
-          {text.repeat(10)}
+          {text.repeat(20)}
         </Text>
       </Box>
     </Box>
