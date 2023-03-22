@@ -1,33 +1,24 @@
 import { Box, Text, useMediaQuery } from "@chakra-ui/react"
-import { motion } from "framer-motion"
-
-const marqueeVariantsHorizontal = {
-  vertical: {
-    x: [-1035, 0],
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "mirror",
-        duration: 8,
-        // ease: "linear",
-      },
-    },
-  },
-  horizontal: {
-    y: [-1035, 0],
-    transition: {
-      y: {
-        repeat: Infinity,
-        repeatType: "mirror",
-        duration: 8,
-        // ease: "linear",
-      },
-    },
-  },
-}
+import { motion, AnimatePresence } from "framer-motion"
 
 const BannerGenerator = ({ text, color, height }) => {
-  const isLargerThanMd = useMediaQuery("(max-width: 800px)")
+  const isLargerThanMd = useMediaQuery("(min-width: 992px)")
+
+  console.log(isLargerThanMd)
+
+  const marqueeVariants = {
+    animate: {
+      x: [0, -1036],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 5,
+          ease: "linear",
+        },
+      },
+    },
+  }
 
   return (
     <Box
@@ -37,16 +28,15 @@ const BannerGenerator = ({ text, color, height }) => {
         position: "relative",
         width: { base: "100%" },
         maxW: { base: "100%" },
-        height: { lg: `${height}px` },
         overflow: "hidden",
       }}
     >
       <Box
-        animate={isLargerThanMd ? "horizontal" : "vertical"}
+        animate={"animate"}
         as={motion.div}
-        // initial={"vertical"}
+        inital={"animate"}
         sx={{ display: "grid", placeContent: "center", whiteSpace: "nowrap" }}
-        variants={marqueeVariantsHorizontal}
+        variants={marqueeVariants}
         w={"100%"}
       >
         <Text

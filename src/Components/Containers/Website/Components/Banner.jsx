@@ -18,11 +18,15 @@ const Banner = ({ height }) => {
   }
 
   return (
-    <Stack height={"auto"} maxW={"100%"} width={{ base: `100%`, lg: "auto" }}>
+    <Stack
+      height={{ base: "100%", lg: `${height}px` }}
+      maxW={"100%"}
+      width={{ base: `100%`, lg: "auto" }}
+    >
       <Stack
         direction={{ base: "column", lg: "row" }}
-        height={"100%"}
         justifyContent={"center"}
+        maxHeight={"100%"}
         width={"100%"}
       >
         {textGenerator()}

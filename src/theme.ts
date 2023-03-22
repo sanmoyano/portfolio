@@ -46,7 +46,7 @@ export default extendTheme({
  
   textStyles: {
     robotos: {
-      fontSize: { base: "4rem", md: "10rem" },
+      fontSize: { base: "4rem",  lg:"8rem" },
       fontFamily: "Roboto",
     },
     neusa: {
@@ -91,7 +91,7 @@ export default extendTheme({
       letterSpacing: 1,
       transform: {base:"scaleY(.7)", lg:"scaleX(.8)"},
       textTransform:"uppercase",
-      lineHeight:.7,
+      lineHeight:.8,
      
     },
     

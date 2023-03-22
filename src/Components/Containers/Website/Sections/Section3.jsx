@@ -1,17 +1,17 @@
 import { useRef, useLayoutEffect, useState } from "react"
-import { Divider, Stack, Text } from "@chakra-ui/react"
+import { Divider, Stack, Text, useMediaQuery } from "@chakra-ui/react"
 
 import { Banner } from "../Components"
 
 const Section3 = () => {
-  const heightRef = useRef()
+  const dimensionRef = useRef()
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   useLayoutEffect(() => {
-    if (heightRef.current) {
+    if (dimensionRef.current) {
       setDimensions({
-        width: heightRef.current.offsetWidth,
-        height: heightRef.current.offsetHeight,
+        width: dimensionRef.current.offsetWidth,
+        height: dimensionRef.current.offsetHeight,
       })
     }
   }, [])
@@ -20,18 +20,13 @@ const Section3 = () => {
     <Stack
       alignItems={"center"}
       direction={{ base: "column", lg: "row" }}
-      height={{ lg: "500px" }}
+      height={"100%"}
       justifyContent={"space-between"}
       paddingInline={{ base: 6, lg: 12 }}
       spacing={{ base: 12, md: 24 }}
       width={"100%"}
     >
-      <Stack
-        ref={heightRef}
-        h={"100%"}
-        justifyContent={"space-between"}
-        // paddingRight={{ base: 6, lg: 12 }}
-      >
+      <Stack ref={dimensionRef} justifyContent={"space-around"} paddingRight={{ lg: 12 }}>
         <Text
           fontWeight={700}
           lineHeight={1}
