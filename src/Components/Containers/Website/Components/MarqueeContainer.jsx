@@ -1,8 +1,8 @@
 import { Stack, useColorModeValue } from "@chakra-ui/react"
 
-import { BannerGenerator } from "../Decorators"
+import { Marquee } from "../Decorators"
 
-const Banner = ({ height }) => {
+const MarqueeContainer = ({ height }) => {
   const color = useColorModeValue("red", "green")
   const textGenerator = () => {
     let words = []
@@ -11,7 +11,7 @@ const Banner = ({ height }) => {
       const textContent = i % 2 === 0 ? "developer " : "designer "
       const colorText = i % 2 === 0 ? "" : `${color}`
 
-      words.push(<BannerGenerator key={i} color={colorText} height={height} text={textContent} />)
+      words.push(<Marquee key={i} color={colorText} height={height} text={textContent} />)
     }
 
     return words
@@ -35,4 +35,4 @@ const Banner = ({ height }) => {
   )
 }
 
-export default Banner
+export default MarqueeContainer

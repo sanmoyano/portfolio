@@ -1,20 +1,29 @@
 import { Box, Text, useMediaQuery } from "@chakra-ui/react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
-const BannerGenerator = ({ text, color, height }) => {
+const Marquee = ({ text, color }) => {
   const isLargerThanMd = useMediaQuery("(min-width: 992px)")
 
-  console.log(isLargerThanMd)
-
   const marqueeVariants = {
-    animate: {
-      x: [0, -1036],
+    horizontal: {
+      x: [null, 1450, 450],
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "mirror",
-          duration: 5,
-          ease: "linear",
+          duration: 8,
+          ease: "easeInOut",
+        },
+      },
+    },
+    vertical: {
+      y: [null, 1450, 450],
+      transition: {
+        y: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 8,
+          ease: "easeInOut",
         },
       },
     },
@@ -32,9 +41,8 @@ const BannerGenerator = ({ text, color, height }) => {
       }}
     >
       <Box
-        animate={"animate"}
+        animate={isLargerThanMd[0] ? "vertical" : "horizontal"}
         as={motion.div}
-        inital={"animate"}
         sx={{ display: "grid", placeContent: "center", whiteSpace: "nowrap" }}
         variants={marqueeVariants}
         w={"100%"}
@@ -57,4 +65,4 @@ const BannerGenerator = ({ text, color, height }) => {
   )
 }
 
-export default BannerGenerator
+export default Marquee

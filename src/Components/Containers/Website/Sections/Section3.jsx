@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect, useState } from "react"
-import { Divider, Stack, Text, useMediaQuery } from "@chakra-ui/react"
+import { Divider, Stack, Text } from "@chakra-ui/react"
 
-import { Banner } from "../Components"
+import { MarqueeContainer } from "../Components"
 
 const Section3 = () => {
   const dimensionRef = useRef()
@@ -52,7 +52,7 @@ const Section3 = () => {
       <Stack display={{ base: "block", lg: "none" }} width={`100%`}>
         <Divider orientation={"horizontal"} variant={"solid"} />
       </Stack>
-      <Banner height={dimensions.height} />
+      <MarqueeContainer height={dimensions.height} />
     </Stack>
   )
 }

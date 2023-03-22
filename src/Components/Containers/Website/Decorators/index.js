@@ -1,2 +1,2 @@
 export { default as StarIcon } from "./StarIcon"
-export { default as BannerGenerator } from "./BannerGenerator"
+export { default as Marquee } from "./Marquee"
