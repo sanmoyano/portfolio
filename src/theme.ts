@@ -89,11 +89,20 @@ export default extendTheme({
       fontWeight: 700,
       fontSize: {base:"4.5rem", md:"11rem", lg:"6rem"},
       letterSpacing: 1,
-      transform: {base:"scaleY(.7)", lg:"scaleX(.8)"},
+      transform: {base:"scaleY(.8)", lg:"scaleX(.8)"},
       textTransform:"uppercase",
       lineHeight:.8,
      
     },
+    neusaBoldUpperTitle : {
+      fontFamily:"neusa-next-std-wide",
+      fontWeight: 700,
+      fontSize: {base:"4.5rem", md:"11rem", lg:"12rem"},
+      letterSpacing: 1,
+      transform: "scaleY(.8)",
+      textTransform:"uppercase",
+      lineHeight:.8,
+    }
     
   },
   components: {

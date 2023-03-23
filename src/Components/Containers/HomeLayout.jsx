@@ -1,6 +1,6 @@
 import { Stack } from "@chakra-ui/react"
 
-import { Section1, Section1Temporary, Section2, Section3 } from "./Website/Sections"
+import { Section1, Section1Temporary, Section2, Section3, Section4 } from "./Website/Sections"
 
 const HomeLayout = () => {
   return (
@@ -9,6 +9,7 @@ const HomeLayout = () => {
       <Section1Temporary />
       <Section2 />
       <Section3 />
+      <Section4 />
     </Stack>
   )
 }
