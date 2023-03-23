@@ -7,7 +7,7 @@ const Logo = () => {
     <Link to={"/"}>
       <Tilt scale={1.2} transitionSpeed={2500}>
         <Stack alignItems={"center"} direction={"row"} justifyContent={"center"} p={4}>
-          <Text textStyle={"neusaBold"}>#SM</Text>
+          <Text textStyle={"neusa"}>#SM</Text>
         </Stack>
       </Tilt>
     </Link>

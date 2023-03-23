@@ -31,7 +31,7 @@ const Section3 = () => {
           fontWeight={700}
           lineHeight={1}
           textAlign={"justify"}
-          textStyle={"robotos"}
+          textStyle={"roboto"}
           textTransform={"uppercase"}
         >
           I see every project as a chance to leave my footprint

@@ -7,13 +7,13 @@ import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 import "@fontsource/roboto/900.css"
 
-const breakpoints = {
-  sm: '30em',//480px
-  md: '48em',//786px
-  lg: '62em',//992px
-  xl: '80em',//1280
-  '2xl': '96em',//1536
-}
+// const breakpoints = {
+//   sm: '30em',//480px
+//   md: '48em',//786px
+//   lg: '62em',//992px
+//   xl: '80em',//1280
+//   '2xl': '96em',//1536
+// }
 
 export default extendTheme({
   config: {
@@ -43,46 +43,25 @@ export default extendTheme({
     green: "#CAF825",
     red: "#EE3442",
   },
- 
+  
   textStyles: {
-    robotos: {
-      fontSize: { base: "4rem",  lg:"8rem" },
-      fontFamily: "Roboto",
-    },
     neusa: {
-      fontSize: "4rem",
-      fontFamily: " neusa-next-std-wide",
-    },
-    robotoBold: {
-      fontFamily: "Roboto",
-      fontWeight: 500,
-      fontSize: "1.6rem",
-      textTransform: "uppercase",
-      letterSpacing: 2,
-    },
-    robotoBoldGreen: {
-      fontFamily: "Roboto",
-      fontWeight: 500,
-      fontSize: { base: ".9rem", md: "1.6rem" },
-      textTransform: "uppercase",
-      letterSpacing: 2,
-      color: "green",
-    },
-    robotoBoldRed: {
-      fontFamily: "Roboto",
-      fontWeight: 500,
-      fontSize: { base: ".9rem", md: "1.6rem" },
-      textTransform: "uppercase",
-      letterSpacing: 2,
-      color: "red",
-    },
-    
-    neusaBold: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
       fontSize: "4rem",
       letterSpacing: 1,
       transform: "scaleY(.8)",
+    },
+    roboto: {
+      fontSize: { base: "4rem",  lg:"8rem" },
+      fontFamily: "Roboto",
+    },
+    robotoBold: {
+      fontFamily: "Roboto",
+      fontWeight: 500,
+      fontSize: {base:".9rem", md:"1.6rem"},
+      textTransform: "uppercase",
+      letterSpacing: 2,
     },
     neusaBoldUpper: {
       fontFamily:"neusa-next-std-wide",
