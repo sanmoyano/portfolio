@@ -1,10 +1,12 @@
-import { Stack } from "@chakra-ui/react"
+import { Stack, useColorModeValue } from "@chakra-ui/react"
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
 import { NavBar, ToggleMenu } from "./"
 
 const MobileNavBar = ({ topPosition }) => {
   const [isOpen, setIsOpen] = useCycle(false, true)
+  const bgColor = useColorModeValue("white", "black")
+
   const variants = {
     open: { opacity: 1, x: "0" },
     closed: { opacity: 0, x: "-100%" },
@@ -21,7 +23,7 @@ const MobileNavBar = ({ topPosition }) => {
         <Stack
           animate={isOpen ? "open" : "closed"}
           as={motion.div}
-          backdropFilter={"blur(5px)"}
+          bgColor={bgColor}
           gap={10}
           height={"100vh"}
           margin={"0px !important"}

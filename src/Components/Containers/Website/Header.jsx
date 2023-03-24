@@ -10,14 +10,15 @@ const Desktop = lazy(() => import("./Components/DesktopNavBar"))
 const Header = () => {
   const colorLine = useColorModeValue("black", "white")
   const headerHeigth = "90px"
+
+  const [isBlured, setIsBlured] = useState(false)
+
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   })
-
-  const [isBlured, setIsBlured] = useState(false)
 
   const activeBackgroundBlur = () => {
     if (window.scrollY > 90) {
@@ -35,7 +36,7 @@ const Header = () => {
   return (
     <Stack
       alignItems={"center"}
-      backdropFilter={isBlured ? "blur(5px)" : ""}
+      backdropFilter={isBlured ? "blur(10px)" : ""}
       direction={"row"}
       height={headerHeigth}
       justifyContent={"space-between"}
