@@ -59,7 +59,7 @@ export default extendTheme({
     robotoBold: {
       fontFamily: "Roboto",
       fontWeight: 500,
-      fontSize: {base:".9rem", md:"1.6rem"},
+      fontSize: "1.6rem",
       textTransform: "uppercase",
       letterSpacing: 2
     },

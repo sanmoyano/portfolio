@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react"
 
-const StarIcon = ({ fill }) => {
+const StarIcon = ({ fill, display }) => {
   return (
-    <Box boxSize={"20px"} sx={{ display: "flex", alignItems: "center" }}>
+    <Box boxSize={"20px"} display={display} sx={{ display: "flex", alignItems: "center" }}>
       <svg fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_41_56)">
           <path

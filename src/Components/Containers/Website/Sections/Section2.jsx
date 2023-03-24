@@ -1,11 +1,10 @@
 import { Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { StarIcon } from "../Decorators"
+import { StarIcon, TextQuot } from "../Decorators"
 
 const Section2 = () => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
-  const colorText = useColorModeValue("red", "green")
 
   const getYearsSinceIstartedDeveloping = () => {
     const sinceYear = new Date(2021, 7)
@@ -23,32 +22,21 @@ const Section2 = () => {
       width={"100%"}
     >
       <Stack
-        alignItems={"center"}
-        direction={"row"}
+        alignItems={{ base: "left", md: "center" }}
+        direction={{ base: "column", md: "row" }}
         justifyContent={"space-between"}
         marginBottom={8}
         paddingInline={{ base: 6, md: 12 }}
       >
-        <Text
-          color={colorText}
-          textAlign={"left"}
-          textStyle={"robotoBold"}
-          width={{ base: "120px", md: "150px" }}
-        >{`Developing for ${getYearsSinceIstartedDeveloping()} years`}</Text>
+        <TextQuot
+          align={"left"}
+          content={`Developing for ${getYearsSinceIstartedDeveloping()} years`}
+        />
         <StarIcon fill={fill} />
-        <Text color={colorText} textAlign={"center"} textStyle={"robotoBold"} width={"150px"}>
-          9 projects published
-        </Text>
         {/**la cantidad de proyectos va ser el length del array de proyectos de la api */}
+        <TextQuot aling={"center"} content={"9 project published"} />
         <StarIcon fill={fill} />
-        <Text
-          color={colorText}
-          textAlign={"right"}
-          textStyle={"robotoBold"}
-          width={{ base: "120px", md: "150px" }}
-        >
-          worked with XX business
-        </Text>
+        <TextQuot aling={"right"} content={"worked with XX business"} />
       </Stack>
     </Stack>
   )
