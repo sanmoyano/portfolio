@@ -1,7 +1,5 @@
-import React from "react"
-
 const Section5 = () => {
-  return <div>Section5</div>
+  return <div>Skills</div>
 }
 
 export default Section5
