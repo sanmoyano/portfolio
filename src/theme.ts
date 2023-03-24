@@ -41,7 +41,7 @@ export default extendTheme({
     black: "#0d0d0d",
     white: "#f5f5f5",
     green: "#CAF825",
-    red: "#EE3442",
+    red: "#EE3442"
   },
   
   textStyles: {
@@ -50,18 +50,24 @@ export default extendTheme({
       fontWeight: 700,
       fontSize: "4rem",
       letterSpacing: 1,
-      transform: "scaleY(.8)",
+      transform: "scaleY(.8)"
     },
     roboto: {
       fontSize: { base: "4rem",  lg:"8rem" },
-      fontFamily: "Roboto",
+      fontFamily: "Roboto"
     },
     robotoBold: {
       fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: {base:".9rem", md:"1.6rem"},
       textTransform: "uppercase",
-      letterSpacing: 2,
+      letterSpacing: 2
+    },
+    robotoText : {
+      fontFamily:"Roboto",
+      fontWeight:400,
+      fontSize:"1rem",
+      letterSpacing:1
     },
     neusaBoldUpper: {
       fontFamily:"neusa-next-std-wide",
@@ -70,7 +76,7 @@ export default extendTheme({
       letterSpacing: 1,
       transform: {base:"scaleY(.8)", lg:"scaleX(.8)"},
       textTransform:"uppercase",
-      lineHeight:.8,
+      lineHeight:.8
      
     },
     neusaBoldUpperTitle : {
@@ -80,7 +86,7 @@ export default extendTheme({
       letterSpacing: 1,
       transform: "scaleY(.8)",
       textTransform:"uppercase",
-      lineHeight:.8,
+      lineHeight:.8
     }
     
   },
