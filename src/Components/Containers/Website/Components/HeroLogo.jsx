@@ -12,8 +12,8 @@ const HeroLogo = ({ loadingHandlersImage }) => {
   )
 
   return (
-    <Container centerContent maxW={"xl"}>
-      <Box>
+    <Container centerContent height={"100%"} maxW={"xl"}>
+      <Box sx={{ display: "grid", placeContent: "center", height: "100%", padding: 6 }}>
         <Image
           animate={{
             opacity: imageLoading ? 1 : 0,

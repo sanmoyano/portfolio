@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react"
 import { mode } from "@chakra-ui/theme-tools"
-import type { StyleFunctionProps } from '@chakra-ui/styled-system'
+import { position, StyleFunctionProps } from '@chakra-ui/styled-system'
 
 import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
@@ -34,6 +34,7 @@ export default extendTheme({
         color: mode("black","white")(props),
         transitionProperty: "background-color",
         transitionDuration: ".5s",
+        scrollBehavior:"smooth",
       },
     }),
   },

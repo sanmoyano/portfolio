@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
@@ -11,6 +10,8 @@ const MobileNavBar = ({ topPosition }) => {
     closed: { opacity: 0, x: "-100%" },
   }
 
+  isOpen ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "unset")
+
   return (
     <Stack display={{ base: "flex", lg: "none" }}>
       <Stack animate={isOpen ? "open" : "closed"} as={motion.div} initial={false}>
@@ -18,14 +19,11 @@ const MobileNavBar = ({ topPosition }) => {
       </Stack>
       <AnimatePresence>
         <Stack
-          alignItems={"center"}
           animate={isOpen ? "open" : "closed"}
           as={motion.div}
           backdropFilter={"blur(5px)"}
-          bgColor={"transparent"}
           gap={10}
           height={"100vh"}
-          justifyContent={"flex-start"}
           margin={"0px !important"}
           p={6}
           position={"absolute"}
@@ -34,7 +32,7 @@ const MobileNavBar = ({ topPosition }) => {
           variants={variants}
           width={"100%"}
         >
-          <Stack alignItems={"center"} gap={8}>
+          <Stack alignItems={"left"} gap={8} height={"100%"} width={"100%"}>
             <NavBar />
           </Stack>
         </Stack>
