@@ -1,6 +1,5 @@
-import { Box, Text, useMediaQuery } from "@chakra-ui/react"
+import { Box, useMediaQuery } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
-import Tilt from "react-parallax-tilt"
 
 import { TextTitles, Tilting } from "../Decorators"
 
