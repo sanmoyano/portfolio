@@ -49,7 +49,7 @@ export default extendTheme({
     neusa: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: "4rem",
+      fontSize: "5rem",
       letterSpacing: 1,
       transform: "scaleY(.8)"
     },
@@ -67,7 +67,7 @@ export default extendTheme({
     robotoText : {
       fontFamily:"Roboto",
       fontWeight:400,
-      fontSize:"1rem",
+      fontSize:"1.6rem",
       letterSpacing:1
     },
     neusaBoldUpper: {
