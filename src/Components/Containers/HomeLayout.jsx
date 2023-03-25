@@ -9,6 +9,7 @@ import {
   Section5,
   Section6,
   Section7,
+  Section8,
 } from "./Website/Sections"
 
 const HomeLayout = () => {
@@ -22,6 +23,7 @@ const HomeLayout = () => {
       <Section5 />
       <Section6 />
       <Section7 />
+      <Section8 />
     </Stack>
   )
 }

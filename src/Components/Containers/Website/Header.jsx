@@ -4,6 +4,7 @@ import { Stack, useColorModeValue, Spinner, Box } from "@chakra-ui/react"
 import { motion, useScroll, useSpring } from "framer-motion"
 
 import { Logo } from "./Components"
+import { Tilting } from "./Decorators"
 const Mobile = lazy(() => import("./Components/MobileNavBar"))
 const Desktop = lazy(() => import("./Components/DesktopNavBar"))
 
@@ -59,7 +60,9 @@ const Header = () => {
           zIndex: 9,
         }}
       />
-      <Logo />
+      <Tilting>
+        <Logo />
+      </Tilting>
       <Suspense
         fallback={
           <Stack alignItems={"cente"} height={"30px"} justifyContent={"center"} width={"50px"}>

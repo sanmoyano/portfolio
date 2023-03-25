@@ -1,15 +1,11 @@
-import { Stack, Text } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
-import Tilt from "react-parallax-tilt"
+
+import { TextTitles, Tilting } from "../Decorators"
 
 const Logo = () => {
   return (
     <Link to={"/"}>
-      <Tilt scale={1.2} transitionSpeed={2500}>
-        <Stack alignItems={"center"} direction={"row"} justifyContent={"center"} p={4}>
-          <Text textStyle={"neusa"}>#SM</Text>
-        </Stack>
-      </Tilt>
+      <TextTitles content={"#SM"} px={1} textStyle={"neusa"} />
     </Link>
   )
 }

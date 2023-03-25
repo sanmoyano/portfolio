@@ -1,3 +1,5 @@
 export { default as StarIcon } from "./StarIcon"
 export { default as Marquee } from "./Marquee"
 export { default as TextQuot } from "./TextQuot"
+export { default as TextTitles } from "./TextTitles"
+export { default as Tilting } from "./Tilting"

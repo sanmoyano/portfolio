@@ -2,6 +2,8 @@ import { Box, Text, useMediaQuery } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import Tilt from "react-parallax-tilt"
 
+import { TextTitles, Tilting } from "../Decorators"
+
 const Section4 = () => {
   const isDesktop = useMediaQuery("(min-width: 992px)")
 
@@ -12,15 +14,9 @@ const Section4 = () => {
       sx={{ display: "grid", placeContent: "center" }}
     >
       <Link to="/projects">
-        <Tilt
-          scale={isDesktop[0] ? 1.2 : 1}
-          tiltEnable={isDesktop[0] ? true : false}
-          transitionSpeed={2500}
-        >
-          <Box p={6} width={"100%"}>
-            <Text textStyle={"neusaBoldUpperTitle"}>Projects</Text>
-          </Box>
-        </Tilt>
+        <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>
+          <TextTitles content={"projects"} px={2} textStyle={"neusaBoldUpperTitle"} />
+        </Tilting>
       </Link>
     </Box>
   )
