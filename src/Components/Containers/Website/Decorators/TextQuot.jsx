@@ -7,7 +7,7 @@ const TextQuot = ({ aling, content }) => {
     <Text
       color={colorText}
       textAlign={{ base: "left", md: aling }}
-      textStyle={"robotoBold"}
+      textStyle={"quotes"}
       width={{ base: "100%", md: "200px" }}
     >
       {content}

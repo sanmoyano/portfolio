@@ -26,19 +26,24 @@ const Section3 = () => {
       spacing={{ base: 12, md: 24 }}
       width={"100%"}
     >
-      <Stack ref={dimensionRef} justifyContent={"space-around"} paddingRight={{ lg: 12 }}>
+      <Stack
+        ref={dimensionRef}
+        justifyContent={"space-around"}
+        paddingRight={{ lg: 12 }}
+        width={{ base: "100%", lg: "70%" }}
+      >
         <Text
           fontWeight={700}
           lineHeight={1}
           textAlign={"justify"}
-          textStyle={"roboto"}
+          textStyle={"paragraphPhrases"}
           textTransform={"uppercase"}
         >
           I see every project as a chance to leave my footprint
         </Text>
         <Text
           fontFamily={"Roboto"}
-          fontSize={{ base: "2rem", md: "7rem" }}
+          fontSize={{ base: "calc(4rem / 1.618)", md: "calc(8rem / 1.618)" }}
           lineHeight={1}
           textAlign={"justify"}
           textTransform={"uppercase"}

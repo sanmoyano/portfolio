@@ -55,7 +55,7 @@ const Marquee = ({ text, color }) => {
             textOrientation: "mixed",
           }}
           textAlign={"center"}
-          textStyle={"neusaBoldUpper"}
+          textStyle={"marquee"}
           w={"100%"}
         >
           {text.repeat(20)}

@@ -46,41 +46,48 @@ export default extendTheme({
   },
   
   textStyles: {
-    neusa: {
+    logo: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
       fontSize: {base:"2rem", md:"4rem"},
       letterSpacing: 1,
       transform: "scaleY(.8)"
     },
-    roboto: {
-      fontSize: { base: "4rem",  lg:"8rem" },
+    paragraphPhrases: {
+      fontSize: { base: "5rem",  md:"8rem" },
       fontFamily: "Roboto"
     },
-    robotoBold: {
+    navLink :{
       fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: "1.6rem",
       textTransform: "uppercase",
-      letterSpacing: 2
+      letterSpacing:1
     },
-    robotoText : {
+    quotes: {
+      fontFamily: "Roboto",
+      fontWeight: 500,
+      fontSize: "1.6rem",
+      textTransform: "uppercase",
+      letterSpacing: 1
+    },
+    paragraph : {
       fontFamily:"Roboto",
       fontWeight:400,
       fontSize:"1.6rem",
       letterSpacing:1
     },
-    neusaBoldUpper: {
+    marquee: {
       fontFamily:"neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: {base:"4.5rem", md:"11rem", lg:"6rem"},
+      fontSize: {base:"3.5rem", md:"11rem", lg:"6rem"},
       letterSpacing: 1,
       transform: {base:"scaleY(.8)", lg:"scaleX(.8)"},
       textTransform:"uppercase",
       lineHeight:.8
      
     },
-    neusaBoldUpperTitle : {
+    sectionTitle : {
       fontFamily:"neusa-next-std-wide",
       fontWeight: 700,
       fontSize: {base:"3.5rem", md:"11rem", lg:"12rem"},

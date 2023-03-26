@@ -5,7 +5,7 @@ import { TextTitles, Tilting } from "../Decorators"
 const Logo = () => {
   return (
     <Link to={"/"}>
-      <TextTitles content={"#SM"} px={1} textStyle={"neusa"} />
+      <TextTitles content={"#SM"} px={1} textStyle={"logo"} />
     </Link>
   )
 }

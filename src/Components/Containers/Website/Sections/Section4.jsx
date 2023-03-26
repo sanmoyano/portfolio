@@ -14,7 +14,7 @@ const Section4 = () => {
     >
       <Link to="/projects">
         <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>
-          <TextTitles content={"projects"} px={2} textStyle={"neusaBoldUpperTitle"} />
+          <TextTitles content={"projects"} px={2} textStyle={"sectionTitle"} />
         </Tilting>
       </Link>
     </Box>
