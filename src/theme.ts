@@ -1,19 +1,17 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme, keyframes } from "@chakra-ui/react"
 import { mode } from "@chakra-ui/theme-tools"
-import { position, StyleFunctionProps } from '@chakra-ui/styled-system'
+import { StyleFunctionProps } from "@chakra-ui/styled-system"
 
 import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 import "@fontsource/roboto/900.css"
 
-// const breakpoints = {
-//   sm: '30em',//480px
-//   md: '48em',//786px
-//   lg: '62em',//992px
-//   xl: '80em',//1280
-//   '2xl': '96em',//1536
-// }
+const floatingText = keyframes`
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); } 
+  `
 
 export default extendTheme({
   config: {
@@ -31,10 +29,10 @@ export default extendTheme({
         boxSizing: "border-box",
         fontSize: "62.5%",
         bgColor: mode("white", "black")(props),
-        color: mode("black","white")(props),
+        color: mode("black", "white")(props),
         transitionProperty: "background-color",
         transitionDuration: ".5s",
-        scrollBehavior:"smooth",
+        scrollBehavior: "smooth",
       },
     }),
   },
@@ -42,70 +40,68 @@ export default extendTheme({
     black: "#0d0d0d",
     white: "#f5f5f5",
     green: "#CAF825",
-    red: "#EE3442"
+    red: "#EE3442",
   },
-  
+
   textStyles: {
-    logo: {
+    sectionTitle: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: {base:"2rem", md:"4rem"},
+      fontSize: { base: "3.5rem", md: "11rem", lg: "12rem" },
       letterSpacing: 1,
-      transform: "scaleY(.8)"
+      transform: "scaleY(.8)",
+      textTransform: "uppercase",
+      lineHeight: 0.8,
+    },
+    paragraph: {
+      fontFamily: "Roboto",
+      fontWeight: 400,
+      fontSize: "1.6rem",
+      letterSpacing: 1,
     },
     paragraphPhrases: {
-      fontSize: { base: "5rem",  md:"8rem" },
-      fontFamily: "Roboto"
+      fontSize: { base: "5rem", md: "8rem" },
+      fontFamily: "Roboto",
     },
-    navLink :{
+    navLink: {
       fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: "1.6rem",
       textTransform: "uppercase",
-      letterSpacing:1
+      letterSpacing: 1,
     },
     quotes: {
       fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: "1.6rem",
       textTransform: "uppercase",
-      letterSpacing: 1
-    },
-    paragraph : {
-      fontFamily:"Roboto",
-      fontWeight:400,
-      fontSize:"1.6rem",
-      letterSpacing:1
+      letterSpacing: 1,
     },
     marquee: {
-      fontFamily:"neusa-next-std-wide",
+      fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: {base:"3.5rem", md:"11rem", lg:"6rem"},
+      fontSize: { base: "3.5rem", md: "11rem", lg: "6rem" },
       letterSpacing: 1,
-      transform: {base:"scaleY(.8)", lg:"scaleX(.8)"},
-      textTransform:"uppercase",
-      lineHeight:.8
-     
+      transform: { base: "scaleY(.8)", lg: "scaleX(.8)" },
+      textTransform: "uppercase",
+      lineHeight: 0.8,
     },
-    sectionTitle : {
-      fontFamily:"neusa-next-std-wide",
+    logo: {
+      fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: {base:"3.5rem", md:"11rem", lg:"12rem"},
+      fontSize: { base: "2rem", md: "4rem" },
       letterSpacing: 1,
       transform: "scaleY(.8)",
-      textTransform:"uppercase",
-      lineHeight:.8
-    }
-    
+    },
   },
   components: {
     Divider: {
       variants: {
-        solid:(props: StyleFunctionProps) => ({
-          borderWidth:2,
+        solid: (props: StyleFunctionProps) => ({
+          borderWidth: 2,
           borderColor: mode("red", "green")(props),
-          opacity:1
-        })
+          opacity: 1,
+        }),
       },
     },
   },

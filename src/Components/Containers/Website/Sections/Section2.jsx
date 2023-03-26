@@ -1,6 +1,7 @@
-import { Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
+import { Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { StarIcon, TextQuot } from "../Decorators"
+import { toFloat } from "../Utils/toFloat"
 
 const Section2 = () => {
   const { colors } = useTheme()
@@ -23,6 +24,7 @@ const Section2 = () => {
     >
       <Stack
         alignItems={{ base: "left", md: "center" }}
+        animation={toFloat()}
         direction={{ base: "column", md: "row" }}
         display={{ base: "none", lg: "flex" }}
         justifyContent={"space-between"}

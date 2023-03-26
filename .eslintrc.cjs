@@ -8,15 +8,17 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "plugin:cypress/recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      tsx: true,
     },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "prettier", "import", "cypress"],
+  plugins: ["react", "prettier", "import", "cypress", "@typescript-eslint"],
   rules: {
     "no-console": "warn",
     "react/no-unknown-property": [0, { ignore: "react-three" }],

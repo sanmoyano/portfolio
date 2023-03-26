@@ -38,9 +38,11 @@
   "devDependencies": {
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "@vitejs/plugin-react": "^2.2.0",
     "cypress": "^12.8.1",
-    "eslint": "^8.27.0",
+    "eslint": "^8.36.0",
     "eslint-config-mdcs": "^5.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
