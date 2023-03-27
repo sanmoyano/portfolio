@@ -25,20 +25,6 @@ const Section7 = () => {
       >
         Skills
       </Text>
-
-      {/* <Stack
-        bgColor={"red"}
-        direction={"row"}
-        height={"100%"}
-        textStyle={"paragraph"}
-        width={"30%"}
-      >
-        <Text textAlign={"left"}>
-          {
-            "As a Front End Developer, my main technology is ReactJS. I focus on designing and coding UX/UI with the user's experience in mind to offer the best possible outcome. I am currently strengthening my skills by focusing on developing a MERN Full Stack profile with the professional objective of creating valuable solutions for the future."
-          }
-        </Text>
-      </Stack> */}
     </Stack>
   )
 }
