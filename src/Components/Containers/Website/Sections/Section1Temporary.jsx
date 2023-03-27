@@ -12,7 +12,6 @@ const Section1Temporary = () => {
       height={"100vh"}
       justifyContent={"center"}
       overflow={"hidden"}
-      paddingInline={{ base: 6, lg: 12 }}
       position={"relative"}
       width={"100%"}
     >

@@ -2,13 +2,7 @@ import { Stack, Text } from "@chakra-ui/react"
 
 const Section7 = () => {
   return (
-    <Stack
-      alignItems={"center"}
-      direction={{ base: "column", md: "row" }}
-      height={"100vh"}
-      // justifyContent={"space-between"}
-      padding={{ base: 6, lg: 12 }}
-    >
+    <Stack alignItems={"center"} direction={{ base: "column", md: "row" }} height={"100vh"}>
       <Text
         display={"inline-block"}
         sx={{

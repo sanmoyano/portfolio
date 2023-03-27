@@ -19,11 +19,9 @@ const Section3 = () => {
   return (
     <Stack
       alignItems={"center"}
-      animation={"g 1s forwards"}
       direction={{ base: "column", lg: "row" }}
       height={"100%"}
       justifyContent={"space-between"}
-      paddingInline={{ base: 6, lg: 12 }}
       spacing={{ base: 12, md: 24 }}
       width={"100%"}
     >

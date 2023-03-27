@@ -1,7 +1,7 @@
 import { Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { StarIcon, TextQuot } from "../Decorators"
-import { toFloat } from "../Utils/toFloat"
+import { floatAnimation } from "../Utils/floatAnimation"
 
 const Section2 = () => {
   const { colors } = useTheme()
@@ -17,30 +17,22 @@ const Section2 = () => {
 
   return (
     <Stack
-      borderBottomColor={fill}
-      borderBottomStyle={"solid"}
-      borderBottomWidth={"2px"}
-      width={"100%"}
+      alignItems={{ base: "left", md: "center" }}
+      animation={floatAnimation()}
+      direction={{ base: "column", md: "row" }}
+      display={{ base: "none", lg: "flex" }}
+      justifyContent={"space-between"}
+      marginBottom={8}
     >
-      <Stack
-        alignItems={{ base: "left", md: "center" }}
-        animation={toFloat()}
-        direction={{ base: "column", md: "row" }}
-        display={{ base: "none", lg: "flex" }}
-        justifyContent={"space-between"}
-        marginBottom={8}
-        paddingInline={{ base: 6, md: 12 }}
-      >
-        <TextQuot
-          align={"left"}
-          content={`Developing for ${getYearsSinceIstartedDeveloping()} years`}
-        />
-        <StarIcon fill={fill} />
-        {/**la cantidad de proyectos va ser el length del array de proyectos de la api */}
-        <TextQuot aling={"center"} content={"9 project published"} />
-        <StarIcon fill={fill} />
-        <TextQuot aling={"right"} content={"worked with XX business"} />
-      </Stack>
+      <TextQuot
+        align={"left"}
+        content={`Developing for ${getYearsSinceIstartedDeveloping()} years`}
+      />
+      <StarIcon fill={fill} />
+      {/**la cantidad de proyectos va ser el length del array de proyectos de la api */}
+      <TextQuot aling={"center"} content={"9 project published"} />
+      <StarIcon fill={fill} />
+      <TextQuot aling={"right"} content={"worked with XX business"} />
     </Stack>
   )
 }
