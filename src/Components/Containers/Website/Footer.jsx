@@ -7,7 +7,6 @@ const Footer = () => {
 
   return (
     <Stack
-      display={{ base: "none", md: "flex" }}
       justifyContent={"space-between"}
       paddingBlock={12}
       paddingInline={{ base: 6, md: 12 }}
@@ -15,22 +14,37 @@ const Footer = () => {
       width={"100%"}
     >
       <Logo />
-      <Stack direction={"row"} justifyContent={"space-between"} width={"100%"}>
+      <Stack
+        direction={"row"}
+        display={{ base: "none", lg: "flex" }}
+        justifyContent={"space-between"}
+        width={"100%"}
+      >
         <Grid gap={2} templateColumns={"repeat(2, 1fr)"}>
-          <Text fontSize={"1.4rem"} fontWeight={700} textStyle={"paragraph"}>
-            <Link href={"https://www.linkedin.com/in/santiago-moyano/"} target={"_blank"}>
-              Santiago Moyano
-            </Link>
-          </Text>
+          <Link
+            fontSize={"1.4rem"}
+            fontWeight={700}
+            href={"https://www.linkedin.com/in/santiago-moyano/"}
+            target={"_blank"}
+            textStyle={"paragraph"}
+          >
+            Santiago Moyano
+          </Link>
+
           <Text fontSize={"1.4rem"} textStyle={"paragraph"}>
             Front End Developer
           </Text>
           <Text fontSize={"1.4rem"} textStyle={"paragraph"}>
             Córdoba, Argentina
           </Text>
-          <Text fontSize={"1.4rem"} fontWeight={700} textStyle={"paragraph"}>
-            <Link href={"mailto:smoyano.di@gamil.com"}>smoyano.di@gmail.com</Link>
-          </Text>
+          <Link
+            fontSize={"1.4rem"}
+            fontWeight={700}
+            href={"mailto:smoyano.di@gamil.com"}
+            textStyle={"paragraph"}
+          >
+            smoyano.di@gmail.com
+          </Link>
         </Grid>
         <ContactIcons />
       </Stack>

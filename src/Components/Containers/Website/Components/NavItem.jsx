@@ -26,7 +26,11 @@ const NavItem = ({ item, route }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Stack alignItems={"center"} direction={"row"}>
+      <Stack
+        alignItems={"center"}
+        direction={"row"}
+        display={{ base: item === "contact" ? "none" : "flex", lg: "flex" }}
+      >
         <motion.div animate={isHovered ? "hover" : "initial"} variants={variants}>
           <StarIcon fill={fill} />
         </motion.div>

@@ -1,6 +1,6 @@
 import { keyframes } from "@chakra-ui/react"
 
-export const toFloat = () => {
+export const floatAnimation = () => {
   const floating = keyframes`
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }

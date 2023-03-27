@@ -1,11 +1,13 @@
-import { Stack, useColorModeValue } from "@chakra-ui/react"
+import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
-import { NavBar, ToggleMenu } from "./"
+import { NavBar, ToggleMenu, ContactIcons } from "./"
 
 const MobileNavBar = ({ topPosition }) => {
   const [isOpen, setIsOpen] = useCycle(false, true)
   const bgColor = useColorModeValue("white", "black")
+  const { colors } = useTheme()
+  const colorText = useColorModeValue(`${colors.red}`, `${colors.green}`)
 
   const variants = {
     open: { opacity: 1, x: "0" },
@@ -24,7 +26,6 @@ const MobileNavBar = ({ topPosition }) => {
           animate={isOpen ? "open" : "closed"}
           as={motion.div}
           bgColor={bgColor}
-          gap={10}
           height={"100vh"}
           margin={"0px !important"}
           p={6}
@@ -34,8 +35,32 @@ const MobileNavBar = ({ topPosition }) => {
           variants={variants}
           width={"100%"}
         >
-          <Stack alignItems={"left"} gap={8} height={"100%"} width={"100%"}>
+          <Stack alignItems={"left"} gap={8} width={"100%"}>
             <NavBar />
+          </Stack>
+          <Stack alignItems={"center"} height={"100%"} justifyContent={"center"} spacing={6}>
+            <Text fontSize={"3.5rem"} textAlign={"center"} textStyle={"sectionTitle"}>
+              get in touch
+            </Text>
+            <Link _hover={{ textDecorationColor: "none" }} href="mailto:smoyano.di@gmail.com">
+              <Text
+                _hover={{
+                  WebkitTextStroke: `1px ${colorText}`,
+                  color: "transparent",
+                }}
+                color={`${colorText}`}
+                fontSize={"2rem"}
+                textStyle={"logo"}
+                textTransform={"uppercase"}
+                transitionDelay={"0s, 0s"}
+                transitionDuration={".5s, .5s"}
+                transitionProperty={"color, opacity"}
+                transitionTimingFunction={"ease, ease"}
+              >
+                smoyano.di@gmail.com
+              </Text>
+            </Link>
+            <ContactIcons />
           </Stack>
         </Stack>
       </AnimatePresence>

@@ -8,7 +8,13 @@ const Section8 = () => {
   const colorText = useColorModeValue(`${colors.red}`, `${colors.green}`)
 
   return (
-    <Stack height={"100%"} paddingInline={{ base: 6, lg: 12 }} spacing={12} width={"100%"}>
+    <Stack
+      display={{ base: "none", lg: "flex" }}
+      height={"100%"}
+      paddingInline={{ base: 6, lg: 12 }}
+      spacing={12}
+      width={"100%"}
+    >
       <Text textAlign={{ base: "center", md: "left" }} textStyle={"sectionTitle"}>
         get in touch
       </Text>

@@ -29,7 +29,8 @@ const Section3 = () => {
     >
       <Stack
         ref={dimensionRef}
-        justifyContent={"space-around"}
+        height={"100%"}
+        justifyContent={"space-between"}
         paddingRight={{ lg: 12 }}
         width={{ base: "100%", lg: "70%" }}
       >
@@ -44,7 +45,7 @@ const Section3 = () => {
         </Text>
         <Text
           fontFamily={"Roboto"}
-          fontSize={{ base: "calc(4rem / 1.618)", md: "calc(8rem / 1.618)" }}
+          fontSize={{ base: "calc(4rem / 1.618)", md: "calc(10rem / 1.618)" }}
           lineHeight={1}
           textAlign={"justify"}
           textTransform={"uppercase"}

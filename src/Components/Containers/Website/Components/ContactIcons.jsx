@@ -8,7 +8,7 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons"
 
-const ContactIcons = ({ size }) => {
+const ContactIcons = ({}) => {
   const icons = [
     {
       icon: faLinkedinIn,

@@ -1,5 +1,4 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
-import { transform } from "framer-motion"
 
 const TextTitles = ({ content, textStyle, transform, px }) => {
   const color = useColorModeValue("black", "white")

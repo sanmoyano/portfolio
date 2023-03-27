@@ -1,17 +1,18 @@
-import { Stack, useColorModeValue } from "@chakra-ui/react"
+import { Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { Marquee } from "../Decorators"
 
 const MarqueeContainer = ({ height }) => {
-  const color = useColorModeValue("red", "green")
+  const { colors } = useTheme()
+  const color = useColorModeValue(`${colors.red}`, `${colors.green}`)
   const textGenerator = () => {
     let words = []
 
     for (let i = 0; i < 4; i++) {
       const textContent = i % 2 === 0 ? "developer " : "designer "
-      const colorText = i % 2 === 0 ? "" : `${color}`
+      const outLineText = i % 2 === 0 ? "" : `1.5px ${color}`
 
-      words.push(<Marquee key={i} color={colorText} height={height} text={textContent} />)
+      words.push(<Marquee key={i} height={height} outlined={outLineText} text={textContent} />)
     }
 
     return words

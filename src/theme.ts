@@ -7,12 +7,6 @@ import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 import "@fontsource/roboto/900.css"
 
-const floatingText = keyframes`
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); } 
-  `
-
 export default extendTheme({
   config: {
     initialColorMode: "dark",
@@ -47,9 +41,18 @@ export default extendTheme({
     sectionTitle: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: { base: "3.5rem", md: "11rem", lg: "12rem" },
+      fontSize: { base: "5rem", md: "11rem", lg: "12rem" },
       letterSpacing: 1,
       transform: "scaleY(.8)",
+      textTransform: "uppercase",
+      lineHeight: 0.8,
+    },
+    sectionTitleVertical: {
+      fontFamily: "neusa-next-std-wide",
+      fontWeight: 700,
+      fontSize: { base: "5rem", md: "11rem", lg: "12rem" },
+      letterSpacing: 1,
+      transform: "scaleX(.8)",
       textTransform: "uppercase",
       lineHeight: 0.8,
     },
@@ -60,15 +63,17 @@ export default extendTheme({
       letterSpacing: 1,
     },
     paragraphPhrases: {
-      fontSize: { base: "5rem", md: "8rem" },
+      fontSize: { base: "5rem", md: "10rem" },
       fontFamily: "Roboto",
     },
     navLink: {
-      fontFamily: "Roboto",
-      fontWeight: 500,
-      fontSize: "1.6rem",
-      textTransform: "uppercase",
+      fontFamily: "neusa-next-std-wide",
+      fontWeight: 700,
+      fontSize: "2rem",
       letterSpacing: 1,
+      transform: "scaleY(.8)",
+      textTransform: "uppercase",
+      lineHeight: 0.8,
     },
     quotes: {
       fontFamily: "Roboto",
@@ -80,7 +85,7 @@ export default extendTheme({
     marquee: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: { base: "3.5rem", md: "11rem", lg: "6rem" },
+      fontSize: { base: "5rem", md: "10rem" },
       letterSpacing: 1,
       transform: { base: "scaleY(.8)", lg: "scaleX(.8)" },
       textTransform: "uppercase",
@@ -89,7 +94,7 @@ export default extendTheme({
     logo: {
       fontFamily: "neusa-next-std-wide",
       fontWeight: 700,
-      fontSize: { base: "2rem", md: "4rem" },
+      fontSize: "4rem",
       letterSpacing: 1,
       transform: "scaleY(.8)",
     },

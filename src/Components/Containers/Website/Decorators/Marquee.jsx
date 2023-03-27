@@ -1,8 +1,9 @@
-import { Box, Text, useMediaQuery } from "@chakra-ui/react"
+import { Box, Text, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
-const Marquee = ({ text, color }) => {
+const Marquee = ({ text, outlined }) => {
   const isLargerThanMd = useMediaQuery("(min-width: 992px)")
+  const color = useColorModeValue("red", "green")
 
   const marqueeVariants = {
     horizontal: {
@@ -10,9 +11,9 @@ const Marquee = ({ text, color }) => {
       transition: {
         x: {
           repeat: Infinity,
-          repeatType: "mirror",
+          repeatType: "reverse",
           duration: 8,
-          ease: "easeInOut",
+          ease: "linear",
         },
       },
     },
@@ -21,9 +22,9 @@ const Marquee = ({ text, color }) => {
       transition: {
         y: {
           repeat: Infinity,
-          repeatType: "mirror",
+          repeatType: "reverse",
           duration: 8,
-          ease: "easeInOut",
+          ease: "linear",
         },
       },
     },
@@ -48,11 +49,12 @@ const Marquee = ({ text, color }) => {
         w={"100%"}
       >
         <Text
-          color={color}
+          color={outlined ? "transparent" : color}
           display={"inline-block"}
           sx={{
             writingMode: { base: "horizontal-tb", lg: "vertical-lr" },
             textOrientation: "mixed",
+            WebkitTextStroke: outlined,
           }}
           textAlign={"center"}
           textStyle={"marquee"}
