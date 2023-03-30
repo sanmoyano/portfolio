@@ -1,24 +1,20 @@
-import { Box, useMediaQuery } from "@chakra-ui/react"
-import { Link } from "react-router-dom"
+import { Stack } from "@chakra-ui/react"
 
-import { TextTitles, Tilting } from "../Decorators"
+import { AboutBlock, SkillsBlock } from "../Components/index"
 
-const Section4 = () => {
-  const isDesktop = useMediaQuery("(min-width: 992px)")
-
+const Section7 = () => {
   return (
-    <Box
-      height={{ base: "150px", md: "350px" }}
-      overflow={"hidden"}
-      sx={{ display: "grid", placeContent: "center" }}
+    <Stack
+      alignItems={"center"}
+      direction={{ base: "column", md: "row" }}
+      height={"100vh"}
+      spacing={2}
+      width={"100%"}
     >
-      <Link to="/projects">
-        <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>
-          <TextTitles content={"projects"} px={2} textStyle={"sectionTitle"} />
-        </Tilting>
-      </Link>
-    </Box>
+      <AboutBlock />
+      <SkillsBlock />
+    </Stack>
   )
 }
 
-export default Section4
+export default Section7

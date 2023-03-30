@@ -23,4 +23,67 @@ Conceptos básicos:
 	- Revisa regularmente el código y busca formas de mejorarlo. La refactorización es el proceso de mejorar el código existente sin cambiar su comportamiento, y puede ayudarte a mejorar la legibilidad y mantenibilidad del código.
 
 # NOTAS CLEAN CODE
-- Concepto del código limpio, nada de duplicados, un objetivo, expresividad y pequeñas abstracciones. 
+- Concepto del código limpio, nada de duplicados, un objetivo, expresividad y pequeñas abstracciones.
+## Nombres 
+- Nombres de variables, funciones y clases tienen que ser significativos y pronunciables. 
+- Si hay variables del mismo tipo, utilizar el mismo vocabulario
+- Nombres buscables por ejemplo:
+  * Mal:
+  ```js
+  // Para qué rayos sirve 86400000? 
+  setTimeout(hastaLaInfinidadYMasAlla, 86400000);
+  ```
+  * Bien: 
+  ```js
+  // Decláralos como variables globales de 'const'.
+  const MILISEGUNDOS_EN_UN_DIA = 8640000;
+  setTimeout(hastaLaInfinidadYMasAlla, MILISEGUNDOS_EN_UN_DIA);
+  ```
+- Utilizar variables explicativas
+- Evitar mapeo mental, hacer mapeos explícitos.
+  ```js
+  const ubicaciones = ["cordoba", "bs as", "santa fe",...]
+  ubicaciones.map((ubicacion) => ubicacion)
+  ```
+- No incluir contexto innecesario, si el nombre de tu objeto te dice algo, no lo repitas de nuevo en el nombre de la variable.
+ * Mal:
+    ```js
+    const Coche = {
+      cocheMarca: 'Honda',
+      cocheModelo: 'Accord',
+      cocheColor: 'Blue'
+    };
+
+    function pintarCoche(coche) {
+      coche.cocheColor = 'Red';
+    }require 'redcarpet'
+    markdown = Redcarpet.new("Hello World!")
+    puts markdown.to_html
+    ```
+  * Bien:
+    ```js
+    const Coche = {
+    marca: 'Honda',
+    modelo: 'Accord',
+    color: 'Blue'
+  };
+
+  function pintarCoche(coche) {
+    coche.color = 'Red';
+  }
+    ```
+- Utiliza argumentos predefinidos en vez de utilizar condiciones
+  * Los argumentos predefinidos muchas veces son más organizados que utilizar los condicionales. Se consciente que si tu los usas, tu función solo tendra valores para los argumentos de ```undefined```. Los demas valores de ```falso``` como ```'', "", false, null, 0 y NaN``` no se reemplazan con un valor predefinido.
+  * Mal:
+  ```js
+  function crearMicroCerveceria(nombre) {
+    const nombreDelMicroCerveceria = nombre || 'Hipster Brew Co.';
+  // ...
+  }
+  ```
+  * Bien:
+  ```js
+    function crearMicroCerveceria(nombreDelMicroCerveceria = 'Hipster Brew Co.') {
+    // ...
+  }
+  ```

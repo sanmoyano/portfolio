@@ -1,7 +1,11 @@
-import React from "react"
+import { Section2 } from "./Website/Projects"
 
 const ProjectsLayout = () => {
-  return <div>ProjectsLayout</div>
+  return (
+    <>
+      <Section2 />
+    </>
+  )
 }
 
 export default ProjectsLayout

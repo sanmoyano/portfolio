@@ -1,65 +1,24 @@
-import { useRef, useLayoutEffect, useState } from "react"
-import { Divider, Stack, Text } from "@chakra-ui/react"
+import { Box, useMediaQuery } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 
-import { MarqueeContainer } from "../Components"
+import { TextTitles, Tilting } from "../Decorators"
 
-const Section3 = () => {
-  const dimensionRef = useRef()
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
-
-  useLayoutEffect(() => {
-    if (dimensionRef.current) {
-      setDimensions({
-        width: dimensionRef.current.offsetWidth,
-        height: dimensionRef.current.offsetHeight,
-      })
-    }
-  }, [])
+const Section4 = () => {
+  const isDesktop = useMediaQuery("(min-width: 992px)")
 
   return (
-    <Stack
-      alignItems={"center"}
-      direction={{ base: "column", lg: "row" }}
-      height={"100%"}
-      justifyContent={"space-between"}
-      spacing={{ base: 12, md: 24 }}
-      width={"100%"}
+    <Box
+      height={{ base: "150px", md: "350px" }}
+      overflow={"hidden"}
+      sx={{ display: "grid", placeContent: "center" }}
     >
-      <Stack
-        ref={dimensionRef}
-        height={"100%"}
-        justifyContent={"space-between"}
-        paddingRight={{ lg: 12 }}
-        width={{ base: "100%", lg: "70%" }}
-      >
-        <Text
-          fontWeight={700}
-          lineHeight={1}
-          textAlign={"justify"}
-          textStyle={"paragraphPhrases"}
-          textTransform={"uppercase"}
-        >
-          I see every project as a chance to leave my footprint
-        </Text>
-        <Text
-          fontFamily={"Roboto"}
-          fontSize={{ base: "calc(4rem / 1.618)", md: "calc(10rem / 1.618)" }}
-          lineHeight={1}
-          textAlign={"justify"}
-          textTransform={"uppercase"}
-        >
-          and explore unique UX/UI solutions for the users.
-        </Text>
-      </Stack>
-      <Stack display={{ base: "none", lg: "block" }} height={`${dimensions.height}px`}>
-        <Divider orientation={"vertical"} variant={"solid"} />
-      </Stack>
-      <Stack display={{ base: "block", lg: "none" }} width={`100%`}>
-        <Divider orientation={"horizontal"} variant={"solid"} />
-      </Stack>
-      <MarqueeContainer height={dimensions.height} />
-    </Stack>
+      <Link to="/projects">
+        <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>
+          <TextTitles content={"projects"} px={2} textStyle={"sectionTitle"} />
+        </Tilting>
+      </Link>
+    </Box>
   )
 }
 
-export default Section3
+export default Section4

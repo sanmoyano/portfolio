@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { TextTitles, Tilting } from "../Decorators"
+import { TextTitles } from "../Decorators"
 
 const Logo = () => {
   return (

@@ -12,18 +12,14 @@ const MarqueeContainer = ({ height }) => {
       const textContent = i % 2 === 0 ? "developer " : "designer "
       const outLineText = i % 2 === 0 ? "" : `1.5px ${color}`
 
-      words.push(<Marquee key={i} height={height} outlined={outLineText} text={textContent} />)
+      words.push(<Marquee key={i} outlined={outLineText} text={textContent} />)
     }
 
     return words
   }
 
   return (
-    <Stack
-      height={{ base: "100%", lg: `${height}px` }}
-      maxW={"100%"}
-      width={{ base: `100%`, lg: "auto" }}
-    >
+    <Stack height={{ base: "100%", lg: height }} maxW={"100%"} width={{ base: `100%`, lg: "auto" }}>
       <Stack
         direction={{ base: "column", lg: "row" }}
         justifyContent={"center"}
