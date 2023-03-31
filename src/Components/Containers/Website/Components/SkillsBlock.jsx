@@ -1,8 +1,10 @@
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Stack, Text } from "@chakra-ui/react"
 
 import useDimensions from "../Hooks/useDimensions"
 import { VerticalText } from "../Decorators"
+
+import { TextSphere } from "./"
 
 const SkillsBlock = () => {
   const skills = [
@@ -13,6 +15,8 @@ const SkillsBlock = () => {
         "JavaScript",
         "Html",
         "Css | Scss",
+        "Framer motion",
+        "ESLint",
         "Firebase",
         "Cypress",
         "Figma",
@@ -45,7 +49,7 @@ const SkillsBlock = () => {
   const dimension = useDimensions(HEIGHT_TEXT_REF)
 
   return (
-    <Stack alignItems={"center"} direction={"row"} width={"100%"}>
+    <Stack alignItems={"center"} direction={"row"} id={"canvas"} width={"100%"}>
       <VerticalText content={"skills"} refItem={HEIGHT_TEXT_REF} />
       <Stack
         direction={"row"}
@@ -59,11 +63,7 @@ const SkillsBlock = () => {
             <Text fontSize={"4rem"} fontWeight={"bold"} textTransform={"uppercase"}>
               {skill.typeSkill}
             </Text>
-            {skill.listSkills.map((skill) => (
-              <Text key={skill} textStyle={"paragraph"}>
-                {skill}
-              </Text>
-            ))}
+            <TextSphere listText={skill.listSkills} />
           </Stack>
         ))}
       </Stack>
