@@ -1,10 +1,10 @@
 export const wordSphere = (canvas, texts, counts, options) => {
   const π = Math.PI // happy math!
   const {
-    width = 500,
-    height = 500,
+    width = 200,
+    height = 200,
     radius = 150,
-    // padding = 50,
+    padding = 50,
     fontSize = 12,
     tilt = 0,
     initialVelocityX = 0,

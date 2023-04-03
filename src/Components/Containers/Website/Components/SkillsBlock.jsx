@@ -59,7 +59,7 @@ const SkillsBlock = () => {
         width={"100%"}
       >
         {skills.map((skill) => (
-          <Stack key={skill.typeSkill} bgColor={"violet"} height={"100%"}>
+          <Stack key={skill.typeSkill} bgColor={"violet"} height={"100%"} width={"100%"}>
             <Text fontSize={"4rem"} fontWeight={"bold"} textTransform={"uppercase"}>
               {skill.typeSkill}
             </Text>

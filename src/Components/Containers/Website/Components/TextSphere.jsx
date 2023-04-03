@@ -27,7 +27,7 @@ const TextSphere = ({ listText }) => {
     }
   }, [id.id])
 
-  return <canvas ref={CANVAS} id={"canvas"} />
+  return <canvas ref={CANVAS} id={"canvas"} style={{ backgroundColor: "red" }} />
 }
 
 export default TextSphere
