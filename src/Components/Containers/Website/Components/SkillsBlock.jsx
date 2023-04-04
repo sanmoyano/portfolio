@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import { Stack, Text } from "@chakra-ui/react"
 
 import useDimensions from "../Hooks/useDimensions"
@@ -14,7 +14,8 @@ const SkillsBlock = () => {
         "ReactJs",
         "JavaScript",
         "Html",
-        "Css | Scss",
+        "Css",
+        "Scss",
         "Framer motion",
         "ESLint",
         "Firebase",
@@ -63,7 +64,7 @@ const SkillsBlock = () => {
             <Text fontSize={"4rem"} fontWeight={"bold"} textTransform={"uppercase"}>
               {skill.typeSkill}
             </Text>
-            <TextSphere listText={skill.listSkills} />
+            <TextSphere tags={skill.listSkills} />
           </Stack>
         ))}
       </Stack>

@@ -1,33 +1,28 @@
-import { useEffect, useState, useRef } from "react"
+import { Stack } from "@chakra-ui/react"
+import TagCloud from "TagCloud"
 
-import { wordSphere } from "../Utils/wordSphere"
-
-const TextSphere = ({ listText }) => {
-  const CANVAS = useRef()
-  const [id, setId] = useState({ id: "" })
-  const counts = [1, 2, 4, 5, 4, 2, 1]
-
+const TextSphere = ({ tags }) => {
   const options = {
-    tilt: Math.PI / 9,
-    initialVelocityX: 0.09,
-    initialVelocityY: 0.09,
-    initialRotationX: Math.PI * 0.14,
-    initialRotationZ: 0,
+    // radius in px
+    radius: 300,
+
+    // animation speed
+    // slow, normal, fast
+    maxSpeed: "fast",
+    initSpeed: "fast",
+
+    // 0 = top
+    // 90 = left
+    // 135 = right-bottom
+    direction: 135,
+
+    // interact with cursor move on mouse out
+    keep: true,
   }
 
-  useEffect(() => {
-    if (CANVAS.current) {
-      setId({ id: CANVAS.current })
-    }
-  }, [])
+  // TagCloud(".content", tags, options)
 
-  useEffect(() => {
-    if (id.id) {
-      wordSphere(id.id, listText, counts, options)
-    }
-  }, [id.id])
-
-  return <canvas ref={CANVAS} id={"canvas"} style={{ backgroundColor: "red" }} />
+  return <Stack className="content" />
 }
 
 export default TextSphere
