@@ -20,6 +20,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@frank-mayer/react-tag-cloud": "^1.2.1",
     "@react-three/drei": "^9.51.20",
     "@react-three/fiber": "^8.10.0",
     "express": "^4.18.2",
