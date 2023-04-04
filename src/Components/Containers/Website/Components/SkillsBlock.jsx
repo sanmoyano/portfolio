@@ -1,16 +1,16 @@
 import { useRef } from "react"
-import { Stack, Text } from "@chakra-ui/react"
+import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
 
 import useDimensions from "../Hooks/useDimensions"
 import { VerticalText } from "../Decorators"
 
-import { TextSphere } from "./"
+import { TagCloudText } from "./"
 
 const SkillsBlock = () => {
   const skills = [
     {
-      typeSkill: "main skills",
-      listSkills: [
+      type: "main skills",
+      list: [
         "ReactJs",
         "JavaScript",
         "Html",
@@ -26,8 +26,8 @@ const SkillsBlock = () => {
       ],
     },
     {
-      typeSkill: "upskilling",
-      listSkills: [
+      type: "upskilling",
+      list: [
         "TypeScript",
         "React Native",
         "NodeJs",
@@ -41,13 +41,14 @@ const SkillsBlock = () => {
       ],
     },
     {
-      typeSkill: "others skills",
-      listSkills: ["Git", "GitHub", "Azure DevOps", "Chakra UI", "Material UI", "Style-components"],
+      type: "others skills",
+      list: ["Git", "GitHub", "Azure DevOps", "Chakra UI", "Material UI", "Style-components"],
     },
   ]
 
   const HEIGHT_TEXT_REF = useRef()
   const dimension = useDimensions(HEIGHT_TEXT_REF)
+  const color = useColorModeValue("red", "green")
 
   return (
     <Stack alignItems={"center"} direction={"row"} id={"canvas"} width={"100%"}>
@@ -60,11 +61,25 @@ const SkillsBlock = () => {
         width={"100%"}
       >
         {skills.map((skill) => (
-          <Stack key={skill.typeSkill} bgColor={"violet"} height={"100%"} width={"100%"}>
-            <Text fontSize={"4rem"} fontWeight={"bold"} textTransform={"uppercase"}>
-              {skill.typeSkill}
+          <Stack
+            key={skill.typeSkill}
+            alignItems={"center"}
+            height={"100%"}
+            justifyContent={"space-between"}
+            width={"100%"}
+          >
+            <Text
+              color={color}
+              fontFamily={"Roboto"}
+              fontSize={"3rem"}
+              fontWeight={700}
+              lineHeight={1}
+              textAlign={"justify"}
+              textTransform={"uppercase"}
+            >
+              {skill.type}
             </Text>
-            <TextSphere tags={skill.listSkills} />
+            <TagCloudText tags={skill.list} />
           </Stack>
         ))}
       </Stack>
