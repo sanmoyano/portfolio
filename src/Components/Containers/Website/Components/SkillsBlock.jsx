@@ -1,12 +1,12 @@
 import { useRef } from "react"
-import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Grid, GridItem, Stack, Text, useColorModeValue } from "@chakra-ui/react"
 
 import useDimensions from "../Hooks/useDimensions"
 import { VerticalText } from "../Decorators"
 
 import { TagCloudText } from "./"
 
-const SkillsBlock = () => {
+const SkillsBlock = ({ isHover }) => {
   const skills = [
     {
       type: "main skills",
@@ -51,38 +51,28 @@ const SkillsBlock = () => {
   const color = useColorModeValue("red", "green")
 
   return (
-    <Stack alignItems={"center"} direction={"row"} id={"canvas"} width={"100%"}>
+    <Stack alignItems={"center"} direction={"row"} width={"100%"}>
       <VerticalText content={"skills"} refItem={HEIGHT_TEXT_REF} />
-      <Stack
-        direction={"row"}
-        height={dimension.height}
-        justifyContent={"space-around"}
-        spacing={6}
-        width={"100%"}
-      >
+      <Grid height={dimension.height} templateColumns={"repeat(3,1fr)"} width={"100%"}>
         {skills.map((skill) => (
-          <Stack
-            key={skill.typeSkill}
-            alignItems={"center"}
-            height={"100%"}
-            justifyContent={"space-between"}
-            width={"100%"}
-          >
-            <Text
-              color={color}
-              fontFamily={"Roboto"}
-              fontSize={"3rem"}
-              fontWeight={700}
-              lineHeight={1}
-              textAlign={"justify"}
-              textTransform={"uppercase"}
-            >
-              {skill.type}
-            </Text>
-            <TagCloudText tags={skill.list} />
-          </Stack>
+          <GridItem key={skill.type} width={"100%"}>
+            <Stack alignItems={"center"} height={"100%"} justifyContent={"space-between"}>
+              <Text
+                color={color}
+                fontFamily={"Roboto"}
+                fontSize={"3rem"}
+                fontWeight={700}
+                lineHeight={1}
+                textAlign={"justify"}
+                textTransform={"uppercase"}
+              >
+                {skill.type}
+              </Text>
+              <TagCloudText tags={skill.list} />
+            </Stack>
+          </GridItem>
         ))}
-      </Stack>
+      </Grid>
     </Stack>
   )
 }

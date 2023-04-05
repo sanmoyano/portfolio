@@ -11,7 +11,6 @@ const TextSphere = ({ tags }) => {
           initSpeed: "normal",
           direction: Math.floor(tags.length * 50),
         })}
-        // onClick={(tag, ev) => alert(tag)}
         onClickOptions={{ passive: true }}
       >
         {tags}
