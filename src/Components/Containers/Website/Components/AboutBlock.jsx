@@ -1,9 +1,23 @@
+import { useRef } from "react"
+import { Stack, Text } from "@chakra-ui/react"
+
 import { VerticalText } from "../Decorators"
-const AboutBlock = () => {
+import useDimensions from "../Hooks/useDimensions"
+
+const AboutBlock = ({ hovering }) => {
+  const { isHover, setHover } = hovering
+
+  const HEIGHT_TEXT_REF = useRef()
+  const dimension = useDimensions(HEIGHT_TEXT_REF)
+
   return (
-    <VerticalText content={"about"} />
+    <Stack alignItems={"center"} direction={"row"} width={"100%"}>
+      <VerticalText content={"about"} refItem={HEIGHT_TEXT_REF} />
+      <Stack bgColor={"violet"} height={dimension.height} width={"100%"}>
+        <Text>content</Text>
+      </Stack>
+    </Stack>
     /* <Stack
-        dd
         alignItems={{ base: "left", md: "center" }}
         direction={{ base: "column", md: "row" }}
         display={{ base: "none", lg: "flex" }}
