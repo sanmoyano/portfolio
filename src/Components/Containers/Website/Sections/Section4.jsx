@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 
-import { AboutBlock, SkillsBlock } from "../Components/index"
-import useDimensions from "../Hooks/useDimensions"
+import { AboutBlock, SkillsBlock } from "../Components"
 
 const Section7 = () => {
   const [isHover, setHover] = useState(false)

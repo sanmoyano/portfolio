@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { Stack, Text } from "@chakra-ui/react"
+import { Button, Grid, GridItem, Stack, Text } from "@chakra-ui/react"
 
 import { VerticalText } from "../Decorators"
 import useDimensions from "../Hooks/useDimensions"
@@ -13,9 +13,18 @@ const AboutBlock = ({ hovering }) => {
   return (
     <Stack alignItems={"center"} direction={"row"} width={"100%"}>
       <VerticalText content={"about"} refItem={HEIGHT_TEXT_REF} />
-      <Stack bgColor={"violet"} height={dimension.height} width={"100%"}>
-        <Text>content</Text>
-      </Stack>
+
+      <Grid height={dimension.height} templateColumns={"repeat(3,1fr)"} width={"100%"}>
+        <GridItem width={"100%"}>
+          <Text textAlign={"center"}>content1</Text>
+        </GridItem>
+        <GridItem>
+          <Button>CV</Button>
+        </GridItem>
+        <GridItem width={"100%"}>
+          <Text textAlign={"center"}>content1</Text>
+        </GridItem>
+      </Grid>
     </Stack>
     /* <Stack
         alignItems={{ base: "left", md: "center" }}
