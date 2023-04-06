@@ -6,7 +6,7 @@ import { VerticalText } from "../Decorators"
 
 import { TagCloudText } from "./"
 
-const SkillsBlock = ({ isHover }) => {
+const SkillsBlock = ({ isHovered }) => {
   const skills = [
     {
       type: "main skills",
@@ -53,7 +53,12 @@ const SkillsBlock = ({ isHover }) => {
   return (
     <Stack alignItems={"center"} direction={"row"} width={"100%"}>
       <VerticalText content={"skills"} refItem={HEIGHT_TEXT_REF} />
-      <Grid height={dimension.height} templateColumns={"repeat(3,1fr)"} width={"100%"}>
+      <Grid
+        display={!isHovered ? "grid" : "none"}
+        height={dimension.height}
+        templateColumns={"repeat(3,1fr)"}
+        width={"100%"}
+      >
         {skills.map((skill) => (
           <GridItem key={skill.type} width={"100%"}>
             <Stack alignItems={"center"} height={"100%"} justifyContent={"space-between"}>

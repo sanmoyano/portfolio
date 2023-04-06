@@ -15,7 +15,7 @@ const Section7 = () => {
       width={"100%"}
     >
       <AboutBlock hovering={{ isHovered, setHovered }} />
-      {/* <SkillsBlock isHover={isHovered} /> */}
+      <SkillsBlock isHovered={isHovered} />
     </Stack>
   )
 }

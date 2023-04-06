@@ -16,7 +16,12 @@ const AboutBlock = ({ hovering }) => {
   return (
     <Stack alignItems={"center"} direction={"row"} width={"100%"}>
       <VerticalText content={"about"} refItem={HEIGHT_TEXT_REF} setHovered={setHovered} />
-      <Stack height={dimension.height} justifyContent={"space-between"} paddingLeft={8}>
+      <Stack
+        display={isHovered ? "flex" : "none"}
+        height={dimension.height}
+        justifyContent={"space-between"}
+        paddingLeft={8}
+      >
         <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
           <GridItemText
             aling={"left"}
