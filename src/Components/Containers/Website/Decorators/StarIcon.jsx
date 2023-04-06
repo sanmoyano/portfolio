@@ -1,8 +1,26 @@
 import { Box } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 
-const StarIcon = ({ fill, display }) => {
+const StarIcon = ({ fill, display, isRotate }) => {
+  const variants = {
+    hover: {
+      rotate: 360,
+    },
+    initial: {
+      rotate: 0,
+    },
+  }
+
   return (
-    <Box boxSize={"20px"} display={display} sx={{ display: "flex", alignItems: "center" }}>
+    <Box
+      animate={isRotate ? "hover" : "inital"}
+      as={motion.div}
+      boxSize={"20px"}
+      display={display}
+      sx={{ display: "flex", alignItems: "center" }}
+      variants={variants}
+      whileHover={"hover"}
+    >
       <svg fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_41_56)">
           <path

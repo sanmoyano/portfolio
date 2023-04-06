@@ -31,9 +31,7 @@ const NavItem = ({ item, route }) => {
         direction={"row"}
         display={{ base: item === "contact" ? "none" : "flex", lg: "flex" }}
       >
-        <motion.div animate={isHovered ? "hover" : "initial"} variants={variants}>
-          <StarIcon fill={fill} />
-        </motion.div>
+        <StarIcon fill={fill} isRotate={isHovered} />
         <Text textStyle={"navLink"}>{item}</Text>
       </Stack>
     </Link>
