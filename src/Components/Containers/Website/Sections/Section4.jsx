@@ -4,7 +4,7 @@ import { Stack } from "@chakra-ui/react"
 import { AboutBlock, SkillsBlock } from "../Components"
 
 const Section7 = () => {
-  const [isHover, setHover] = useState(false)
+  const [isHovered, setHovered] = useState(false)
 
   return (
     <Stack
@@ -14,8 +14,8 @@ const Section7 = () => {
       spacing={2}
       width={"100%"}
     >
-      <AboutBlock hovering={{ isHover, setHover }} />
-      {/* <SkillsBlock isHover={isHover} /> */}
+      <AboutBlock hovering={{ isHovered, setHovered }} />
+      {/* <SkillsBlock isHover={isHovered} /> */}
     </Stack>
   )
 }

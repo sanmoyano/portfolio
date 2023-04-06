@@ -6,7 +6,7 @@ import useDimensions from "../Hooks/useDimensions"
 import { floatAnimation } from "../Utils/floatAnimation"
 
 const AboutBlock = ({ hovering }) => {
-  const { isHover, setHover } = hovering
+  const { isHovered, setHovered } = hovering
 
   const HEIGHT_TEXT_REF = useRef()
   const dimension = useDimensions(HEIGHT_TEXT_REF)
@@ -15,7 +15,7 @@ const AboutBlock = ({ hovering }) => {
 
   return (
     <Stack alignItems={"center"} direction={"row"} width={"100%"}>
-      <VerticalText content={"about"} refItem={HEIGHT_TEXT_REF} />
+      <VerticalText content={"about"} refItem={HEIGHT_TEXT_REF} setHovered={setHovered} />
       <Stack height={dimension.height} justifyContent={"space-between"} paddingLeft={8}>
         <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
           <GridItemText

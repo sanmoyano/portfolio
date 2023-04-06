@@ -2,7 +2,7 @@ import { Text, useColorModeValue } from "@chakra-ui/react"
 
 import Tilting from "./Tilting"
 
-const VerticalText = ({ content, refItem }) => {
+const VerticalText = ({ content, refItem, setHovered }) => {
   const color = useColorModeValue("black", "white")
 
   return (
@@ -21,6 +21,8 @@ const VerticalText = ({ content, refItem }) => {
         transitionDuration={".5s, .5s"}
         transitionProperty={"color, opacity"}
         transitionTimingFunction={"ease, ease"}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
         {content}
       </Text>
