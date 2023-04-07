@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 const GridItemText = ({ content, aling }) => {
   return (
     <GridItem
-      animate={{ opacity: 1, transition: { duration: 2 } }}
+      animate={{ opacity: 1, transition: { duration: 2, delay: 0.2 } }}
       as={motion.div}
       height={"100%"}
       initial={{ opacity: 0 }}

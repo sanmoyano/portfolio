@@ -14,6 +14,7 @@ const AboutBlock = ({ isHovered, dimension }) => {
       transition: {
         duration: 1,
         ease: "easeInOut",
+        // delay: 0.5,
       },
     },
     anim: {
@@ -23,7 +24,7 @@ const AboutBlock = ({ isHovered, dimension }) => {
         duration: 1,
         ease: "easeInOut",
         staggerChildren: 0.1,
-        delayChildren: 0.5,
+        delayChildren: 0.3,
       },
     },
   }
@@ -43,7 +44,7 @@ const AboutBlock = ({ isHovered, dimension }) => {
           variants={animationVariants}
           width={"100%"}
         >
-          <Grid bgColor={"red"} gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
+          <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
             <GridItemText
               aling={"left"}
               content={
@@ -68,8 +69,11 @@ const AboutBlock = ({ isHovered, dimension }) => {
           >
             <Stack
               alignItems={"center"}
+              animate={{ opacity: 1, transition: { duration: 2, delay: 0.2 } }}
               animation={floatAnimation}
+              as={motion.div}
               direction={"row"}
+              initial={{ opacity: 0 }}
               justifyContent={"space-between"}
               width={"100%"}
             >

@@ -10,10 +10,6 @@ const TextQuot = ({ aling, content }) => {
       color={colorText}
       textAlign={{ base: "left", md: aling }}
       textStyle={"quotes"}
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 0.5 },
-      }}
       width={{ base: "100%", md: "200px" }}
     >
       {content}
