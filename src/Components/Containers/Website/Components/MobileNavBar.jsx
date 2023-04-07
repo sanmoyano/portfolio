@@ -22,47 +22,51 @@ const MobileNavBar = ({ topPosition }) => {
         <ToggleMenu toggle={() => setIsOpen()} />
       </Stack>
       <AnimatePresence>
-        <Stack
-          animate={isOpen ? "open" : "closed"}
-          as={motion.div}
-          bgColor={bgColor}
-          height={"100vh"}
-          margin={"0px !important"}
-          p={6}
-          position={"absolute"}
-          right={"0px"}
-          top={topPosition}
-          variants={variants}
-          width={"100%"}
-        >
-          <Stack alignItems={"left"} gap={8} width={"100%"}>
-            <NavBar />
-          </Stack>
-          <Stack alignItems={"center"} height={"100%"} justifyContent={"center"} spacing={6}>
-            <Text fontSize={"3.5rem"} textAlign={"center"} textStyle={"sectionTitle"}>
-              get in touch
-            </Text>
-            <Link _hover={{ textDecorationColor: "none" }} href="mailto:smoyano.di@gmail.com">
-              <Text
-                _hover={{
-                  WebkitTextStroke: `1px ${colorText}`,
-                  color: "transparent",
-                }}
-                color={`${colorText}`}
-                fontSize={"2rem"}
-                textStyle={"logo"}
-                textTransform={"uppercase"}
-                transitionDelay={"0s, 0s"}
-                transitionDuration={".5s, .5s"}
-                transitionProperty={"color, opacity"}
-                transitionTimingFunction={"ease, ease"}
-              >
-                smoyano.di@gmail.com
+        {isOpen && (
+          <Stack
+            animate={"open"}
+            as={motion.div}
+            bgColor={bgColor}
+            exit={"closed"}
+            height={"100vh"}
+            initial={"closed"}
+            margin={"0px !important"}
+            p={6}
+            position={"absolute"}
+            right={"0px"}
+            top={topPosition}
+            variants={variants}
+            width={"100%"}
+          >
+            <Stack alignItems={"left"} gap={8} width={"100%"}>
+              <NavBar />
+            </Stack>
+            <Stack alignItems={"center"} height={"100%"} justifyContent={"center"} spacing={6}>
+              <Text fontSize={"3.5rem"} textAlign={"center"} textStyle={"sectionTitle"}>
+                get in touch
               </Text>
-            </Link>
-            <ContactIcons />
+              <Link _hover={{ textDecorationColor: "none" }} href="mailto:smoyano.di@gmail.com">
+                <Text
+                  _hover={{
+                    WebkitTextStroke: `1px ${colorText}`,
+                    color: "transparent",
+                  }}
+                  color={`${colorText}`}
+                  fontSize={"2rem"}
+                  textStyle={"logo"}
+                  textTransform={"uppercase"}
+                  transitionDelay={"0s, 0s"}
+                  transitionDuration={".5s, .5s"}
+                  transitionProperty={"color, opacity"}
+                  transitionTimingFunction={"ease, ease"}
+                >
+                  smoyano.di@gmail.com
+                </Text>
+              </Link>
+              <ContactIcons />
+            </Stack>
           </Stack>
-        </Stack>
+        )}
       </AnimatePresence>
     </Stack>
   )
