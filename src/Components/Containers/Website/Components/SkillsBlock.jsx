@@ -1,12 +1,8 @@
-import { useRef } from "react"
-import { Grid, GridItem, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Grid, GridItem } from "@chakra-ui/react"
 
-import useDimensions from "../Hooks/useDimensions"
-import { VerticalText } from "../Decorators"
+import { SkillCard } from "./"
 
-import { TagCloudText } from "./"
-
-const SkillsBlock = ({ isHovered }) => {
+const SkillsBlock = ({ isHovered, dimension }) => {
   const skills = [
     {
       type: "main skills",
@@ -46,39 +42,19 @@ const SkillsBlock = ({ isHovered }) => {
     },
   ]
 
-  const HEIGHT_TEXT_REF = useRef()
-  const dimension = useDimensions(HEIGHT_TEXT_REF)
-  const color = useColorModeValue("red", "green")
-
   return (
-    <Stack alignItems={"center"} direction={"row"} width={"100%"}>
-      <VerticalText content={"skills"} refItem={HEIGHT_TEXT_REF} />
-      <Grid
-        display={!isHovered ? "grid" : "none"}
-        height={dimension.height}
-        templateColumns={"repeat(3,1fr)"}
-        width={"100%"}
-      >
-        {skills.map((skill) => (
-          <GridItem key={skill.type} width={"100%"}>
-            <Stack alignItems={"center"} height={"100%"} justifyContent={"space-between"}>
-              <Text
-                color={color}
-                fontFamily={"Roboto"}
-                fontSize={"3rem"}
-                fontWeight={700}
-                lineHeight={1}
-                textAlign={"justify"}
-                textTransform={"uppercase"}
-              >
-                {skill.type}
-              </Text>
-              <TagCloudText tags={skill.list} />
-            </Stack>
-          </GridItem>
-        ))}
-      </Grid>
-    </Stack>
+    <Grid
+      display={!isHovered ? "grid" : "none"}
+      height={dimension.height}
+      templateColumns={"repeat(3,1fr)"}
+      width={"100%"}
+    >
+      {skills.map(({ type, list }) => (
+        <GridItem key={type} width={"100%"}>
+          <SkillCard list={list} type={type} />
+        </GridItem>
+      ))}
+    </Grid>
   )
 }
 

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 
-import { About, SkillsBlock } from "../Components"
+import { About, Skills } from "../Components"
 
 const Section7 = () => {
   const [isHovered, setHovered] = useState(false)
@@ -9,7 +9,6 @@ const Section7 = () => {
   return (
     <Stack
       alignItems={"center"}
-      // bgColor={"red"}
       direction={{ base: "column", md: "row" }}
       height={"100vh"}
       position={"relative"}
@@ -17,7 +16,7 @@ const Section7 = () => {
       width={"100%"}
     >
       <About hovering={{ isHovered, setHovered }} />
-      {/* <SkillsBlock isHovered={isHovered} /> */}
+      <Skills isHovered={isHovered} />
     </Stack>
   )
 }
