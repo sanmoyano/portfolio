@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useAnimation } from "framer-motion"
 import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { GridItemText, TextQuot, StarIcon } from "../Decorators"
@@ -7,11 +7,13 @@ import { floatAnimation } from "../Utils/floatAnimation"
 const AboutBlock = ({ isHovered, dimension }) => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
-  const divAnimationVariants = {
+
+  const animationVariants = {
     init: {
       x: "-200%",
       transition: {
         duration: 1,
+        ease: "easeInOut",
       },
     },
     anim: {
@@ -19,7 +21,9 @@ const AboutBlock = ({ isHovered, dimension }) => {
       transition: {
         type: "tween",
         duration: 1,
-        repeatType: "reverse",
+        ease: "easeInOut",
+        staggerChildren: 0.1,
+        delayChildren: 0.5,
       },
     },
   }
@@ -36,10 +40,10 @@ const AboutBlock = ({ isHovered, dimension }) => {
           initial={"init"}
           justifyContent={"space-between"}
           paddingLeft={8}
-          variants={divAnimationVariants}
+          variants={animationVariants}
           width={"100%"}
         >
-          <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
+          <Grid bgColor={"red"} gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
             <GridItemText
               aling={"left"}
               content={
@@ -53,7 +57,15 @@ const AboutBlock = ({ isHovered, dimension }) => {
               }
             />
           </Grid>
-          <Container centerContent maxW={"100%"}>
+          <Container
+            centerContent
+            animate={"anim"}
+            as={motion.div}
+            exit={"init"}
+            initial={"init"}
+            maxW={"100%"}
+            variants={animationVariants}
+          >
             <Stack
               alignItems={"center"}
               animation={floatAnimation}
