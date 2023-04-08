@@ -1,12 +1,19 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
 
+import { floatAnimation } from "../Utils/floatAnimation"
+
 import Tilting from "./Tilting"
 
-const VerticalText = ({ content, refItem, setHovered }) => {
+const VerticalText = ({ content, refItem, setHovered, isHovering }) => {
   const color = useColorModeValue("black", "white")
 
   return (
-    <Box zIndex={99} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+    <Box
+      animation={isHovering ? floatAnimation() : "unset"}
+      zIndex={99}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <Tilting>
         <Text
           ref={refItem}

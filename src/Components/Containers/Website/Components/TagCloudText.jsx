@@ -1,9 +1,17 @@
 import { Stack } from "@chakra-ui/react"
 import TagCloud from "@frank-mayer/react-tag-cloud"
+import { motion } from "framer-motion"
 
 const TextSphere = ({ tags }) => {
   return (
-    <Stack alignItems={"center"} justifyContent={"center"} textStyle={"paragraph"} width={"100%"}>
+    <Stack
+      alignItems={"center"}
+      as={motion.div}
+      justifyContent={"center"}
+      textStyle={"paragraph"}
+      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+      width={"100%"}
+    >
       <TagCloud
         options={(w) => ({
           radius: Math.min(350, w.innerWidth, w.innerHeight) / 2,
