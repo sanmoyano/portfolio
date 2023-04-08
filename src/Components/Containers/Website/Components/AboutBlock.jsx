@@ -54,7 +54,7 @@ const AboutBlock = ({ isHovered, dimension }) => {
             initial={"init"}
             templateColumns={"repeat(2,1fr)"}
             variants={animationVariants}
-            // width={"100%"}
+            width={"100%"}
           >
             <GridItemText
               aling={"left"}

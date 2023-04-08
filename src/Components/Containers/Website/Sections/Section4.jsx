@@ -14,7 +14,6 @@ const Section7 = () => {
       overflow={"hidden"}
       position={"relative"}
       spacing={2}
-      // width={"100%"}
     >
       <About hovering={{ isHovered, setHovered }} />
       <Skills isHovered={isHovered} />

@@ -52,18 +52,16 @@ const SkillsBlock = ({ isHovered, dimension }) => {
   const animationVariants = {
     init: {
       opacity: 1,
-      display: "grid",
       transition: {
+        duration: 1.4,
         type: "tween",
-        delay: 1.4,
       },
     },
     anim: {
       opacity: 0,
-      display: "none",
       transition: {
+        duration: 1.4,
         type: "tween",
-        delay: 1.4,
       },
     },
   }
