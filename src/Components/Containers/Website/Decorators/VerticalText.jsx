@@ -4,15 +4,16 @@ import { floatAnimation } from "../Utils/floatAnimation"
 
 import Tilting from "./Tilting"
 
-const VerticalText = ({ content, refItem, setHovered, isHovering }) => {
+const VerticalText = ({ content, refItem, hovering }) => {
+  const isHovered = hovering?.isHovered
   const color = useColorModeValue("black", "white")
 
   return (
     <Box
-      animation={isHovering ? floatAnimation() : "unset"}
+      animation={isHovered ? floatAnimation() : "unset"}
       zIndex={99}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => hovering?.setHovered(true)}
+      onMouseLeave={() => hovering?.setHovered(false)}
     >
       <Tilting>
         <Text
