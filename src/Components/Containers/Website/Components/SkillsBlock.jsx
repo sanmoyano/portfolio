@@ -17,8 +17,6 @@ const SkillsBlock = ({ isHovered, dimension }) => {
         "Firebase",
         "Cypress",
         "Figma",
-        "Illustrator",
-        "Pothoshop",
       ],
     },
     {
@@ -38,7 +36,16 @@ const SkillsBlock = ({ isHovered, dimension }) => {
     },
     {
       type: "others skills",
-      list: ["Git", "GitHub", "Azure DevOps", "Chakra UI", "Material UI", "Style-components"],
+      list: [
+        "Git",
+        "GitHub",
+        "Azure DevOps",
+        "Chakra UI",
+        "Material UI",
+        "Style-components",
+        "Illustrator",
+        "Pothoshop",
+      ],
     },
   ]
 
