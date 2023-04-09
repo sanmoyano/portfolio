@@ -3,7 +3,7 @@ import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react
 import { ContactIcons } from "../Components"
 import { Tilting } from "../Decorators"
 
-const Section8 = () => {
+const Section5Contact = () => {
   const { colors } = useTheme()
   const colorText = useColorModeValue(`${colors.red}`, `${colors.green}`)
 
@@ -38,4 +38,4 @@ const Section8 = () => {
   )
 }
 
-export default Section8
+export default Section5Contact

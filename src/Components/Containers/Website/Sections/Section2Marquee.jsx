@@ -4,7 +4,7 @@ import { Divider, Stack, Text } from "@chakra-ui/react"
 import useDimensions from "../Hooks/useDimensions"
 import { MarqueeContainer } from "../Components"
 
-const Section3 = () => {
+const Section2Marquee = () => {
   const DIMENSIONS_REF = useRef()
   const dimensions = useDimensions(DIMENSIONS_REF)
 
@@ -54,4 +54,4 @@ const Section3 = () => {
   )
 }
 
-export default Section3
+export default Section2Marquee

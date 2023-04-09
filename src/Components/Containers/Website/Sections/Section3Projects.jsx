@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import { TextTitles, Tilting } from "../Decorators"
 
-const Section4 = () => {
+const Section3Projects = () => {
   const isDesktop = useMediaQuery("(min-width: 992px)")
 
   return (
@@ -21,4 +21,4 @@ const Section4 = () => {
   )
 }
 
-export default Section4
+export default Section3Projects

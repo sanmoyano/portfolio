@@ -3,7 +3,7 @@ import { Stack } from "@chakra-ui/react"
 
 import { About, Skills } from "../Components"
 
-const Section7 = () => {
+const Section4AboutSkill = () => {
   const [isHovered, setHovered] = useState(false)
 
   return (
@@ -21,4 +21,4 @@ const Section7 = () => {
   )
 }
 
-export default Section7
+export default Section4AboutSkill

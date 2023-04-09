@@ -1,23 +1,23 @@
 import { Stack } from "@chakra-ui/react"
 
 import {
-  Section1,
+  Section1Init,
   Section1Temporary,
-  Section2,
-  Section3,
-  Section4,
-  Section5,
+  Section2Marquee,
+  Section3Projects,
+  Section4AboutSkill,
+  Section5Contact,
 } from "./Website/Sections"
 
 const HomeLayout = () => {
   return (
     <Stack gap={{ base: 20, md: 40 }} paddingInline={{ base: 6, lg: 12 }}>
-      {/* <Section1 /> */}
+      {/* <Section1Init /> */}
       <Section1Temporary />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <Section2Marquee />
+      <Section3Projects />
+      <Section4AboutSkill />
+      <Section5Contact />
     </Stack>
   )
 }

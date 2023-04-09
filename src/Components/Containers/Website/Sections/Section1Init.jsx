@@ -31,7 +31,7 @@ const Box = () => {
   )
 }
 
-const Section1 = () => {
+const Section1Init = () => {
   return (
     <Canvas camera={{ fov: 25 }} dpr={[1, 2]}>
       <ambientLight intensity={0.5} />
@@ -43,4 +43,4 @@ const Section1 = () => {
   )
 }
 
-export default Section1
+export default Section1Init

@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, useAnimation } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { GridItemText, TextQuot, StarIcon } from "../Decorators"
@@ -14,7 +14,6 @@ const AboutBlock = ({ isHovered, dimension }) => {
       transition: {
         duration: 1,
         ease: "easeInOut",
-        display: "none",
       },
     },
     anim: {
@@ -26,7 +25,6 @@ const AboutBlock = ({ isHovered, dimension }) => {
         staggerChildren: 0.1,
         delayChildren: 0.3,
         delay: 1.5,
-        display: "flex",
       },
     },
   }
@@ -48,7 +46,7 @@ const AboutBlock = ({ isHovered, dimension }) => {
           <Grid
             animate={"anim"}
             as={motion.div}
-            display={isHovered ? "grid" : "none"}
+            // display={isHovered ? "grid" : "none"}
             exit={"init"}
             gap={12}
             initial={"init"}
