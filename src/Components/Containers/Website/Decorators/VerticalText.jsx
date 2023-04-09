@@ -5,7 +5,7 @@ import { floatAnimation } from "../Utils/floatAnimation"
 import Tilting from "./Tilting"
 
 const VerticalText = ({ content, refItem, hovering }) => {
-  const hoverState = hovering?.isHovered //hoverState is undefined on "skill" because it doesn't animated with the floatAnimation()
+  const hoverState = hovering?.isHovered //hoverState is undefined on "skill" because it doesn't animated with the floatAnimation() just with the _hover prop.
   const color = useColorModeValue("black", "white")
 
   return (
