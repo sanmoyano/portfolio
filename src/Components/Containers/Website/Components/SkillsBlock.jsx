@@ -13,12 +13,18 @@ const SkillsBlock = ({ isHovered, dimension }) => {
         duration: 1.4,
         type: "tween",
       },
+      transitionEnd: {
+        display: "grid",
+      },
     },
     anim: {
       opacity: 0,
       transition: {
         duration: 1.4,
         type: "tween",
+      },
+      transitionEnd: {
+        display: "none",
       },
     },
   }

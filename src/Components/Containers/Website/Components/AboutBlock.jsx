@@ -46,7 +46,6 @@ const AboutBlock = ({ isHovered, dimension }) => {
           <Grid
             animate={"anim"}
             as={motion.div}
-            // display={isHovered ? "grid" : "none"}
             exit={"init"}
             gap={12}
             initial={"init"}
@@ -67,21 +66,12 @@ const AboutBlock = ({ isHovered, dimension }) => {
               }
             />
           </Grid>
-          <Container
-            centerContent
-            animate={"anim"}
-            as={motion.div}
-            exit={"init"}
-            initial={"init"}
-            maxW={"100%"}
-            variants={animationVariants}
-          >
+          <Container centerContent maxW={"100%"}>
             <Stack
               alignItems={"center"}
-              animate={{ opacity: 1, transition: { duration: 2, delay: 0.2 } }}
+              animate={{ opacity: 1, transition: { duration: 2, delay: 2 } }}
               animation={floatAnimation}
               as={motion.div}
-              bgColor={"red"}
               direction={"row"}
               initial={{ opacity: 0 }}
               justifyContent={"space-between"}
