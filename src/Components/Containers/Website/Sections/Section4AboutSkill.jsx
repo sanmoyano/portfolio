@@ -1,7 +1,9 @@
 import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
+import { lazy, Suspense } from "react"
 
-import { About, Skills } from "../Components"
+import { Skills } from "../Components"
+const AboutContainer = lazy(() => import("../Components/About"))
 
 const Section4AboutSkill = () => {
   const [isHovered, setHovered] = useState(false)
@@ -15,7 +17,9 @@ const Section4AboutSkill = () => {
       position={"relative"}
       spacing={2}
     >
-      <About hovering={{ isHovered, setHovered }} />
+      <Suspense>
+        <AboutContainer hovering={{ isHovered, setHovered }} />
+      </Suspense>
       <Skills isHovered={isHovered} />
     </Stack>
   )
