@@ -12,7 +12,7 @@ const About = ({ hovering }) => {
 
   return (
     <>
-      <VerticalText content={"about"} hovering={hovering} refItem={HEIGHT_TEXT_REF} />
+      <VerticalText content={"about"} hovering={hovering} id={"about"} refItem={HEIGHT_TEXT_REF} />
       <AboutBlock dimension={dimension} isHovered={isHovered} />
     </>
   )

@@ -11,7 +11,7 @@ const Skills = ({ isHovered }) => {
 
   return (
     <>
-      <VerticalText content={"skills"} refItem={HEIGHT_TEXT_REF} />
+      <VerticalText content={"skills"} id={"skills"} refItem={HEIGHT_TEXT_REF} />
       <SkillsBlock dimension={dimension} isHovered={isHovered} />
     </>
   )

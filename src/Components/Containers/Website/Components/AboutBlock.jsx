@@ -37,6 +37,7 @@ const AboutBlock = ({ isHovered, dimension }) => {
           as={motion.div}
           exit={"init"}
           height={dimension.height}
+          id={"about-hover"}
           initial={"init"}
           justifyContent={"space-between"}
           paddingLeft={8}

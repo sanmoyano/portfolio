@@ -3,3 +3,11 @@ describe("#SM Home Page", () => {
     cy.visit("http://localhost:5173")
   })
 })
+
+describe("Render while hover", () => {
+  it("renders on hover", () => {
+    cy.visit("http://localhost:5173")
+    cy.get("#about").trigger("mouseover")
+    cy.get("#about-hover").should("be.visible")
+  })
+})

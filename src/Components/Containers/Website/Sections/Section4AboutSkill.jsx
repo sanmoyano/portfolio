@@ -7,6 +7,7 @@ const AboutContainer = lazy(() => import("../Components/About"))
 
 const Section4AboutSkill = () => {
   const [isHovered, setHovered] = useState(false)
+  // const [aboutIsVisible, setAboutVisible] = useState(false)
 
   return (
     <Stack
