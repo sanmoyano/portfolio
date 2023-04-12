@@ -10,7 +10,7 @@ const SkillsBlock = ({ isHovered, dimension }) => {
     init: {
       opacity: 1,
       transition: {
-        duration: 1.4,
+        duration: 1.2,
         type: "tween",
       },
       transitionEnd: {
@@ -20,7 +20,7 @@ const SkillsBlock = ({ isHovered, dimension }) => {
     anim: {
       opacity: 0,
       transition: {
-        duration: 1.4,
+        duration: 1.2,
         type: "tween",
       },
       transitionEnd: {

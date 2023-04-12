@@ -3,11 +3,11 @@ import { Stack } from "@chakra-ui/react"
 import { lazy, Suspense } from "react"
 
 import { Skills } from "../Components"
-const AboutContainer = lazy(() => import("../Components/About"))
+const About = lazy(() => import("../Components/About"))
 
 const Section4AboutSkill = () => {
   const [isHovered, setHovered] = useState(false)
-  // const [aboutIsVisible, setAboutVisible] = useState(false)
+  const [isVisible, setVisible] = useState(false)
 
   return (
     <Stack
@@ -19,7 +19,7 @@ const Section4AboutSkill = () => {
       spacing={2}
     >
       <Suspense>
-        <AboutContainer hovering={{ isHovered, setHovered }} />
+        <About hovering={{ isHovered, setHovered }} visible={{ isVisible, setVisible }} />
       </Suspense>
       <Skills isHovered={isHovered} />
     </Stack>

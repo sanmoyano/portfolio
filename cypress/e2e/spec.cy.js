@@ -4,6 +4,7 @@ describe("#SM Home Page", () => {
   })
 })
 
+//This check if the "aboutBlock" is rendering before the animation start.
 describe("Render while hover", () => {
   it("renders on hover", () => {
     cy.visit("http://localhost:5173")
