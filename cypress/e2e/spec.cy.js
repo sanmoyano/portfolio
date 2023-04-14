@@ -12,3 +12,5 @@ describe("Render while hover", () => {
     cy.get("#about-hover").should("be.visible")
   })
 })
+
+describe("")

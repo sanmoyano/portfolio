@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { motion } from "framer-motion"
 
 import useDimensions from "../Hooks/useDimensions"
 import { VerticalText } from "../Decorators"
