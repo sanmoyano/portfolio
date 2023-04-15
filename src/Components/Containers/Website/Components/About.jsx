@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { Stack } from "@chakra-ui/react"
 
 import { VerticalText } from "../Decorators"
 import useDimensions from "../Hooks/useDimensions"
@@ -13,7 +14,7 @@ const About = ({ hovering, visible }) => {
   const dimension = useDimensions(HEIGHT_TEXT_REF)
 
   return (
-    <>
+    <Stack bgColor={"blue"} direction={"row"} width={isVisible ? "100%" : ""}>
       <VerticalText
         content={"about"}
         hovering={hovering}
@@ -22,7 +23,7 @@ const About = ({ hovering, visible }) => {
         setVisible={setVisible}
       />
       <AboutBlock dimension={dimension} isHovered={isHovered} isVisible={isVisible} />
-    </>
+    </Stack>
   )
 }
 

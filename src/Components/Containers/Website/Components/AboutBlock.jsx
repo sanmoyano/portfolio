@@ -20,11 +20,11 @@ const AboutBlock = ({ isHovered, isVisible, dimension }) => {
       x: "0%",
       transition: {
         type: "tween",
-        duration: 1.1,
+        duration: 1,
         ease: "easeInOut",
         staggerChildren: 0.1,
         delayChildren: 0.3,
-        // delay: 1,
+        delay: 2.2,
       },
     },
   }
