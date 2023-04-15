@@ -14,13 +14,25 @@ const Skills = ({ isHovered }) => {
   const animationVariants = {
     init: {
       x: "0%",
+      transition: {
+        type: "tween",
+        delay: 1,
+        ease: "easeInOut",
+      },
+      transitionEnd: {
+        display: "flex",
+      },
     },
     anim: {
       x: "100%",
       transition: {
+        type: "tween",
         duration: 1,
         ease: "easeInOut",
         delay: 1.2,
+      },
+      transitionEnd: {
+        display: "none",
       },
     },
   }
@@ -30,7 +42,6 @@ const Skills = ({ isHovered }) => {
       <Stack
         animate={isHovered ? "anim" : "init"}
         as={motion.div}
-        bgColor={"red"}
         direction={"row"}
         exit={"init"}
         initial={"init"}

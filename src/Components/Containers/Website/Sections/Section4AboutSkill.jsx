@@ -12,11 +12,12 @@ const Section4AboutSkill = () => {
   return (
     <Stack
       alignItems={"center"}
-      direction={{ base: "column", md: "row" }}
+      direction={"row"}
       height={"100vh"}
       overflow={"hidden"}
       position={"relative"}
       spacing={2}
+      width={"100%"}
     >
       <Suspense>
         <About hovering={{ isHovered, setHovered }} visible={{ isVisible, setVisible }} />
