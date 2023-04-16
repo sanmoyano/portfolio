@@ -5,23 +5,16 @@ import { floatAnimation } from "../Utils/floatAnimation"
 
 import Tilting from "./Tilting"
 
-const VerticalText = ({ content, refItem, hovering, id, setVisible }) => {
+const VerticalText = ({ content, refItem, hovering, id }) => {
   const hoverState = hovering?.isHovered //hoverState is undefined on "skill" because it doesn't animated with the floatAnimation() just with the _hover prop.
   const color = useColorModeValue("black", "white")
-  const delay = 2200
 
-  const handleMouseEnter = () => {
-    setTimeout(() => {
-      setVisible && setVisible(true)
-    }, delay)
-    hovering?.setHovered(true)
-  }
-  const handleMouseLeave = () => {
-    setTimeout(() => {
-      setVisible && setVisible(false)
-    }, 1000)
-    hovering?.setHovered(false)
-  }
+  // const handleMouseEnter = () => {
+  //   hovering?.setHovered(true)
+  // }
+  // const handleMouseLeave = () => {
+  //   hovering?.setHovered(false)
+  // }
 
   return (
     <Box
@@ -29,8 +22,8 @@ const VerticalText = ({ content, refItem, hovering, id, setVisible }) => {
       as={motion.div}
       id={id}
       zIndex={99}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
     >
       <Tilting>
         <Text

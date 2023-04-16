@@ -7,7 +7,7 @@ import { VerticalText } from "../Decorators"
 
 import { SkillsBlock } from "."
 
-const Skills = ({ isHovered, isVisible }) => {
+const Skills = () => {
   const HEIGHT_TEXT_REF = useRef()
   const dimension = useDimensions(HEIGHT_TEXT_REF)
 
@@ -39,7 +39,7 @@ const Skills = ({ isHovered, isVisible }) => {
   // }
 
   return (
-    <Stack alignItems={"center"} direction={"row"}>
+    <Stack alignItems={"center"} direction={"row"} height={"100vh"}>
       <VerticalText content={"skills"} id={"skills"} refItem={HEIGHT_TEXT_REF} />
       <SkillsBlock dimension={dimension} />
     </Stack>

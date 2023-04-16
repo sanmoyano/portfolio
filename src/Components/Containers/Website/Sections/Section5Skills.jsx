@@ -1,7 +1,7 @@
-import React from "react"
+import { Skills } from "../Components"
 
 const Section5Skills = () => {
-  return <div>Section5Skills</div>
+  return <Skills />
 }
 
 export default Section5Skills

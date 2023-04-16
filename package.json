@@ -31,6 +31,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.4.3",
     "react-parallax-tilt": "^1.7.118",
     "react-router-dom": "^6.5.0",
     "sort-by": "^0.0.2",

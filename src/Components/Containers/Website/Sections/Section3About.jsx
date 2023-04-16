@@ -2,29 +2,26 @@ import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 import { lazy, Suspense } from "react"
 
-import { Skills } from "../Components"
 const About = lazy(() => import("../Components/About"))
 
-const Section4AboutSkill = () => {
+const Section3About = () => {
   const [isHovered, setHovered] = useState(false)
-  const [isVisible, setVisible] = useState(false)
+  // const [isVisible, setVisible] = useState(false)
 
   return (
     <Stack
       alignItems={"center"}
       direction={"row"}
       height={"100%"}
-      // overflow={"hidden"}
       position={"relative"}
       spacing={2}
       width={"100%"}
     >
       <Suspense>
-        <About hovering={{ isHovered, setHovered }} visible={{ isVisible, setVisible }} />
+        <About hovering={{ isHovered, setHovered }} />
       </Suspense>
-      {/* <Skills isHovered={isHovered} isVisible={isVisible} /> */}
     </Stack>
   )
 }
 
-export default Section4AboutSkill
+export default Section3About
