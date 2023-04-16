@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { Stack } from "@chakra-ui/react"
 
 import { VerticalText } from "../Decorators"
 import useDimensions from "../Hooks/useDimensions"

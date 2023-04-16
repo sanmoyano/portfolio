@@ -13,8 +13,8 @@ const Section4AboutSkill = () => {
     <Stack
       alignItems={"center"}
       direction={"row"}
-      height={"100vh"}
-      overflow={"hidden"}
+      height={"100%"}
+      // overflow={"hidden"}
       position={"relative"}
       spacing={2}
       width={"100%"}
@@ -22,7 +22,7 @@ const Section4AboutSkill = () => {
       <Suspense>
         <About hovering={{ isHovered, setHovered }} visible={{ isVisible, setVisible }} />
       </Suspense>
-      <Skills isHovered={isHovered} isVisible={isVisible} />
+      {/* <Skills isHovered={isHovered} isVisible={isVisible} /> */}
     </Stack>
   )
 }

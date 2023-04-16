@@ -4,9 +4,10 @@ import {
   Section1Init,
   Section1Temporary,
   Section2Marquee,
-  Section3Projects,
-  Section4AboutSkill,
-  Section5Contact,
+  Section3About,
+  Section4Projects,
+  Section5Skills,
+  Section6Contact,
 } from "./Website/Sections"
 
 const HomeLayout = () => {
@@ -15,9 +16,10 @@ const HomeLayout = () => {
       {/* <Section1Init /> */}
       <Section1Temporary />
       <Section2Marquee />
-      <Section3Projects />
-      <Section4AboutSkill />
-      <Section5Contact />
+      <Section3About />
+      <Section4Projects />
+      <Section5Skills />
+      <Section6Contact />
     </Stack>
   )
 }

@@ -32,7 +32,7 @@ const SkillsBlock = ({ isHovered, dimension }) => {
   return (
     <AnimatePresence>
       <Grid
-        animate={isHovered ? "anim" : "init"}
+        // animate={isHovered ? "anim" : "init"}
         as={motion.div}
         exit={"init"}
         height={dimension.height}
