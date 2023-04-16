@@ -22,7 +22,7 @@ const Section4AboutSkill = () => {
       <Suspense>
         <About hovering={{ isHovered, setHovered }} visible={{ isVisible, setVisible }} />
       </Suspense>
-      <Skills isHovered={isHovered} />
+      <Skills isHovered={isHovered} isVisible={isVisible} />
     </Stack>
   )
 }

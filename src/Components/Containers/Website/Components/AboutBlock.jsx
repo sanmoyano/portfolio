@@ -12,7 +12,7 @@ const AboutBlock = ({ isHovered, isVisible, dimension }) => {
     init: {
       x: "-200%",
       transition: {
-        duration: 1,
+        duration: 1.2,
         ease: "easeInOut",
       },
     },
@@ -20,7 +20,7 @@ const AboutBlock = ({ isHovered, isVisible, dimension }) => {
       x: "0%",
       transition: {
         type: "tween",
-        duration: 1,
+        duration: 1.2,
         ease: "easeInOut",
         staggerChildren: 0.1,
         delayChildren: 0.3,

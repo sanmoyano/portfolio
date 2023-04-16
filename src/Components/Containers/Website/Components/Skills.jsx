@@ -1,5 +1,5 @@
-import { useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useRef, useEffect } from "react"
+import { motion, AnimatePresence, usePresence } from "framer-motion"
 import { Stack } from "@chakra-ui/react"
 
 import useDimensions from "../Hooks/useDimensions"
@@ -7,16 +7,22 @@ import { VerticalText } from "../Decorators"
 
 import { SkillsBlock } from "."
 
-const Skills = ({ isHovered }) => {
+const Skills = ({ isHovered, isVisible }) => {
   const HEIGHT_TEXT_REF = useRef()
   const dimension = useDimensions(HEIGHT_TEXT_REF)
+  const [isPresent, safeToRemove] = usePresence()
+
+  useEffect(() => {
+    !isPresent && setTimeout(safeToRemove, 1000)
+  }, [isPresent])
 
   const animationVariants = {
     init: {
       x: "0%",
       transition: {
         type: "tween",
-        delay: 1,
+        duration: 0.5,
+        delay: 1.2,
         ease: "easeInOut",
       },
       transitionEnd: {
@@ -44,7 +50,6 @@ const Skills = ({ isHovered }) => {
         as={motion.div}
         direction={"row"}
         exit={"init"}
-        initial={"init"}
         variants={animationVariants}
         width={"100%"}
       >

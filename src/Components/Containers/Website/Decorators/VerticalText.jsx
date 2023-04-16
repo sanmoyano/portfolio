@@ -19,7 +19,7 @@ const VerticalText = ({ content, refItem, hovering, id, setVisible }) => {
   const handleMouseLeave = () => {
     setTimeout(() => {
       setVisible && setVisible(false)
-    }, delay)
+    }, 1000)
     hovering?.setHovered(false)
   }
 
