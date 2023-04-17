@@ -6,7 +6,6 @@ const About = lazy(() => import("../Components/About"))
 
 const Section3About = () => {
   const [isHovered, setHovered] = useState(false)
-  // const [isVisible, setVisible] = useState(false)
 
   return (
     <Stack

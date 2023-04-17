@@ -1,5 +1,5 @@
-import { useEffect } from "react"
-import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { GridItemText, TextQuot, StarIcon } from "../Decorators"
@@ -8,50 +8,23 @@ import { floatAnimation } from "../Utils/floatAnimation"
 const AboutBlock = ({ dimension }) => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
-
-  const animationVariants = {
-    init: {
-      x: "-200%",
-      transition: {
-        duration: 1.2,
-        ease: "easeInOut",
-      },
-    },
-    anim: {
-      x: "0%",
-      transition: {
-        type: "tween",
-        duration: 1.2,
-        ease: "easeInOut",
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  }
+  const ITEM_REF = useRef()
+  const isInView = useInView(ITEM_REF)
 
   return (
     <Stack
-      animate={"anim"}
-      as={motion.div}
-      exit={"init"}
+      ref={ITEM_REF}
       height={dimension.height}
       id={"about-hover"}
-      initial={"init"}
       justifyContent={"space-between"}
       paddingLeft={8}
-      variants={animationVariants}
+      style={{
+        transform: isInView ? "none" : "translateX(-100%)",
+        transition: "all 1s",
+      }}
       width={"100%"}
     >
-      <Grid
-        animate={"anim"}
-        as={motion.div}
-        exit={"init"}
-        gap={12}
-        initial={"init"}
-        templateColumns={"repeat(2,1fr)"}
-        variants={animationVariants}
-        width={"100%"}
-      >
+      <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
         <GridItemText
           aling={"left"}
           content={
