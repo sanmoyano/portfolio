@@ -1,7 +1,8 @@
 import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
+import useIsInView from "../Hooks/useIsInView"
 import { GridItemText, TextQuot, StarIcon } from "../Decorators"
 import { floatAnimation } from "../Utils/floatAnimation"
 
@@ -9,7 +10,7 @@ const AboutBlock = ({ dimension }) => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
   const ITEM_REF = useRef()
-  const isInView = useInView(ITEM_REF)
+  const isInView = useIsInView(ITEM_REF)
 
   return (
     <Stack

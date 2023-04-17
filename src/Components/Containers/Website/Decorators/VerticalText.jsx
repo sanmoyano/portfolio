@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
-import { motion, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 
 import { floatAnimation } from "../Utils/floatAnimation"
 import useIsInView from "../Hooks/useIsInView"

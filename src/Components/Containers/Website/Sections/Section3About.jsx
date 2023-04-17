@@ -11,7 +11,7 @@ const Section3About = () => {
     <Stack
       alignItems={"center"}
       direction={"row"}
-      height={"100%"}
+      height={"100vh"}
       position={"relative"}
       spacing={2}
       width={"100%"}
