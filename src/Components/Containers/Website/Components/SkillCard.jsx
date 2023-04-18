@@ -5,7 +5,6 @@ import { TagCloudText } from "."
 const SkillCard = ({ type, list }) => {
   const color = useColorModeValue("red", "green")
 
-  // perspective(1200px) translateX(0px) translateY(50.6859px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)
   return (
     <Stack
       alignItems={"center"}

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Stack, Text } from "@chakra-ui/react"
+import { Parallax } from "react-scroll-parallax"
 
 import { HeroLogo } from "../Components/"
 
