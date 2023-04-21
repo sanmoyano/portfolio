@@ -1,9 +1,8 @@
 import { useRef } from "react"
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 
 import { floatAnimation } from "../Utils/floatAnimation"
-import useIsInView from "../Hooks/useIsInView"
 
 import Tilting from "./Tilting"
 
@@ -18,7 +17,7 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
     hovering?.setHovered(false)
   }
   const ITEM_REF = useRef(null)
-  const isInView = useIsInView(ITEM_REF)
+  const isInView = useInView(ITEM_REF)
 
   return (
     <Box
@@ -27,7 +26,7 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
       as={motion.div}
       id={id}
       style={{
-        transition: "all 2s",
+        transition: "all 3s",
         opacity: isInView ? 1 : 0,
       }}
       zIndex={99}
