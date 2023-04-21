@@ -1,28 +1,26 @@
-import { useRef } from "react"
 import { motion } from "framer-motion"
 import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import useIsInView from "../Hooks/useIsInView"
 import { GridItemText, TextQuot, StarIcon } from "../Decorators"
 import { floatAnimation } from "../Utils/floatAnimation"
 
 const AboutBlock = ({ dimension }) => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
-  const ITEM_REF = useRef()
-  const isInView = useIsInView(ITEM_REF)
 
   return (
     <Stack
-      ref={ITEM_REF}
+      as={motion.div}
       height={dimension.height}
       id={"about-hover"}
+      initial={"hidden"}
       justifyContent={"space-between"}
       paddingLeft={8}
-      style={{
-        transform: isInView ? "none" : "translateX(-100%)",
-        transition: "all 1s",
+      variants={{
+        visible: { translateX: "0%", transition: { duration: 1 } },
+        hidden: { translateX: "-100%" },
       }}
+      whileInView={"visible"}
       width={"100%"}
     >
       <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
@@ -42,7 +40,7 @@ const AboutBlock = ({ dimension }) => {
       <Container centerContent maxW={"100%"}>
         <Stack
           alignItems={"center"}
-          animate={{ opacity: 1, transition: { duration: 2, delay: 0.5 } }}
+          animate={{ opacity: 1, transition: { duration: 3, delay: 0.5 } }}
           animation={floatAnimation}
           as={motion.div}
           direction={"row"}

@@ -20,7 +20,7 @@ const Section2Marquee = () => {
           justifyContent={"space-between"}
           spacing={{ base: 12, md: 24 }}
           variants={{
-            visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.5 } },
+            visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
             hidden: { opacity: 0, scale: 0 },
           }}
           viewport={{ once: true }}
