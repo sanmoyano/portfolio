@@ -6,12 +6,7 @@ const SkillCard = ({ type, list }) => {
   const color = useColorModeValue("red", "green")
 
   return (
-    <Stack
-      alignItems={"center"}
-      height={"100%"}
-      justifyContent={"space-between"}
-      sx={{ perspective: "1200px" }}
-    >
+    <Stack alignItems={"center"} height={"100%"} justifyContent={"space-between"}>
       <Text
         color={color}
         fontFamily={"Roboto"}

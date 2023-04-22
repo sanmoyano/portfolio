@@ -5,40 +5,39 @@ import { skills } from "../Data/skills"
 
 import { SkillCard } from "./"
 
-const SkillsBlock = ({ isHovered, dimension }) => {
-  const animationVariants = {
-    init: {
-      opacity: 1,
-      transition: {
-        duration: 1.2,
-        type: "tween",
-      },
-      transitionEnd: {
-        display: "grid",
-      },
-    },
-    anim: {
-      opacity: 0,
-      transition: {
-        duration: 1.2,
-        type: "tween",
-      },
-      transitionEnd: {
-        display: "none",
-      },
-    },
-  }
+const SkillsBlock = ({ dimension }) => {
+  // const animationVariants = {
+  //   init: {
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 1.2,
+  //       type: "tween",
+  //     },
+  //     transitionEnd: {
+  //       display: "grid",
+  //     },
+  //   },
+  //   anim: {
+  //     opacity: 0,
+  //     transition: {
+  //       duration: 1.2,
+  //       type: "tween",
+  //     },
+  //     transitionEnd: {
+  //       display: "none",
+  //     },
+  //   },
+  // }
+  //tamplateColumns = {{base: "repeat(1,1fr)", md:"repeat(3,1fr)"}}
 
   return (
     <AnimatePresence>
       <Grid
-        // animate={isHovered ? "anim" : "init"}
         as={motion.div}
         exit={"init"}
         height={dimension.height}
         initial={"init"}
         templateColumns={"repeat(3,1fr)"}
-        variants={animationVariants}
         width={"100%"}
       >
         {skills.map(({ type, list }) => (

@@ -11,7 +11,6 @@ const Section3Projects = () => {
     <ParallaxContainer>
       <Box
         height={{ base: "150px", md: "350px" }}
-        // height={"350px"}
         id={4}
         overflow={"hidden"}
         sx={{ display: "grid", placeContent: "center" }}
