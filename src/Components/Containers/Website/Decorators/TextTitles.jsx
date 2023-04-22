@@ -1,4 +1,5 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 
 const TextTitles = ({ content, textStyle, transform, px }) => {
   const color = useColorModeValue("black", "white")
@@ -16,7 +17,13 @@ const TextTitles = ({ content, textStyle, transform, px }) => {
   }
 
   return (
-    <Box width={"fit-content"}>
+    <Box
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, transition: { duration: 3 } }}
+      width={"fit-content"}
+    >
       <Text
         _hover={{ WebkitTextStroke: `${px}px ${color}`, color: "transparent" }}
         textAlign={"center"}

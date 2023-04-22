@@ -20,6 +20,7 @@ const AboutBlock = ({ dimension }) => {
         visible: { translateX: "0%", transition: { duration: 1 } },
         hidden: { translateX: "-100%" },
       }}
+      viewport={{ once: true }}
       whileInView={"visible"}
       width={"100%"}
     >

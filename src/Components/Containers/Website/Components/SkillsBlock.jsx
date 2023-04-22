@@ -34,6 +34,7 @@ const SkillsBlock = ({ dimension }) => {
         initial={"hidden"}
         justifyContent={"space-around"}
         variants={containerSkills}
+        viewport={{ once: true }}
         whileInView={"show"}
         width={"100%"}
       >

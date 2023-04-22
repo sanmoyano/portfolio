@@ -1,6 +1,5 @@
-import { useRef } from "react"
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
-import { motion, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 
 import { floatAnimation } from "../Utils/floatAnimation"
 
@@ -16,19 +15,15 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
   const handleMouseLeave = () => {
     hovering?.setHovered(false)
   }
-  const ITEM_REF = useRef(null)
-  const isInView = useInView(ITEM_REF)
 
   return (
     <Box
-      ref={ITEM_REF}
       animation={hoverState ? floatAnimation : "unset"}
       as={motion.div}
       id={id}
-      style={{
-        transition: "all 3s",
-        opacity: isInView ? 1 : 0,
-      }}
+      initial={{ opacity: 0 }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, transition: { duration: 3 } }}
       zIndex={99}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
