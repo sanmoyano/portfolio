@@ -11,7 +11,7 @@ const Section1Temporary = () => {
       <Stack
         alignItems={"center"}
         height={"100vh"}
-        id={0}
+        id={1}
         justifyContent={"center"}
         overflow={"hidden"}
         position={"relative"}

@@ -12,7 +12,7 @@ const Section5Contact = () => {
       <Stack
         display={{ base: "none", lg: "flex" }}
         height={"100%"}
-        id={5}
+        id={6}
         spacing={12}
         width={"100%"}
       >

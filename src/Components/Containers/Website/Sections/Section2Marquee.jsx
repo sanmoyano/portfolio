@@ -11,7 +11,7 @@ const Section2Marquee = () => {
 
   return (
     <ParallaxContainer>
-      <AnimatePresence id={1}>
+      <AnimatePresence id={2}>
         <Stack
           alignItems={"center"}
           as={motion.div}

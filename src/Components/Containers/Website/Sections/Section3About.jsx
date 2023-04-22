@@ -15,7 +15,7 @@ const Section3About = () => {
         alignItems={"center"}
         direction={"row"}
         height={"100vh"}
-        id={2}
+        id={3}
         position={"relative"}
         spacing={2}
         width={"100%"}
