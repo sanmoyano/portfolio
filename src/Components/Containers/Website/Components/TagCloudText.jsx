@@ -7,14 +7,16 @@ const TextSphere = ({ tags }) => {
     <Stack
       alignItems={"center"}
       as={motion.div}
+      fontSize={"1.2rem"}
+      height={"100%"}
       justifyContent={"center"}
       textStyle={"paragraph"}
-      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-      width={"100%"}
+      whileHover={{ scale: 1.8, transition: { duration: 0.2 } }}
+      width={"30%"}
     >
       <TagCloud
         options={(w) => ({
-          radius: Math.min(350, w.innerWidth, w.innerHeight) / 2,
+          radius: Math.min(160, w.innerWidth, w.innerHeight) / 2,
           maxSpeed: "normal",
           initSpeed: "normal",
           direction: Math.floor(tags.length * 50),

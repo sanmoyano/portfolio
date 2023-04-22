@@ -14,6 +14,7 @@ const Section3Projects = () => {
         id={4}
         overflow={"hidden"}
         sx={{ display: "grid", placeContent: "center" }}
+        width={"100%"}
       >
         <Link to="/projects">
           <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>

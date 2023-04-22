@@ -6,14 +6,20 @@ const SkillCard = ({ type, list }) => {
   const color = useColorModeValue("red", "green")
 
   return (
-    <Stack alignItems={"center"} height={"100%"} justifyContent={"space-between"}>
+    <Stack
+      alignItems={"center"}
+      direction={"row"}
+      height={"100%"}
+      justifyContent={"space-between"}
+      marginTop={"0px !important"}
+    >
       <Text
         color={color}
+        display={"inline-block"}
         fontFamily={"Roboto"}
-        fontSize={"3rem"}
+        fontSize={"16rem"}
         fontWeight={700}
         lineHeight={1}
-        textAlign={"justify"}
         textTransform={"uppercase"}
       >
         {type}

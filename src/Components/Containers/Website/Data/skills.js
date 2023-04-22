@@ -1,6 +1,6 @@
 export const skills = [
   {
-    type: "main skills",
+    type: "main",
     list: [
       "ReactJs",
       "JavaScript",
@@ -30,7 +30,7 @@ export const skills = [
     ],
   },
   {
-    type: "others skills",
+    type: "others",
     list: [
       "Git",
       "GitHub",

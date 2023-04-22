@@ -100,14 +100,7 @@ export default extendTheme({
       transform: "scaleY(.8)",
     },
   },
-  layerStyle: {
-    redLayer: {
-      color: "red",
-    },
-    greenLayer: {
-      color: "green",
-    },
-  },
+
   components: {
     Divider: {
       variants: {
