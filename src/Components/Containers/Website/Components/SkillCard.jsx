@@ -2,8 +2,9 @@ import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
 
 import { TagCloudText } from "."
 
-const SkillCard = ({ type, list }) => {
+const SkillCard = ({ type, list, isHovered, handleHover, index }) => {
   const color = useColorModeValue("red", "green")
+  const opacity = isHovered ? 1 : 0.1
 
   return (
     <Stack
@@ -12,6 +13,10 @@ const SkillCard = ({ type, list }) => {
       height={"100%"}
       justifyContent={"space-between"}
       marginTop={"0px !important"}
+      opacity={opacity}
+      transition={"1.5s"}
+      onMouseEnter={() => handleHover(index)}
+      onMouseLeave={() => handleHover(0)}
     >
       <Text
         color={color}
