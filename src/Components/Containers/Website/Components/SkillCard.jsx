@@ -16,7 +16,7 @@ const SkillCard = ({ type, list, isHovered, handleHover, index, animateSkill }) 
         id={index}
         justifyContent={"space-between"}
         marginTop={"0px !important"}
-        opacity={isHovered ? 1 : 0.2}
+        opacity={isHovered ? 1 : 0.1}
         transition={"1.5s"}
         variants={animateSkill}
         onMouseEnter={() => handleHover(index)}
