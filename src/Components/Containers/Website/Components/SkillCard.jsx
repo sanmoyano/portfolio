@@ -4,7 +4,6 @@ import { TagCloudText } from "."
 
 const SkillCard = ({ type, list, isHovered, handleHover, index }) => {
   const color = useColorModeValue("red", "green")
-  const opacity = isHovered ? 1 : 0.1
 
   return (
     <Stack
@@ -13,7 +12,7 @@ const SkillCard = ({ type, list, isHovered, handleHover, index }) => {
       height={"100%"}
       justifyContent={"space-between"}
       marginTop={"0px !important"}
-      opacity={opacity}
+      opacity={isHovered ? 1 : 0.2}
       transition={"1.5s"}
       onMouseEnter={() => handleHover(index)}
       onMouseLeave={() => handleHover(0)}
