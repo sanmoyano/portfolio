@@ -1,6 +1,8 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
+import { floatAnimation } from "../Utils/floatAnimation"
+
 const TextTitles = ({ content, textStyle, transform, px }) => {
   const color = useColorModeValue("black", "white")
   let styles = {}
@@ -18,6 +20,7 @@ const TextTitles = ({ content, textStyle, transform, px }) => {
 
   return (
     <Box
+      animation={content === "projects" ? floatAnimation : null}
       as={motion.div}
       initial={{ opacity: 0 }}
       viewport={{ once: true }}
