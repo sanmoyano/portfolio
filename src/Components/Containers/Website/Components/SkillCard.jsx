@@ -1,7 +1,8 @@
+import { lazy, Suspense } from "react"
 import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 
-import { TagCloudText } from "."
+const TagCloudText = lazy(() => import("../Components/TagCloudText"))
 
 const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent }) => {
   const { activeIndex, setActiveIndex } = handleActiveIndex
@@ -33,7 +34,11 @@ const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent
           {skill.type}
         </Text>
       </Stack>
-      <TagCloudText activeIndex={active} height={heightParent} tags={skill.list} />
+      {active && (
+        <Suspense>
+          <TagCloudText activeIndex={active} height={heightParent} tags={skill.list} />
+        </Suspense>
+      )}
     </AnimatePresence>
   )
 }
