@@ -22,7 +22,6 @@ const SkillCard = ({ type, list, isHovered, handleHover, index, animateSkill }) 
     >
       <Text
         color={color}
-        display={"inline-block"}
         fontFamily={"Roboto"}
         fontSize={"16rem"}
         fontWeight={700}

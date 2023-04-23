@@ -8,10 +8,11 @@ const TextSphere = ({ tags }) => {
       alignItems={"center"}
       as={motion.div}
       fontSize={"1.2rem"}
+      fontWeight={"bold"}
       height={"100%"}
       justifyContent={"center"}
       textStyle={"paragraph"}
-      whileHover={{ scale: 1.6, transition: { duration: 0.2 } }}
+      whileHover={{ scale: 1.5, transition: { duration: 0.2 } }}
       width={"30%"}
     >
       <TagCloud
