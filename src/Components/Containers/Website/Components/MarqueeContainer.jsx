@@ -3,6 +3,7 @@ import { Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { Marquee } from "../Decorators"
 
 const MarqueeContainer = ({ height }) => {
+  //Styles settings
   const { colors } = useTheme()
   const color = useColorModeValue(colors.brand[100], colors.brand[200])
 

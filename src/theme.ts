@@ -6,7 +6,6 @@ import "@fontsource/roboto"
 import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 import "@fontsource/roboto/900.css"
-// import "https://use.typekit.net/nvb0lhh.css" apoket Dyana Weissman
 
 export default extendTheme({
   config: {
@@ -46,7 +45,6 @@ export default extendTheme({
   textStyles: {
     h1: {
       fontFamily: `"apotek-extrawide", sans-serif`,
-      fontWeight: 700,
       fontSize: "12rem",
       textTransform: "uppercase",
       lineHeight: 1,
@@ -67,7 +65,6 @@ export default extendTheme({
     },
     navigation: {
       fontFamily: `"apotek-extrawide", sans-serif`,
-      fontWeight: 700,
       fontSize: "2rem",
       textTransform: "uppercase",
       lineHeight: 1,
@@ -84,7 +81,6 @@ export default extendTheme({
     },
     logo: {
       fontFamily: `"apotek-extrawide", sans-serif`,
-      fontWeight: 700,
       fontSize: "4rem",
     },
     footer: {

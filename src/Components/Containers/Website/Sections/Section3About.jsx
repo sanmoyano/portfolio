@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 import { lazy, Suspense } from "react"
 
@@ -7,8 +6,6 @@ import { ParallaxContainer } from "../Components"
 const About = lazy(() => import("../Components/About"))
 
 const Section3About = () => {
-  const [isHovered, setHovered] = useState(false)
-
   return (
     <ParallaxContainer>
       <Stack
@@ -21,7 +18,7 @@ const Section3About = () => {
         width={"100%"}
       >
         <Suspense>
-          <About hovering={{ isHovered, setHovered }} />
+          <About />
         </Suspense>
       </Stack>
     </ParallaxContainer>

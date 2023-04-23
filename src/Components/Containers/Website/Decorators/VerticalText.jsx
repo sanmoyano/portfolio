@@ -3,15 +3,8 @@ import { motion } from "framer-motion"
 
 import Tilting from "./Tilting"
 
-const VerticalText = ({ content, refItem, hovering, id }) => {
+const VerticalText = ({ content, refItem, id }) => {
   const color = useColorModeValue("black", "white")
-
-  const handleMouseEnter = () => {
-    hovering?.setHovered(true)
-  }
-  const handleMouseLeave = () => {
-    hovering?.setHovered(false)
-  }
 
   return (
     <Box
@@ -21,8 +14,6 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
       viewport={{ once: true }}
       whileInView={{ opacity: 1, transition: { duration: 3 } }}
       zIndex={99}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
       <Tilting>
         <Text

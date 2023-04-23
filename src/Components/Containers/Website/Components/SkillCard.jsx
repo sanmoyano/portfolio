@@ -7,6 +7,8 @@ const TagCloudText = lazy(() => import("../Components/TagCloudText"))
 const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent }) => {
   const { activeIndex, setActiveIndex } = handleActiveIndex
   const active = activeIndex === index
+
+  //Style settings
   const { colors } = useTheme()
   const color = useColorModeValue(colors.brand[100], colors.brand[200])
 

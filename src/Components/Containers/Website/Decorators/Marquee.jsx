@@ -2,11 +2,13 @@ import { Box, Text, useMediaQuery, useColorModeValue, useTheme } from "@chakra-u
 import { motion } from "framer-motion"
 
 const Marquee = ({ text, outlined }) => {
+  //Styles settings
   const isLargerThanMd = useMediaQuery("(min-width: 992px)")
   const color = useColorModeValue("brand.100", "brand.200")
   const { textStyles } = useTheme()
   const h1Size = textStyles.h1.fontSize
 
+  //Animation settings
   const marqueeVariants = {
     horizontal: {
       x: [null, 1450, 450],

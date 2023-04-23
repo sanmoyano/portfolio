@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { Stack } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
+import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 
 import { skills } from "../Data/skills"
@@ -7,8 +7,7 @@ import { skills } from "../Data/skills"
 import { SkillCard } from "./"
 
 const SkillsBlock = ({ dimension }) => {
-  const [activeIndex, setActiveIndex] = useState(0)
-
+  //Animation settings
   const containerSkills = {
     hidden: { opacity: 0 },
     show: {
@@ -26,6 +25,12 @@ const SkillsBlock = ({ dimension }) => {
     hidden: { x: "-200%" },
     show: { x: "0%" },
   }
+
+  //Style settings
+  const color = useColorModeValue("brand.100", "brand.200")
+
+  //Handle states
+  const [activeIndex, setActiveIndex] = useState(0)
 
   return (
     <AnimatePresence>
@@ -50,6 +55,9 @@ const SkillsBlock = ({ dimension }) => {
             skill={{ type, list }}
           />
         ))}
+        <Text bottom={0} color={color} position={"absolute"} textStyle={"quotes"}>
+          use the up and down arrow keys
+        </Text>
       </Stack>
     </AnimatePresence>
   )
