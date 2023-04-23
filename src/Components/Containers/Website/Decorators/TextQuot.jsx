@@ -2,7 +2,7 @@ import { Text, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const TextQuot = ({ aling, content }) => {
-  const colorText = useColorModeValue("red", "green")
+  const colorText = useColorModeValue("brand.100", "brand.200")
 
   return (
     <Text

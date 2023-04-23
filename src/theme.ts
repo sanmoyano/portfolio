@@ -34,8 +34,10 @@ export default extendTheme({
   colors: {
     black: "#0d0d0d",
     white: "#f5f5f5",
-    green: "#CAF825",
-    red: "#EE3442",
+    brand: {
+      100: "#EE3442",
+      200: "#CAF825",
+    },
   },
   fonts: {
     heading: `"apotek-extrawide", sans-serif`,
@@ -97,7 +99,7 @@ export default extendTheme({
       variants: {
         solid: (props: StyleFunctionProps) => ({
           borderWidth: 2,
-          borderColor: mode("red", "green")(props),
+          borderColor: mode("brand.100", "brand.200")(props),
           opacity: 1,
         }),
       },

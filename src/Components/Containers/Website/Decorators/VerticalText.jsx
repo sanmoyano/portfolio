@@ -27,7 +27,7 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
       <Tilting>
         <Text
           ref={refItem}
-          _hover={{ WebkitTextStroke: `2px ${color}`, color: "transparent" }}
+          _hover={{ WebkitTextStroke: `1px ${color}`, color: "transparent" }}
           display={"inline-block"}
           sx={{
             writingMode: { base: "horizontal-lr", md: "vertical-lr" },

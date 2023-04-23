@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const Marquee = ({ text, outlined }) => {
   const isLargerThanMd = useMediaQuery("(min-width: 992px)")
-  const color = useColorModeValue("red", "green")
+  const color = useColorModeValue("brand.100", "brand.200")
   const { textStyles } = useTheme()
   const h1Size = textStyles.h1.fontSize
 

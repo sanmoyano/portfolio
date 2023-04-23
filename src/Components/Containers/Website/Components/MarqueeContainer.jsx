@@ -4,13 +4,14 @@ import { Marquee } from "../Decorators"
 
 const MarqueeContainer = ({ height }) => {
   const { colors } = useTheme()
-  const color = useColorModeValue(`${colors.red}`, `${colors.green}`)
+  const color = useColorModeValue(colors.brand[100], colors.brand[200])
+
   const textGenerator = () => {
     let words = []
 
     for (let i = 0; i < 4; i++) {
       const textContent = i % 2 === 0 ? "developer " : "designer "
-      const outLineText = i % 2 === 0 ? "" : `1.5px ${color}`
+      const outLineText = i % 2 === 0 ? "" : `1px ${color}`
 
       words.push(<Marquee key={i} outlined={outLineText} text={textContent} />)
     }

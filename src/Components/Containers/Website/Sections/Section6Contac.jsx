@@ -5,7 +5,7 @@ import { Tilting } from "../Decorators"
 
 const Section5Contact = () => {
   const { colors } = useTheme()
-  const colorText = useColorModeValue(`${colors.red}`, `${colors.green}`)
+  const colorText = useColorModeValue(colors.brand[100], colors.brand[200])
 
   return (
     <ParallaxContainer>
@@ -24,7 +24,7 @@ const Section5Contact = () => {
             <Tilting>
               <Text
                 _hover={{
-                  WebkitTextStroke: `1px ${colorText}`,
+                  WebkitTextStroke: `calc(1px / 1.618) ${colorText}`,
                   color: "transparent",
                 }}
                 color={`${colorText}`}

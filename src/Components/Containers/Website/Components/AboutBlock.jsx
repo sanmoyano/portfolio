@@ -6,7 +6,7 @@ import { floatAnimation } from "../Utils/floatAnimation"
 
 const AboutBlock = ({ dimension }) => {
   const { colors } = useTheme()
-  const fill = useColorModeValue(`${colors.red}`, `${colors.green}`)
+  const fill = useColorModeValue(colors.brand[100], colors.brand[200])
 
   return (
     <Stack
