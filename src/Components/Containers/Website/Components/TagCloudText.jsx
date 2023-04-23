@@ -8,6 +8,7 @@ const TextSphere = ({ height, tags, activeIndex }) => {
       alignItems={"center"}
       animate={activeIndex ? "visible" : "hidden"}
       as={motion.div}
+      // display={activeIndex ? "flex" : "none"}
       exit={"hidden"}
       height={height}
       initial={"hidden"}
@@ -20,7 +21,7 @@ const TextSphere = ({ height, tags, activeIndex }) => {
       variants={{
         visible: {
           opacity: 1,
-          transition: { duration: 1 },
+          transition: { duration: 1, delay: 0.1 },
         },
 
         hidden: {

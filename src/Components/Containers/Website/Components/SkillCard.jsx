@@ -16,7 +16,10 @@ const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent
         direction={"row"}
         justifyContent={"space-between"}
         marginTop={"0px !important"}
+        opacity={active ? 1 : 0.2}
+        transition={"2s"}
         variants={animateSkill}
+        width={"100%"}
         onMouseEnter={() => setActiveIndex(index)}
         onMouseLeave={() => setActiveIndex(0)}
       >
@@ -24,10 +27,8 @@ const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent
           color={color}
           display={"inline-block"}
           height={"100%"}
-          opacity={active ? 1 : 0.1}
           textAlign={"center"}
           textStyle={"h2"}
-          transition={"1.5s"}
         >
           {skill.type}
         </Text>
