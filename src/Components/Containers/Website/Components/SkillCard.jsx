@@ -12,6 +12,7 @@ const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent
   return (
     <AnimatePresence>
       <Stack
+        key={index}
         alignItems={"center"}
         as={motion.div}
         direction={"row"}
