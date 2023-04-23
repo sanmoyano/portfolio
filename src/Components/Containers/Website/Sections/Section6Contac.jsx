@@ -16,7 +16,7 @@ const Section5Contact = () => {
         spacing={12}
         width={"100%"}
       >
-        <Text textAlign={{ base: "center", md: "left" }} textStyle={"sectionTitle"}>
+        <Text textAlign={{ base: "center", md: "left" }} textStyle={"h1"}>
           get in touch
         </Text>
         <Stack alignItems={"center"} justifyContent={"center"} width={"100%"}>

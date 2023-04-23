@@ -32,7 +32,7 @@ const SkillsBlock = ({ dimension }) => {
         as={motion.div}
         height={dimension.height}
         initial={"hidden"}
-        justifyContent={"space-around"}
+        justifyContent={"flex-start"}
         variants={containerSkills}
         viewport={{ once: true }}
         whileInView={"show"}

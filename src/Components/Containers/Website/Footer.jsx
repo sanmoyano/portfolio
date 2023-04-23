@@ -1,9 +1,11 @@
-import { Grid, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Grid, Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { Logo, ContactIcons } from "./Components"
 
 const Footer = () => {
   const heart = useColorModeValue("🖤", "🤍")
+  const { textStyles } = useTheme()
+  const footerSize = textStyles.footer.fontSize
 
   return (
     <Stack
@@ -22,33 +24,23 @@ const Footer = () => {
       >
         <Grid gap={2} templateColumns={"repeat(2, 1fr)"}>
           <Link
-            fontSize={"1.4rem"}
             fontWeight={700}
             href={"https://www.linkedin.com/in/santiago-moyano/"}
             target={"_blank"}
-            textStyle={"paragraph"}
+            textStyle={"footer"}
           >
             Santiago Moyano
           </Link>
 
-          <Text fontSize={"1.4rem"} textStyle={"paragraph"}>
-            Front End Developer
-          </Text>
-          <Text fontSize={"1.4rem"} textStyle={"paragraph"}>
-            Córdoba, Argentina
-          </Text>
-          <Link
-            fontSize={"1.4rem"}
-            fontWeight={700}
-            href={"mailto:smoyano.di@gamil.com"}
-            textStyle={"paragraph"}
-          >
+          <Text textStyle={"footer"}>Front End Developer</Text>
+          <Text textStyle={"footer"}>Córdoba, Argentina</Text>
+          <Link fontWeight={700} href={"mailto:smoyano.di@gamil.com"} textStyle={"footer"}>
             smoyano.di@gmail.com
           </Link>
         </Grid>
         <ContactIcons />
       </Stack>
-      <Text fontSize={"1rem"} textAlign={"center"} textStyle={"paragraph"}>
+      <Text fontSize={`calc(${footerSize} / 1.618)`} textAlign={"center"} textStyle={"footer"}>
         {`2023 - Designed and developed with ${heart}.`}
       </Text>
     </Stack>

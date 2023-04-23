@@ -11,7 +11,6 @@ const SkillCard = ({ type, list, isHovered, handleHover, index, animateSkill }) 
       alignItems={"center"}
       as={motion.div}
       direction={"row"}
-      height={"100%"}
       justifyContent={"space-between"}
       marginTop={"0px !important"}
       opacity={isHovered ? 1 : 0.1}
@@ -22,17 +21,23 @@ const SkillCard = ({ type, list, isHovered, handleHover, index, animateSkill }) 
     >
       <Text
         color={color}
+        display={"inline-block"}
         fontFamily={"Roboto"}
-        fontSize={"16rem"}
+        fontSize={"12rem"}
         fontWeight={700}
-        lineHeight={1}
+        height={"100%"}
+        lineHeight={0.8}
+        textAlign={"center"}
         textTransform={"uppercase"}
       >
         {type}
       </Text>
-      <TagCloudText tags={list} />
     </Stack>
   )
 }
 
 export default SkillCard
+
+{
+  /* <TagCloudText tags={list} /> */
+}

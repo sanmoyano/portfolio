@@ -15,7 +15,6 @@ const AboutBlock = ({ dimension }) => {
       id={"about-hover"}
       initial={"hidden"}
       justifyContent={"space-between"}
-      paddingLeft={8}
       variants={{
         visible: { translateX: "0%", transition: { duration: 1 } },
         hidden: { translateX: "-100%" },

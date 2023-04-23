@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { Divider, Stack, Text } from "@chakra-ui/react"
+import { Divider, Stack, Text, useTheme } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 
 import useDimensions from "../Hooks/useDimensions"
@@ -8,6 +8,8 @@ import { MarqueeContainer, ParallaxContainer } from "../Components"
 const Section2Marquee = () => {
   const DIMENSIONS_REF = useRef()
   const dimensions = useDimensions(DIMENSIONS_REF)
+  const { textStyles } = useTheme()
+  const captionSize = textStyles.caption.fontSize
 
   return (
     <ParallaxContainer>
@@ -38,14 +40,14 @@ const Section2Marquee = () => {
               fontWeight={700}
               lineHeight={1}
               textAlign={"justify"}
-              textStyle={"paragraphPhrases"}
+              textStyle={"caption"}
               textTransform={"uppercase"}
             >
               I see every project as a chance to leave my footprint
             </Text>
             <Text
               fontFamily={"Roboto"}
-              fontSize={{ base: "calc(4rem / 1.618)", md: "calc(10rem / 1.618)" }}
+              fontSize={`calc(${captionSize} / 1.618)`}
               lineHeight={1}
               textAlign={"justify"}
               textTransform={"uppercase"}

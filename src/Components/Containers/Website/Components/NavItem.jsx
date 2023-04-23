@@ -9,15 +9,6 @@ const NavItem = ({ item, route }) => {
   const { colors } = useTheme()
   const fill = useColorModeValue(`${colors.black}`, `${colors.white}`)
 
-  const variants = {
-    hover: {
-      rotate: 360,
-    },
-    initial: {
-      rotate: 0,
-    },
-  }
-
   const [isHovered, setHovered] = useState(false)
 
   return (
@@ -32,7 +23,7 @@ const NavItem = ({ item, route }) => {
         display={{ base: item === "contact" ? "none" : "flex", lg: "flex" }}
       >
         <StarIcon fill={fill} isRotate={isHovered} />
-        <Text textStyle={"navLink"}>{item}</Text>
+        <Text textStyle={"navigation"}>{item}</Text>
       </Stack>
     </Link>
   )

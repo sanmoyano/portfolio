@@ -34,7 +34,7 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
             textOrientation: "mixed",
           }}
           textAlign={"center"}
-          textStyle={{ base: "sectionTitle", md: "sectionTitleVertical" }}
+          textStyle={"h1"}
           transitionDelay={"0s, 0s"}
           transitionDuration={".5s, .5s"}
           transitionProperty={"color, opacity"}

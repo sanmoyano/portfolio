@@ -18,7 +18,7 @@ const Section3Projects = () => {
       >
         <Link to="/projects">
           <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>
-            <TextTitles content={"projects"} px={2} textStyle={"sectionTitle"} />
+            <TextTitles content={"projects"} px={2} textStyle={"h1"} />
           </Tilting>
         </Link>
       </Box>

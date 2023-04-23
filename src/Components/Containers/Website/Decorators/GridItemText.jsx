@@ -11,13 +11,7 @@ const GridItemText = ({ content, aling }) => {
       width={"100%"}
     >
       <Container centerContent maxW={"100%"}>
-        <Text
-          fontFamily={"Roboto"}
-          fontSize={"4.6rem"}
-          lineHeight={1}
-          textAlign={aling}
-          textTransform={"uppercase"}
-        >
+        <Text textAlign={aling} textStyle={"paragraph"}>
           {content}
         </Text>
       </Container>
