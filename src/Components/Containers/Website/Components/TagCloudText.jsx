@@ -2,22 +2,37 @@ import { Stack } from "@chakra-ui/react"
 import TagCloud from "@frank-mayer/react-tag-cloud"
 import { motion } from "framer-motion"
 
-const TextSphere = ({ tags }) => {
+const TextSphere = ({ height, tags, activeIndex }) => {
   return (
     <Stack
       alignItems={"center"}
+      animate={activeIndex ? "visible" : "hidden"}
       as={motion.div}
-      fontSize={"1.2rem"}
-      fontWeight={"bold"}
-      height={"100%"}
+      exit={"hidden"}
+      height={height}
+      initial={"hidden"}
       justifyContent={"center"}
-      textStyle={"paragraph"}
-      whileHover={{ scale: 1.5, transition: { duration: 0.2 } }}
-      width={"30%"}
+      position={"absolute"}
+      right={0}
+      textStyle={"cloud"}
+      top={0}
+      transition={"1s"}
+      variants={{
+        visible: {
+          opacity: 1,
+          transition: { duration: 1 },
+        },
+
+        hidden: {
+          opacity: 0,
+          transition: { duration: 0.2 },
+        },
+      }}
+      width={"50%"}
     >
       <TagCloud
         options={(w) => ({
-          radius: Math.min(170, w.innerWidth, w.innerHeight) / 2,
+          radius: Math.min(400, w.innerWidth, w.innerHeight) / 2,
           maxSpeed: "normal",
           initSpeed: "normal",
           direction: Math.floor(tags.length * 50),

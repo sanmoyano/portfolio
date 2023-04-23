@@ -1,43 +1,43 @@
 import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 import { TagCloudText } from "."
 
-const SkillCard = ({ type, list, isHovered, handleHover, index, animateSkill }) => {
+const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent }) => {
+  const { activeIndex, setActiveIndex } = handleActiveIndex
+  const active = activeIndex === index
   const color = useColorModeValue("red", "green")
 
   return (
-    <Stack
-      alignItems={"center"}
-      as={motion.div}
-      direction={"row"}
-      justifyContent={"space-between"}
-      marginTop={"0px !important"}
-      opacity={isHovered ? 1 : 0.1}
-      transition={"1.5s"}
-      variants={animateSkill}
-      onMouseEnter={() => handleHover(index)}
-      onMouseLeave={() => handleHover(0)}
-    >
-      <Text
-        color={color}
-        display={"inline-block"}
-        fontFamily={"Roboto"}
-        fontSize={"12rem"}
-        fontWeight={700}
-        height={"100%"}
-        lineHeight={0.8}
-        textAlign={"center"}
-        textTransform={"uppercase"}
+    <AnimatePresence>
+      <Stack
+        alignItems={"center"}
+        as={motion.div}
+        direction={"row"}
+        justifyContent={"space-between"}
+        marginTop={"0px !important"}
+        variants={animateSkill}
+        onMouseEnter={() => setActiveIndex(index)}
+        onMouseLeave={() => setActiveIndex(0)}
       >
-        {type}
-      </Text>
-    </Stack>
+        <Text
+          color={color}
+          display={"inline-block"}
+          height={"100%"}
+          opacity={active ? 1 : 0.1}
+          textAlign={"center"}
+          textStyle={"h2"}
+          transition={"1.5s"}
+        >
+          {skill.type}
+        </Text>
+      </Stack>
+      <TagCloudText activeIndex={active} height={heightParent} tags={skill.list} />
+    </AnimatePresence>
   )
 }
 
 export default SkillCard
 
 {
-  /* <TagCloudText tags={list} /> */
 }

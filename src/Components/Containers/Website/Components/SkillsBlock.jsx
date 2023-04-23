@@ -7,7 +7,8 @@ import { skills } from "../Data/skills"
 import { SkillCard } from "./"
 
 const SkillsBlock = ({ dimension }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0)
+
   const containerSkills = {
     hidden: { opacity: 0 },
     show: {
@@ -33,6 +34,7 @@ const SkillsBlock = ({ dimension }) => {
         height={dimension.height}
         initial={"hidden"}
         justifyContent={"flex-start"}
+        position={"relative"}
         variants={containerSkills}
         viewport={{ once: true }}
         whileInView={"show"}
@@ -42,11 +44,10 @@ const SkillsBlock = ({ dimension }) => {
           <SkillCard
             key={type}
             animateSkill={itemSkill}
-            handleHover={setHoveredIndex}
+            handleActiveIndex={{ setActiveIndex, activeIndex }}
+            heightParent={dimension.height}
             index={index}
-            isHovered={hoveredIndex === index}
-            list={list}
-            type={type}
+            skill={{ type, list }}
           />
         ))}
       </Stack>

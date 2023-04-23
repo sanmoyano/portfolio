@@ -49,6 +49,12 @@ export default extendTheme({
       textTransform: "uppercase",
       lineHeight: 1,
     },
+    h2: {
+      fontSize: "12rem",
+      fontWeight: 700,
+      lineHeight: 0.8,
+      textTransform: "uppercase",
+    },
     caption: {
       fontSize: "10rem",
     },
@@ -70,11 +76,14 @@ export default extendTheme({
       textTransform: "uppercase",
       letterSpacing: 1,
     },
+    cloud: {
+      fontFamily: `"apotek-extrawide", sans-serif`,
+      fontSize: "calc(4rem / 1.618)",
+    },
     logo: {
       fontFamily: `"apotek-extrawide", sans-serif`,
       fontWeight: 700,
       fontSize: "4rem",
-      letterSpacing: 1,
     },
     footer: {
       fontWeight: 400,

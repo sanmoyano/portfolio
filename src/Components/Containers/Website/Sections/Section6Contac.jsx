@@ -19,7 +19,7 @@ const Section5Contact = () => {
         <Text textAlign={{ base: "center", md: "left" }} textStyle={"h1"}>
           get in touch
         </Text>
-        <Stack alignItems={"center"} justifyContent={"center"} width={"100%"}>
+        <Stack alignItems={"center"} justifyContent={"center"} spacing={10} width={"100%"}>
           <Link _hover={{ textDecorationColor: "none" }} href="mailto:smoyano.di@gmail.com">
             <Tilting>
               <Text
