@@ -1,12 +1,9 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
-import { floatAnimation } from "../Utils/floatAnimation"
-
 import Tilting from "./Tilting"
 
 const VerticalText = ({ content, refItem, hovering, id }) => {
-  const hoverState = hovering?.isHovered //hoverState is undefined on "skill" because it doesn't animated with the floatAnimation() just with the _hover prop.
   const color = useColorModeValue("black", "white")
 
   const handleMouseEnter = () => {
@@ -18,7 +15,6 @@ const VerticalText = ({ content, refItem, hovering, id }) => {
 
   return (
     <Box
-      animation={hoverState ? floatAnimation : "unset"}
       as={motion.div}
       id={id}
       initial={{ opacity: 0 }}
