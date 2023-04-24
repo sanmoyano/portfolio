@@ -4,8 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const TagCloudText = lazy(() => import("../Components/TagCloudText"))
 
-const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent }) => {
-  const { activeIndex, setActiveIndex } = handleActiveIndex
+const SkillCard = ({ skill, index, animateSkill, activeIndex, heightParent }) => {
   const active = activeIndex === index
 
   //Style settings
@@ -23,8 +22,6 @@ const SkillCard = ({ skill, index, animateSkill, handleActiveIndex, heightParent
         marginTop={"0px !important"}
         variants={animateSkill}
         width={"100%"}
-        onMouseEnter={() => setActiveIndex(index)}
-        onMouseLeave={() => setActiveIndex(0)}
       >
         <Text
           color={active ? `${color}` : "transparent"}

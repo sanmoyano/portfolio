@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion, AnimatePresence, useInView } from "framer-motion"
+import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons"
 
 import { skills } from "../Data/skills"
 
@@ -36,10 +37,10 @@ const SkillsBlock = ({ dimension }) => {
   const handlerKeyPress = (e) => {
     if (e.code === "ArrowUp") {
       e.preventDefault()
-      console.log(e.code)
+      setActiveIndex((prevIndex) => (prevIndex === 0 ? skills.length - 1 : prevIndex - 1))
     } else if (e.code === "ArrowDown") {
       e.preventDefault()
-      console.log(e.code)
+      setActiveIndex((prevIndex) => (prevIndex === skills.length - 1 ? 0 : prevIndex + 1))
     }
   }
 
@@ -68,15 +69,15 @@ const SkillsBlock = ({ dimension }) => {
         {skills.map(({ type, list }, index) => (
           <SkillCard
             key={type}
+            activeIndex={activeIndex}
             animateSkill={itemSkill}
-            handleActiveIndex={{ setActiveIndex, activeIndex }}
             heightParent={dimension.height}
             index={index}
             skill={{ type, list }}
           />
         ))}
-        <Text bottom={0} color={color} position={"absolute"} textStyle={"quotes"}>
-          use the up and down arrow keys to change skills
+        <Text bottom={0} color={color} position={"absolute"} spacing={1} textStyle={"quotes"}>
+          use the {<ArrowUpIcon />} {<ArrowDownIcon />} arrow keys to change skills
         </Text>
       </Stack>
     </AnimatePresence>
