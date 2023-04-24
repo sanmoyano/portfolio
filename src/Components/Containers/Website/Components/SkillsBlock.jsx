@@ -59,6 +59,7 @@ const SkillsBlock = ({ dimension }) => {
         ref={ITEM_REF}
         as={motion.div}
         height={dimension.height}
+        id={"skills"}
         initial={"hidden"}
         justifyContent={"flex-start"}
         position={"relative"}
@@ -67,7 +68,7 @@ const SkillsBlock = ({ dimension }) => {
         whileInView={"show"}
         width={"100%"}
       >
-        {skills.map(({ type, list }, index) => (
+        {skills?.map(({ type, list }, index) => (
           <SkillCard
             key={type}
             activeIndex={activeIndex}

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Stack, Text, useTheme, useColorModeValue } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
 
 import { StarIcon } from "../Decorators"
 
@@ -13,7 +12,7 @@ const NavItem = ({ item, route }) => {
 
   return (
     <Link
-      to={!route ? "" : route}
+      to={route && route}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

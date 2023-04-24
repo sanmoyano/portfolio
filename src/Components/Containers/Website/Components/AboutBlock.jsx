@@ -12,7 +12,7 @@ const AboutBlock = ({ dimension }) => {
     <Stack
       as={motion.div}
       height={dimension.height}
-      id={"about-hover"}
+      id={"about"}
       initial={"hidden"}
       justifyContent={"space-between"}
       variants={{

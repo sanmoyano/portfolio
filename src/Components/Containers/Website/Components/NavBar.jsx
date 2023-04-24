@@ -12,17 +12,21 @@ const NavBar = () => {
       route: "/",
     },
     {
+      name: "about",
+      route: "#about",
+    },
+    {
       name: "projects",
       route: "/projects",
     },
     {
       name: "skills",
+      route: "#skills",
     },
-    {
-      name: "about",
-    },
+
     {
       name: "contact",
+      route: "#contact",
     },
   ]
   const { toggleColorMode } = useColorMode()
