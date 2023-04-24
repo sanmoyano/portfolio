@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useInView } from "framer-motion"
 
 import { skills } from "../Data/skills"
 
@@ -30,11 +30,31 @@ const SkillsBlock = ({ dimension }) => {
   const color = useColorModeValue("brand.100", "brand.200")
 
   //Handle states
+  const ITEM_REF = useRef(null)
+  const isInView = useInView(ITEM_REF)
   const [activeIndex, setActiveIndex] = useState(0)
+  const handlerKeyPress = (e) => {
+    if (e.code === "ArrowUp") {
+      e.preventDefault()
+      console.log(e.code)
+    } else if (e.code === "ArrowDown") {
+      e.preventDefault()
+      console.log(e.code)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handlerKeyPress)
+
+    return () => {
+      document.removeEventListener("keydown", handlerKeyPress)
+    }
+  }, [])
 
   return (
     <AnimatePresence>
       <Stack
+        ref={ITEM_REF}
         as={motion.div}
         height={dimension.height}
         initial={"hidden"}
@@ -56,7 +76,7 @@ const SkillsBlock = ({ dimension }) => {
           />
         ))}
         <Text bottom={0} color={color} position={"absolute"} textStyle={"quotes"}>
-          use the up and down arrow keys
+          use the up and down arrow keys to change skills
         </Text>
       </Stack>
     </AnimatePresence>
