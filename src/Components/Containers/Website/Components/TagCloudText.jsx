@@ -27,7 +27,9 @@ const TextSphere = ({ height, tags, activeIndex }) => {
           transition: { duration: 0.2 },
         },
       }}
+      whileHover={{ scale: 1.2, transition: { duration: 0.5 } }}
       width={"50%"}
+      zIndex={99}
     >
       <TagCloud
         options={(w) => ({

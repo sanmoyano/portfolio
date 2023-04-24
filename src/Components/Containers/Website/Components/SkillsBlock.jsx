@@ -3,6 +3,7 @@ import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
 import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons"
 
+import { floatAnimation } from "../Utils/floatAnimation"
 import { skills } from "../Data/skills"
 
 import { SkillCard } from "./"
@@ -45,12 +46,12 @@ const SkillsBlock = ({ dimension }) => {
   }
 
   useEffect(() => {
-    document.addEventListener("keydown", handlerKeyPress)
+    isInView && document.addEventListener("keydown", handlerKeyPress)
 
     return () => {
-      document.removeEventListener("keydown", handlerKeyPress)
+      isInView && document.removeEventListener("keydown", handlerKeyPress)
     }
-  }, [])
+  }, [isInView])
 
   return (
     <AnimatePresence>
@@ -76,7 +77,14 @@ const SkillsBlock = ({ dimension }) => {
             skill={{ type, list }}
           />
         ))}
-        <Text bottom={0} color={color} position={"absolute"} spacing={1} textStyle={"quotes"}>
+        <Text
+          animation={floatAnimation}
+          bottom={0}
+          color={color}
+          position={"absolute"}
+          spacing={1}
+          textStyle={"quotes"}
+        >
           use the {<ArrowUpIcon />} {<ArrowDownIcon />} arrow keys to change skills
         </Text>
       </Stack>
