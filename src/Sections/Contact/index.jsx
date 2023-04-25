@@ -1,8 +1,8 @@
 import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { ContactIcons, ParallaxContainer, Tilting } from "../Components"
+import { ContactIcons, ParallaxContainer, Tilting } from "../../Components"
 
-const Section5Contact = () => {
+const Contact = () => {
   const { colors } = useTheme()
   const colorText = useColorModeValue(colors.brand[100], colors.brand[200])
 
@@ -45,4 +45,4 @@ const Section5Contact = () => {
   )
 }
 
-export default Section5Contact
+export default Contact

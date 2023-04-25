@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 
-import { HeroLogo, ParallaxContainer } from "../Components/"
+import { HeroLogo, ParallaxContainer } from "../../Components"
 
-const Section1Temporary = () => {
+const Hero = () => {
   const [imageLoading, setImageLoading] = useState(false)
 
   return (
@@ -25,4 +25,4 @@ const Section1Temporary = () => {
   )
 }
 
-export default Section1Temporary
+export default Hero

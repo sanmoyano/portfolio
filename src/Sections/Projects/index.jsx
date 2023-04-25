@@ -1,9 +1,9 @@
 import { Box, useMediaQuery } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
-import { ParallaxContainer, TextTitles, Tilting } from "../Components"
+import { ParallaxContainer, TextTitles, Tilting } from "../../Components"
 
-const Section3Projects = () => {
+const Projects = () => {
   const isDesktop = useMediaQuery("(min-width: 992px)")
 
   return (
@@ -25,4 +25,4 @@ const Section3Projects = () => {
   )
 }
 
-export default Section3Projects
+export default Projects

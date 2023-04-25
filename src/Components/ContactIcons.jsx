@@ -22,10 +22,6 @@ const ContactIcons = ({}) => {
       icon: faWhatsapp,
       url: "https://wa.me/3517562121",
     },
-    // {
-    //   icon: faInstagram,
-    //   url: "https://www.instagram.com/sanmoyano/?theme=dark",
-    // },
   ]
 
   return (

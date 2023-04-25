@@ -31,7 +31,7 @@ const Box = () => {
   )
 }
 
-const Section1Init = () => {
+const HeroInProgress = () => {
   return (
     <Canvas camera={{ fov: 25 }} dpr={[1, 2]}>
       <ambientLight intensity={0.5} />
@@ -43,4 +43,4 @@ const Section1Init = () => {
   )
 }
 
-export default Section1Init
+export default HeroInProgress

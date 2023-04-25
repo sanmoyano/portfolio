@@ -1,4 +1,4 @@
-import Section2 from "../Projects/Section2"
+import Section2 from "../Sections/Projects/Section2"
 
 const ProjectsLayout = () => {
   return (

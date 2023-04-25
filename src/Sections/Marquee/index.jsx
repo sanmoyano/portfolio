@@ -2,10 +2,10 @@ import { useRef } from "react"
 import { Divider, Stack, Text, useTheme } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 
-import useDimensions from "../Hooks/useDimensions"
-import { MarqueeContainer, ParallaxContainer } from "../Components"
+import useDimensions from "../../Hooks/useDimensions"
+import { MarqueeContainer, ParallaxContainer } from "../../Components"
 
-const Section2Marquee = () => {
+const Marquee = () => {
   const DIMENSIONS_REF = useRef()
   const dimensions = useDimensions(DIMENSIONS_REF)
   const { textStyles } = useTheme()
@@ -68,4 +68,4 @@ const Section2Marquee = () => {
   )
 }
 
-export default Section2Marquee
+export default Marquee
