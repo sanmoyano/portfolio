@@ -1,11 +1,7 @@
-import Section2 from "../Sections/Projects/Section2"
+import { ProjectsPage } from "../Sections"
 
 const ProjectsLayout = () => {
-  return (
-    <>
-      <Section2 />
-    </>
-  )
+  return <ProjectsPage />
 }
 
 export default ProjectsLayout
