@@ -1,4 +1,4 @@
-import { Section2 } from "./Website/Projects"
+import Section2 from "../Projects/Section2"
 
 const ProjectsLayout = () => {
   return (

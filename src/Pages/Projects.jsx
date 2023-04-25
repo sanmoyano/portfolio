@@ -1,4 +1,4 @@
-import { ProjectsLayout } from "../../Components/Containers"
+import { ProjectsLayout } from "../Layouts"
 
 const Projects = () => {
   return <ProjectsLayout />

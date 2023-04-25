@@ -1,6 +1,6 @@
 import { Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { StarIcon, TextQuot } from "../Decorators"
+import { StarIcon, TextQuot } from "../Components/"
 import { floatAnimation } from "../Utils/floatAnimation"
 
 const Section2 = () => {

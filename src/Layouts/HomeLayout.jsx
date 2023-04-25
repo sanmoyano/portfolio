@@ -8,7 +8,7 @@ import {
   Section4Projects,
   Section5Skills,
   Section6Contact,
-} from "./Website/Sections"
+} from "../Sections"
 
 const HomeLayout = () => {
   return (

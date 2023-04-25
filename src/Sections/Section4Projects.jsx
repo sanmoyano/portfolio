@@ -1,8 +1,7 @@
 import { Box, useMediaQuery } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
-import { ParallaxContainer } from "../Components"
-import { TextTitles, Tilting } from "../Decorators"
+import { ParallaxContainer, TextTitles, Tilting } from "../Components"
 
 const Section3Projects = () => {
   const isDesktop = useMediaQuery("(min-width: 992px)")

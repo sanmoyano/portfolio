@@ -1,8 +1,9 @@
 import { motion } from "framer-motion"
 import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { GridItemText, TextQuot, StarIcon } from "../Decorators"
 import { floatAnimation } from "../Utils/floatAnimation"
+
+import { GridItemText, TextQuot, StarIcon } from "./"
 
 const AboutBlock = ({ dimension }) => {
   const { colors } = useTheme()

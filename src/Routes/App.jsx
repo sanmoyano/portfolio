@@ -2,8 +2,9 @@ import React from "react"
 import { useLocation, useRoutes } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 
-import { Home, Projects } from "./Routes"
-import Root from "./Routes/Root"
+import { Home, Projects } from "../Pages"
+
+import Root from "./Root"
 
 const App = () => {
   const element = useRoutes([

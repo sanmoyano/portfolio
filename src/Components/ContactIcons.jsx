@@ -2,7 +2,7 @@ import { Link, Stack } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedinIn, faTelegram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
-import { Tilting } from "../Decorators"
+import { Tilting } from "./"
 
 const ContactIcons = ({}) => {
   const icons = [

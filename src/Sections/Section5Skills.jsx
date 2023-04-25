@@ -2,8 +2,7 @@ import { useRef } from "react"
 import { Stack } from "@chakra-ui/react"
 
 import useDimensions from "../Hooks/useDimensions"
-import { VerticalText } from "../Decorators"
-import { SkillsBlock, ParallaxContainer } from "../Components"
+import { SkillsBlock, ParallaxContainer, VerticalText } from "../Components"
 
 const Section5Skills = () => {
   const HEIGHT_TEXT_REF = useRef()

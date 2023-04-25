@@ -1,8 +1,8 @@
 import { useRef } from "react"
 
-import { VerticalText } from "../Decorators"
 import useDimensions from "../Hooks/useDimensions"
 
+import { VerticalText } from "./"
 import { AboutBlock } from "./"
 
 const About = () => {

@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Stack, Text, useTheme, useColorModeValue } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
-import { StarIcon } from "../Decorators"
+import { StarIcon } from "./"
 
 const NavItem = ({ item, route }) => {
   const { colors } = useTheme()

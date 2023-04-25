@@ -1,6 +1,6 @@
 import { Grid, Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { Logo, ContactIcons } from "./Components"
+import { Logo, ContactIcons } from "./"
 
 const Footer = () => {
   const heart = useColorModeValue("🖤", "🤍")

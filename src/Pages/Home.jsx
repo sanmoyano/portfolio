@@ -1,4 +1,4 @@
-import { HomeLayout } from "../../Components/Containers"
+import { HomeLayout } from "../Layouts"
 
 const Home = () => {
   return <HomeLayout />

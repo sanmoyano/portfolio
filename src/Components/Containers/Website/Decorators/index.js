@@ -1,8 +1,0 @@
-export { default as StarIcon } from "./StarIcon"
-export { default as Marquee } from "./Marquee"
-export { default as TextQuot } from "./TextQuot"
-export { default as TextTitles } from "./TextTitles"
-export { default as Tilting } from "./Tilting"
-export { default as SpacedContainer } from "./SpacedContainer"
-export { default as VerticalText } from "./VerticalText"
-export { default as GridItemText } from "./GridItemText"
