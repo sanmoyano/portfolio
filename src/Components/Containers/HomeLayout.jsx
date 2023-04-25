@@ -1,7 +1,7 @@
 import { Stack } from "@chakra-ui/react"
 
 import {
-  Section1Init,
+  // Section1Init,
   Section1Temporary,
   Section2Marquee,
   Section3About,
