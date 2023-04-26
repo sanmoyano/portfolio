@@ -3,16 +3,16 @@ import { lazy, Suspense } from "react"
 import { Stack, useColorModeValue, Spinner, Box } from "@chakra-ui/react"
 import { motion, useScroll, useSpring } from "framer-motion"
 
-import { Logo, Tilting } from "./"
-const Mobile = lazy(() => import("./MobileNavBar"))
-const Desktop = lazy(() => import("./DesktopNavBar"))
+import { Logo, Tilting } from ".."
+const Mobile = lazy(() => import("../MobileNavBar"))
+const Desktop = lazy(() => import("../DesktopNavBar"))
 
 const Header = () => {
+  //Style settings
   const colorLine = useColorModeValue("black", "white")
   const headerHeigth = "90px"
 
-  const [isBlured, setIsBlured] = useState(false)
-
+  //Page scroll progress animation
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -20,6 +20,8 @@ const Header = () => {
     restDelta: 0.001,
   })
 
+  //Blur animation
+  const [isBlured, setIsBlured] = useState(false)
   const activeBackgroundBlur = () => {
     if (window.scrollY > 90) {
       setIsBlured(true)
