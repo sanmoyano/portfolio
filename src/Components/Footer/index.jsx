@@ -7,6 +7,7 @@ const Footer = () => {
   const heart = useColorModeValue("🖤", "🤍")
   const { textStyles } = useTheme()
   const footerSize = textStyles.footer.fontSize
+  const year = new Date().getFullYear()
 
   return (
     <Stack
@@ -42,7 +43,7 @@ const Footer = () => {
         <ContactIcons />
       </Stack>
       <Text fontSize={`calc(${footerSize} / 1.618)`} textAlign={"center"} textStyle={"footer"}>
-        {`2023 - Designed and developed with ${heart}.`}
+        {`${year} - Designed and developed with ${heart}.`}
       </Text>
     </Stack>
   )
