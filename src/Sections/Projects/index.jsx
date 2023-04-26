@@ -1,11 +1,10 @@
-import { Box, useMediaQuery } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
-import { ParallaxContainer, TextTitles, Tilting } from "../../Components"
+import { ParallaxContainer, Titles } from "../../Components"
+import { floatAnimation } from "../../Utils/floatAnimation"
 
 const Projects = () => {
-  const isDesktop = useMediaQuery("(min-width: 992px)")
-
   return (
     <ParallaxContainer>
       <Box
@@ -16,9 +15,12 @@ const Projects = () => {
         width={"100%"}
       >
         <Link to="/projects">
-          <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}>
-            <TextTitles content={"projects"} px={2} textStyle={"h1"} />
-          </Tilting>
+          <Titles
+            content={"projects"}
+            float={floatAnimation}
+            textStyle={"title"}
+            tiltingScale={1.2}
+          />
         </Link>
       </Box>
     </ParallaxContainer>

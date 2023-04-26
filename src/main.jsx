@@ -7,7 +7,7 @@ import { ParallaxProvider } from "react-scroll-parallax"
 
 // import client from "./apollo/client"
 import App from "./Routes/App"
-import theme from "./Styles/theme"
+import theme from "./Theme/theme"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

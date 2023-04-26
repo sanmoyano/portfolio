@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
-import { TextTitles } from "../"
+import { Titles } from "../"
 
 const Logo = () => {
   return (
     <Link to={"/"}>
-      <TextTitles content={"#SM"} px={1} textStyle={"logo"} />
+      <Titles content={"#SM"} scale={1.1} textStyle={"logo"} />
     </Link>
   )
 }

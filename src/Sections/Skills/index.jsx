@@ -2,8 +2,8 @@ import { useRef } from "react"
 import { Stack } from "@chakra-ui/react"
 
 import useDimensions from "../../Hooks/useDimensions"
-import { SkillsBlock, ParallaxContainer, VerticalText } from "../../Components"
-
+import { SkillsBlock, ParallaxContainer, Titles } from "../../Components"
+import { verticalText } from "../../Theme/styles/verticalText"
 const Skills = () => {
   const HEIGHT_TEXT_REF = useRef()
   const dimension = useDimensions(HEIGHT_TEXT_REF)
@@ -16,7 +16,13 @@ const Skills = () => {
         height={"100vh"}
         id={5}
       >
-        <VerticalText content={"skills"} id={"skills"} refItem={HEIGHT_TEXT_REF} />
+        <Titles
+          content={"skills"}
+          refItem={HEIGHT_TEXT_REF}
+          textStyle={"h1"}
+          tiltingScale={1.2}
+          vertical={verticalText}
+        />
         <SkillsBlock dimension={dimension} />
       </Stack>
     </ParallaxContainer>

@@ -1,9 +1,9 @@
 import { Stack } from "@chakra-ui/react"
 import { lazy, Suspense, useRef } from "react"
 
-import { ParallaxContainer, VerticalText } from "../../Components"
+import { ParallaxContainer, Titles } from "../../Components"
 import useDimensions from "../../Hooks/useDimensions"
-
+import { verticalText } from "../../Theme/styles/verticalText"
 const AboutBlock = lazy(() => import("../../Components/AboutBlock"))
 
 const About = () => {
@@ -21,7 +21,13 @@ const About = () => {
         spacing={2}
         width={"100%"}
       >
-        <VerticalText content={"about"} id={"about"} refItem={HEIGHT_TEXT_REF} />
+        <Titles
+          content={"about"}
+          refItem={HEIGHT_TEXT_REF}
+          textStyle={"h1"}
+          tiltingScale={1.2}
+          vertical={verticalText}
+        />
         <Suspense>
           <AboutBlock dimension={dimension} />
         </Suspense>

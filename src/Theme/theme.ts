@@ -49,6 +49,12 @@ export default extendTheme({
       textTransform: "uppercase",
       lineHeight: 1,
     },
+    title: {
+      fontFamily: `"apotek-extrawide", sans-serif`,
+      fontSize: "18rem",
+      textTransform: "uppercase",
+      lineHeight: 1,
+    },
     h2: {
       fontSize: "12rem",
       fontWeight: 700,

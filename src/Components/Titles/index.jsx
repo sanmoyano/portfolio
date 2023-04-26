@@ -1,31 +1,32 @@
-import { Box, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
-import Tilting from "./Tilting"
+import Tilting from "../Tilting"
 
-const VerticalText = ({ content, refItem, id }) => {
+const Titles = ({ content, refItem, textStyle, vertical, float, tiltingScale, tiltingEnable }) => {
   const color = useColorModeValue("black", "white")
+
+  // const isDesktop = useMediaQuery("(min-width: 992px)")
+  /* <Tilting enable={isDesktop[0] ? true : false} scale={isDesktop[0] ? 1.2 : 1}> */
 
   return (
     <Box
+      animation={float}
       as={motion.div}
-      id={id}
       initial={{ opacity: 0 }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1, transition: { duration: 3 } }}
+      width={"fit-content"}
       zIndex={99}
     >
-      <Tilting>
+      <Tilting enable={tiltingEnable} scale={tiltingScale && tiltingScale}>
         <Text
-          ref={refItem}
+          ref={refItem && refItem}
           _hover={{ WebkitTextStroke: `1px ${color}`, color: "transparent" }}
           display={"inline-block"}
-          sx={{
-            writingMode: { base: "horizontal-lr", md: "vertical-lr" },
-            textOrientation: "mixed",
-          }}
+          sx={vertical && vertical}
           textAlign={"center"}
-          textStyle={"h1"}
+          textStyle={textStyle}
           transitionDelay={"0s, 0s"}
           transitionDuration={".5s, .5s"}
           transitionProperty={"color, opacity"}
@@ -38,4 +39,4 @@ const VerticalText = ({ content, refItem, id }) => {
   )
 }
 
-export default VerticalText
+export default Titles
