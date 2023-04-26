@@ -3,7 +3,7 @@ import { useColorMode } from "@chakra-ui/react"
 import { VscColorMode } from "react-icons/vsc"
 import { motion } from "framer-motion"
 
-import { NavItem } from "./"
+import { NavItem } from "../.."
 
 const NavBar = () => {
   const navItems = [

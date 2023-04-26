@@ -1,7 +1,7 @@
 import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
-import { NavBar, ToggleMenu, ContactIcons } from "./"
+import { NavBar, ToggleMenu, ContactIcons } from "../.."
 
 const MobileNavBar = ({ topPosition }) => {
   const [isOpen, setIsOpen] = useCycle(false, true)

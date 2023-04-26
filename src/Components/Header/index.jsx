@@ -4,8 +4,8 @@ import { Stack, useColorModeValue, Spinner, Box } from "@chakra-ui/react"
 import { motion, useScroll, useSpring } from "framer-motion"
 
 import { Logo, Tilting } from ".."
-const Mobile = lazy(() => import("../MobileNavBar"))
-const Desktop = lazy(() => import("../DesktopNavBar"))
+const Mobile = lazy(() => import("../Nav/Mobile"))
+const Desktop = lazy(() => import("../Nav/Desktop"))
 
 const Header = () => {
   //Style settings
