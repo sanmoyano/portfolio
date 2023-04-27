@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Stack } from "@chakra-ui/react"
 
-import { HeroLogo, ParallaxContainer } from "../../Components"
+import { HeroImage, ParallaxContainer } from "../../Components"
 
 const Hero = () => {
   const [imageLoading, setImageLoading] = useState(false)
@@ -18,7 +18,7 @@ const Hero = () => {
         width={"100%"}
       >
         <Stack height={"calc(100% - 90px)"} position={"absolute"} top={"calc(90px)"} width={"100%"}>
-          <HeroLogo loadingHandlersImage={{ imageLoading, setImageLoading }} />
+          <HeroImage loadingHandlersImage={{ imageLoading, setImageLoading }} />
         </Stack>
       </Stack>
     </ParallaxContainer>

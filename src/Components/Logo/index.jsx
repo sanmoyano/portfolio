@@ -5,7 +5,7 @@ import { Titles } from "../"
 const Logo = () => {
   return (
     <Link to={"/"}>
-      <Titles content={"#SM"} scale={1.1} textStyle={"logo"} />
+      <Titles content={"#SM"} textStyle={"logo"} tiltingScale={1.1} />
     </Link>
   )
 }

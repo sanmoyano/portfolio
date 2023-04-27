@@ -2,6 +2,7 @@ import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react
 import { motion, AnimatePresence, useCycle } from "framer-motion"
 
 import { NavBar, ToggleMenu, ContactIcons } from "../.."
+import { icons } from "../../../Data/icons"
 
 const MobileNavBar = ({ topPosition }) => {
   const [isOpen, setIsOpen] = useCycle(false, true)
@@ -63,7 +64,7 @@ const MobileNavBar = ({ topPosition }) => {
                   smoyano.di@gmail.com
                 </Text>
               </Link>
-              <ContactIcons />
+              <ContactIcons icons={icons} />
             </Stack>
           </Stack>
         )}

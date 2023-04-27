@@ -24,7 +24,7 @@ const AboutBlock = ({ dimension }) => {
       whileInView={"visible"}
       width={"100%"}
     >
-      <Grid gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
+      <Grid as={motion.div} gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
         <GridItemText
           aling={"left"}
           content={

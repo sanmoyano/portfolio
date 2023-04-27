@@ -1,6 +1,7 @@
 import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { ContactIcons, ParallaxContainer, Tilting, Titles } from "../../Components"
+import { icons } from "../../Data/icons"
 
 const Contact = () => {
   const { colors } = useTheme()
@@ -18,7 +19,6 @@ const Contact = () => {
         <Titles content={"get in touch"} textStyle={"h1"} tiltingEnable={false} />
         <Stack alignItems={"center"} justifyContent={"center"} spacing={10} width={"100%"}>
           <Link _hover={{ textDecorationColor: "none" }} href="mailto:smoyano.di@gmail.com">
-            {/* <Titles content={"smoyano.di@gmail.com"}  /> */}
             <Tilting scale={1.2}>
               <Text
                 _hover={{
@@ -37,7 +37,7 @@ const Contact = () => {
               </Text>
             </Tilting>
           </Link>
-          <ContactIcons />
+          <ContactIcons icons={icons} />
         </Stack>
       </Stack>
     </ParallaxContainer>
