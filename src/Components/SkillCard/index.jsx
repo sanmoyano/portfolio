@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react"
 import { Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 
-const TextSphere = lazy(() => import("./TextSphere"))
+const TextSphere = lazy(() => import("../TextSphere"))
 
 const SkillCard = ({ skill, index, animateSkill, activeIndex, heightParent }) => {
   const active = activeIndex === index
