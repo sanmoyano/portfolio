@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import { Container, Grid, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
+import { Container, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
 import { floatAnimation } from "../Utils/floatAnimation"
 
-import { GridItemText, TextQuot, StarIcon } from "./"
+import { GridItemText, TextQuot, StarIcon, GridContainer } from "./"
 
 const AboutBlock = ({ dimension }) => {
   const { colors } = useTheme()
@@ -24,7 +24,7 @@ const AboutBlock = ({ dimension }) => {
       whileInView={"visible"}
       width={"100%"}
     >
-      <Grid as={motion.div} gap={12} templateColumns={"repeat(2,1fr)"} width={"100%"}>
+      <GridContainer columns={"repeat(2,1fr)"} gap={12}>
         <GridItemText
           aling={"left"}
           content={
@@ -37,7 +37,7 @@ const AboutBlock = ({ dimension }) => {
             "Currently, I am working to enhance my skills in order to develop a MERN Full Stack profile. My ultimate goal is to create practical solutions for the future."
           }
         />
-      </Grid>
+      </GridContainer>
       <Container centerContent maxW={"100%"}>
         <Stack
           alignItems={"center"}
