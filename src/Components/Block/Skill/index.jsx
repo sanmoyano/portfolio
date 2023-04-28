@@ -15,8 +15,8 @@ const SkillsBlock = ({ dimension }) => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.1,
-        delayChildren: 0.5,
+        duration: 1,
+        delayChildren: 1,
         staggerChildren: 0.5,
         staggerDirection: 1,
       },
@@ -57,9 +57,9 @@ const SkillsBlock = ({ dimension }) => {
     <AnimatePresence>
       <BlockContainer
         ref={ITEM_REF}
+        animationVariants={containerSkills}
         height={dimension.height}
         justifyContent={"flex-start"}
-        variants={containerSkills}
       >
         {skills?.map(({ type, list }, index) => (
           <SkillCard

@@ -3,19 +3,19 @@ import { Stack } from "@chakra-ui/react"
 import { AnimatePresence, motion } from "framer-motion"
 
 // eslint-disable-next-line react/display-name
-const BlockContainer = forwardRef((props, itemRef) => {
-  const { children, ...otherProps } = props
+const BlockContainer = forwardRef((props, ref) => {
+  const { children, height, justifyContent, animationVariants } = props
 
   return (
     <AnimatePresence>
       <Stack
-        ref={itemRef}
+        ref={ref}
         as={motion.div}
-        height={otherProps.height}
+        height={height}
         initial={"hidden"}
-        justifyContent={otherProps.justifyContent}
+        justifyContent={justifyContent}
         position={"relative"}
-        variants={otherProps.animationVariants}
+        variants={animationVariants}
         viewport={{ once: true }}
         whileInView={"visible"}
         width={"100%"}
