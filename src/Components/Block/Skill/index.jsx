@@ -1,18 +1,18 @@
 import { useState, useEffect, useRef } from "react"
-import { Stack, Text, useColorModeValue } from "@chakra-ui/react"
-import { motion, AnimatePresence, useInView } from "framer-motion"
+import { Text, useColorModeValue } from "@chakra-ui/react"
+import { AnimatePresence, useInView } from "framer-motion"
 import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons"
 
-import { floatAnimation } from "../Utils/floatAnimation"
-import { skills } from "../Data/skills"
-
-import { SkillCard } from "./"
+import { floatAnimation } from "../../../Utils/floatAnimation"
+import { skills } from "../../../Data/skills"
+import { SkillCard } from "../.."
+import { BlockContainer } from "../../"
 
 const SkillsBlock = ({ dimension }) => {
   //Animation settings
   const containerSkills = {
     hidden: { opacity: 0 },
-    show: {
+    visible: {
       opacity: 1,
       transition: {
         duration: 0.1,
@@ -25,7 +25,7 @@ const SkillsBlock = ({ dimension }) => {
 
   const itemSkill = {
     hidden: { x: "-200%" },
-    show: { x: "0%" },
+    visible: { x: "0%" },
   }
 
   //Style settings
@@ -55,18 +55,11 @@ const SkillsBlock = ({ dimension }) => {
 
   return (
     <AnimatePresence>
-      <Stack
+      <BlockContainer
         ref={ITEM_REF}
-        as={motion.div}
         height={dimension.height}
-        id={"skills"}
-        initial={"hidden"}
         justifyContent={"flex-start"}
-        position={"relative"}
         variants={containerSkills}
-        viewport={{ once: true }}
-        whileInView={"show"}
-        width={"100%"}
       >
         {skills?.map(({ type, list }, index) => (
           <SkillCard
@@ -88,7 +81,7 @@ const SkillsBlock = ({ dimension }) => {
         >
           use the {<ArrowUpIcon />} {<ArrowDownIcon />} arrow keys to change skills
         </Text>
-      </Stack>
+      </BlockContainer>
     </AnimatePresence>
   )
 }

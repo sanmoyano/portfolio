@@ -1,28 +1,30 @@
 import { motion } from "framer-motion"
 import { Container, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { floatAnimation } from "../Utils/floatAnimation"
-
-import { GridItemText, TextQuot, StarIcon, GridContainer } from "./"
+import { floatAnimation } from "../../../Utils/floatAnimation"
+import { GridItemText, TextQuot, StarIcon, GridContainer, BlockContainer } from "../.."
 
 const AboutBlock = ({ dimension }) => {
+  //Styles settings
   const { colors } = useTheme()
   const fill = useColorModeValue(colors.brand[100], colors.brand[200])
 
+  //Animation settings
+  const animationVariants = {
+    visible: {
+      translateX: "0%",
+      transition: { duration: 1 },
+    },
+    hidden: {
+      translateX: "-100%",
+    },
+  }
+
   return (
-    <Stack
-      as={motion.div}
+    <BlockContainer
+      animationVariants={animationVariants}
       height={dimension.height}
-      id={"about"}
-      initial={"hidden"}
       justifyContent={"space-between"}
-      variants={{
-        visible: { translateX: "0%", transition: { duration: 1 } },
-        hidden: { translateX: "-100%" },
-      }}
-      viewport={{ once: true }}
-      whileInView={"visible"}
-      width={"100%"}
     >
       <GridContainer columns={"repeat(2,1fr)"} gap={12}>
         <GridItemText
@@ -58,7 +60,7 @@ const AboutBlock = ({ dimension }) => {
           <TextQuot aling={"right"} content={"Skilled in UX/UI design"} />
         </Stack>
       </Container>
-    </Stack>
+    </BlockContainer>
   )
 }
 

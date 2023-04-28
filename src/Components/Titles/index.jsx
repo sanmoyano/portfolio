@@ -21,13 +21,13 @@ const Titles = ({ content, refItem, textStyle, vertical, float, tiltingScale, ti
     >
       <Tilting enable={tiltingEnable} scale={tiltingScale && tiltingScale}>
         <Text
-          ref={refItem && refItem}
+          ref={refItem}
           _hover={{
             WebkitTextStroke: content === "projects" ? `2px ${color}` : `1px ${color}`,
             color: "transparent",
           }}
           display={"inline-block"}
-          sx={vertical && vertical}
+          sx={vertical}
           textAlign={"center"}
           textStyle={textStyle}
           transitionDelay={"0s, 0s"}
