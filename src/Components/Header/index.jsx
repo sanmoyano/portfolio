@@ -10,7 +10,7 @@ const Desktop = lazy(() => import("../Nav/Desktop"))
 const Header = () => {
   //Style settings
   const colorLine = useColorModeValue("black", "white")
-  const headerHeigth = "90px"
+  const headerHeigth = 90
 
   //Page scroll progress animation
   const { scrollYProgress } = useScroll()
@@ -40,7 +40,7 @@ const Header = () => {
       alignItems={"center"}
       backdropFilter={isBlured ? "blur(10px)" : ""}
       direction={"row"}
-      height={headerHeigth}
+      height={`${headerHeigth}px`}
       justifyContent={"space-between"}
       paddingInline={{ base: 3, md: 6, lg: 12 }}
       position={"fixed"}

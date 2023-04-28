@@ -8,7 +8,7 @@ const ContactIcons = ({ icons }) => {
     <Stack alignItems={"center"} direction={"row"} justifyContent={"space-between"} width={"200px"}>
       {icons?.map((icon, i) => (
         <Link key={i} href={icon.url} target={"_blank"}>
-          <Tilting>
+          <Tilting scale={1.2}>
             <FontAwesomeIcon fontSize={"2.5rem"} icon={icon.icon} />
           </Tilting>
         </Link>
