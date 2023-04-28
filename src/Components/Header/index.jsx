@@ -23,7 +23,7 @@ const Header = () => {
   //Blur animation
   const [isBlured, setIsBlured] = useState(false)
   const activeBackgroundBlur = () => {
-    if (window.scrollY > 90) {
+    if (window.scrollY > headerHeigth) {
       setIsBlured(true)
     } else {
       setIsBlured(false)
