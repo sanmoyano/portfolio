@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 
 import { ParallaxContainer, Titles } from "../../Components"
 import { floatAnimation } from "../../Utils/floatAnimation"
@@ -7,22 +8,24 @@ import { floatAnimation } from "../../Utils/floatAnimation"
 const Projects = () => {
   return (
     <ParallaxContainer>
-      <Box
-        height={{ base: "150px", md: "350px" }}
-        id={4}
-        overflow={"hidden"}
-        sx={{ display: "grid", placeContent: "center" }}
-        width={"100%"}
-      >
-        <Link to="/projects">
-          <Titles
-            content={"projects"}
-            float={floatAnimation}
-            textStyle={"title"}
-            tiltingScale={1.2}
-          />
-        </Link>
-      </Box>
+      <AnimatePresence id={4}>
+        <Box
+          height={{ base: "150px", md: "350px" }}
+          id={"projects"}
+          overflow={"hidden"}
+          sx={{ display: "grid", placeContent: "center" }}
+          width={"100%"}
+        >
+          <Link to="/projects">
+            <Titles
+              content={"projects"}
+              float={floatAnimation}
+              textStyle={"title"}
+              tiltingScale={1.2}
+            />
+          </Link>
+        </Box>
+      </AnimatePresence>
     </ParallaxContainer>
   )
 }

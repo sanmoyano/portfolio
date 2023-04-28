@@ -18,6 +18,7 @@ const Marquee = () => {
           alignItems={"center"}
           as={motion.div}
           direction={{ base: "column", lg: "row" }}
+          id={"marquee"}
           initial={"hidden"}
           justifyContent={"space-between"}
           spacing={{ base: 12, md: 24 }}

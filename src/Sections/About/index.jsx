@@ -1,5 +1,6 @@
 import { Stack } from "@chakra-ui/react"
 import { lazy, Suspense, useRef } from "react"
+import { AnimatePresence } from "framer-motion"
 
 import { ParallaxContainer, Titles } from "../../Components"
 import useDimensions from "../../Hooks/useDimensions"
@@ -12,26 +13,28 @@ const About = () => {
 
   return (
     <ParallaxContainer>
-      <Stack
-        alignItems={"center"}
-        direction={"row"}
-        height={"100vh"}
-        id={3}
-        position={"relative"}
-        spacing={2}
-        width={"100%"}
-      >
-        <Titles
-          content={"about"}
-          refItem={HEIGHT_TEXT_REF}
-          textStyle={"h1"}
-          tiltingScale={1.2}
-          vertical={verticalText}
-        />
-        <Suspense>
-          <AboutBlock dimension={dimension} />
-        </Suspense>
-      </Stack>
+      <AnimatePresence id={3}>
+        <Stack
+          alignItems={"center"}
+          direction={"row"}
+          height={"100vh"}
+          id={"about"}
+          position={"relative"}
+          spacing={2}
+          width={"100%"}
+        >
+          <Titles
+            content={"about"}
+            refItem={HEIGHT_TEXT_REF}
+            textStyle={"h1"}
+            tiltingScale={1.2}
+            vertical={verticalText}
+          />
+          <Suspense>
+            <AboutBlock dimension={dimension} />
+          </Suspense>
+        </Stack>
+      </AnimatePresence>
     </ParallaxContainer>
   )
 }
