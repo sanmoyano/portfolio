@@ -8,8 +8,7 @@ const Footer = () => {
   const { textStyles } = useTheme()
   const footerSize = textStyles.footer.fontSize
   const underlineColor = useColorModeValue("black", "white")
-  const year = new Date().getFullYear()
-  const anchordStyle = {
+  const anchorStyle = {
     _after: {
       content: `" "`,
       display: "block",
@@ -32,6 +31,8 @@ const Footer = () => {
     display: "block",
   }
 
+  const getYear = new Date().getFullYear()
+
   return (
     <Stack
       justifyContent={"space-between"}
@@ -48,20 +49,20 @@ const Footer = () => {
         width={"100%"}
       >
         <GridContainer columns={"repeat(2, 1fr)"} gap={2}>
-          <Link {...anchordStyle} href={"https://www.linkedin.com/in/santiago-moyano/"} width={125}>
+          <Link {...anchorStyle} href={"https://www.linkedin.com/in/santiago-moyano/"} width={125}>
             Santiago Moyano
           </Link>
 
           <Text textStyle={"footer"}>Front End Developer</Text>
           <Text textStyle={"footer"}>Córdoba, Argentina</Text>
-          <Link {...anchordStyle} href={"mailto:smoyano.di@gamil.com"}>
+          <Link {...anchorStyle} href={"mailto:smoyano.di@gamil.com"}>
             smoyano.di@gmail.com
           </Link>
         </GridContainer>
         <ContactIcons />
       </Stack>
       <Text fontSize={`calc(${footerSize} / 1.618)`} textAlign={"center"} textStyle={"footer"}>
-        {`${year} - Designed and developed with ${heart}.`}
+        {`${getYear} - Designed and developed with ${heart}.`}
       </Text>
     </Stack>
   )
