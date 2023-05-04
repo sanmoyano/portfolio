@@ -10,6 +10,10 @@ const MobileNavBar = ({ topPosition }) => {
   const { colors } = useTheme()
   const colorText = useColorModeValue(`${colors.red}`, `${colors.green}`)
 
+  const handleOpenMenu = () => {
+    setIsOpen()
+  }
+
   const variants = {
     open: { opacity: 1, x: "0" },
     closed: { opacity: 0, x: "-100%" },
@@ -20,7 +24,7 @@ const MobileNavBar = ({ topPosition }) => {
   return (
     <Stack display={{ base: "flex", lg: "none" }}>
       <Stack animate={isOpen ? "open" : "closed"} as={motion.div} initial={false}>
-        <ToggleMenu toggle={() => setIsOpen()} />
+        <ToggleMenu toggle={handleOpenMenu} />
       </Stack>
       <AnimatePresence>
         {isOpen && (

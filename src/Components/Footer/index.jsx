@@ -1,13 +1,35 @@
-import { Grid, Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
+import { Link, Stack, Text, useColorModeValue, useTheme } from "@chakra-ui/react"
 
-import { Logo, ContactIcons } from ".."
+import { Logo, ContactIcons, GridContainer } from ".."
 
 const Footer = () => {
   //Style settings
   const heart = useColorModeValue("🖤", "🤍")
   const { textStyles } = useTheme()
   const footerSize = textStyles.footer.fontSize
+  const underlineColor = useColorModeValue("black", "white")
   const year = new Date().getFullYear()
+  const anchordStyle = {
+    _after: {
+      content: `" "`,
+      display: "inline",
+      background: "none repeat scroll 0 0 transparent",
+      bottom: 0,
+      height: 0.5,
+      left: "50%",
+      position: "absolute",
+      backgroundColor: underlineColor,
+      transition: "width 0.3s ease 0s, left 0.3s ease 0s",
+      width: 0,
+    },
+    _hover: {
+      _after: { width: "100%", left: 0 },
+    },
+    position: "relative",
+    fontWeight: 700,
+    target: "_blank",
+    textStyle: "footer",
+  }
 
   return (
     <Stack
@@ -24,22 +46,21 @@ const Footer = () => {
         justifyContent={"space-between"}
         width={"100%"}
       >
-        <Grid gap={2} templateColumns={"repeat(2, 1fr)"}>
+        <GridContainer columns={"repeat(2, 1fr)"} gap={2}>
           <Link
-            fontWeight={700}
+            {...anchordStyle}
+            display={"inline-block"}
             href={"https://www.linkedin.com/in/santiago-moyano/"}
-            target={"_blank"}
-            textStyle={"footer"}
           >
             Santiago Moyano
           </Link>
 
           <Text textStyle={"footer"}>Front End Developer</Text>
           <Text textStyle={"footer"}>Córdoba, Argentina</Text>
-          <Link fontWeight={700} href={"mailto:smoyano.di@gamil.com"} textStyle={"footer"}>
+          <Link {...anchordStyle} href={"mailto:smoyano.di@gamil.com"}>
             smoyano.di@gmail.com
           </Link>
-        </Grid>
+        </GridContainer>
         <ContactIcons />
       </Stack>
       <Text fontSize={`calc(${footerSize} / 1.618)`} textAlign={"center"} textStyle={"footer"}>

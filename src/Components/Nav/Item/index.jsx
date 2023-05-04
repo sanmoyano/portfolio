@@ -11,11 +11,7 @@ const NavItem = ({ item, route }) => {
   const [isHovered, setHovered] = useState(false)
 
   return (
-    <Link
-      to={route && route}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+    <Link to={route} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <Stack
         alignItems={"center"}
         direction={"row"}
