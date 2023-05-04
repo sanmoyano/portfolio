@@ -12,7 +12,7 @@ const Footer = () => {
   const anchordStyle = {
     _after: {
       content: `" "`,
-      display: "inline",
+      display: "block",
       background: "none repeat scroll 0 0 transparent",
       bottom: 0,
       height: 0.5,
@@ -29,6 +29,7 @@ const Footer = () => {
     fontWeight: 700,
     target: "_blank",
     textStyle: "footer",
+    display: "block",
   }
 
   return (
@@ -47,11 +48,7 @@ const Footer = () => {
         width={"100%"}
       >
         <GridContainer columns={"repeat(2, 1fr)"} gap={2}>
-          <Link
-            {...anchordStyle}
-            display={"inline-block"}
-            href={"https://www.linkedin.com/in/santiago-moyano/"}
-          >
+          <Link {...anchordStyle} href={"https://www.linkedin.com/in/santiago-moyano/"} width={125}>
             Santiago Moyano
           </Link>
 
