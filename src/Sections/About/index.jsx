@@ -16,9 +16,10 @@ const About = () => {
       <AnimatePresence id={3}>
         <Stack
           alignItems={"center"}
-          direction={"row"}
+          direction={{ base: "column", md: "row" }}
           height={"100vh"}
           id={"about"}
+          justifyContent={{ base: "center" }}
           position={"relative"}
           spacing={2}
           width={"100%"}

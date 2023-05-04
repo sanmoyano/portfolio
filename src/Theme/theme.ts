@@ -45,7 +45,7 @@ export default extendTheme({
   textStyles: {
     h1: {
       fontFamily: `"apotek-extrawide", sans-serif`,
-      fontSize: "12rem",
+      fontSize: { base: "8rem", md: "12rem" },
       textTransform: "uppercase",
       lineHeight: 1,
     },
@@ -62,10 +62,10 @@ export default extendTheme({
       textTransform: "uppercase",
     },
     caption: {
-      fontSize: "10rem",
+      fontSize: { base: "5rem", md: "8rem", lg: "10rem" },
     },
     paragraph: {
-      fontSize: "calc(2.6rem * 1.618)",
+      fontSize: { base: "1.6rem", md: "calc(2.6rem * 1.618)" },
       textTransform: "uppercase",
       lineHeight: 1,
     },

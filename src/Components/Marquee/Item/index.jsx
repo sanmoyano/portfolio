@@ -1,12 +1,14 @@
 import { Box, Text, useMediaQuery, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
+import { calcFontSize } from "../../../Utils/calcFontSize"
+
 const Marquee = ({ text, outlined }) => {
   //Styles settings
   const isLargerThanMd = useMediaQuery("(min-width: 992px)")
   const color = useColorModeValue("brand.100", "brand.200")
   const { textStyles } = useTheme()
-  const h1Size = textStyles.h1.fontSize
+  const h1Size = textStyles.h1.fontSize.md
 
   //Animation settings
   const marqueeVariants = {
@@ -55,7 +57,7 @@ const Marquee = ({ text, outlined }) => {
         <Text
           color={outlined ? "transparent" : color}
           display={"inline-block"}
-          fontSize={`calc(${h1Size}/ 1.618)`}
+          fontSize={calcFontSize(h1Size)}
           sx={{
             writingMode: { base: "horizontal-tb", lg: "vertical-lr" },
             textOrientation: "mixed",

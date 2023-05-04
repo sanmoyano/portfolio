@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import useDimensions from "../../Hooks/useDimensions"
 import { MarqueeContainer, ParallaxContainer } from "../../Components"
+import { calcFontSize } from "../../Utils/calcFontSize"
 
 const Marquee = () => {
   const DIMENSIONS_REF = useRef()
@@ -48,7 +49,11 @@ const Marquee = () => {
             </Text>
             <Text
               fontFamily={"Roboto"}
-              fontSize={`calc(${captionSize} / 1.618)`}
+              fontSize={{
+                base: calcFontSize(captionSize.base),
+                md: calcFontSize(captionSize.md),
+                lg: calcFontSize(captionSize.lg),
+              }}
               lineHeight={1}
               textAlign={"justify"}
               textTransform={"uppercase"}
