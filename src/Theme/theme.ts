@@ -65,7 +65,7 @@ export default extendTheme({
       fontSize: { base: "5rem", md: "8rem", lg: "10rem" },
     },
     paragraph: {
-      fontSize: { base: "1.6rem", md: "calc(2.6rem * 1.618)" },
+      fontSize: { base: "2rem", md: "calc(2.6rem * 1.618)" },
       textTransform: "uppercase",
       lineHeight: 1,
     },

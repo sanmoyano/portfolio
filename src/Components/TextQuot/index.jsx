@@ -8,7 +8,7 @@ const TextQuot = ({ aling, content }) => {
     <Text
       as={motion.p}
       color={colorText}
-      textAlign={{ base: "left", md: aling }}
+      textAlign={{ base: "center", md: aling }}
       textStyle={"quotes"}
       width={{ base: "100%", md: "200px" }}
     >

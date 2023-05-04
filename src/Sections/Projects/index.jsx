@@ -10,7 +10,8 @@ const Projects = () => {
     <ParallaxContainer>
       <AnimatePresence id={4}>
         <Box
-          height={{ base: "150px", md: "350px" }}
+          // height={{ base: "150px", md: "350px" }}
+          height={"40vh"}
           id={"projects"}
           overflow={"hidden"}
           sx={{ display: "grid", placeContent: "center" }}

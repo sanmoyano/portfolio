@@ -26,21 +26,19 @@ const AboutBlock = ({ dimension }) => {
       height={dimension.height}
       justifyContent={"space-between"}
     >
-      <GridContainer columns={"repeat(2,1fr)"} gap={12}>
+      <GridContainer columns={{ base: "repeat(1,1fr)", lg: "repeat(2,1fr)" }} gap={12}>
         <GridItemText
-          aling={"left"}
           content={
-            "I am a Front End Developer who primarily utilizes ReactJS technology. I prioritize designing and coding UX/UI features that provide the best possible user experience."
+            "I am a Front End Developer who primarily utilizes ReactJS. I prioritize designing and coding UX/UI features that provide the best possible user experience."
           }
         />
         <GridItemText
-          aling={"right"}
           content={
-            "Currently, I am working to enhance my skills in order to develop a MERN Full Stack profile. My ultimate goal is to create practical solutions for the future."
+            "I'm currently working to enhance my skills in order to develop a mern Full Stack profile. My ultimate goal is to create practical solutions for the future."
           }
         />
       </GridContainer>
-      <Container centerContent maxW={"100%"}>
+      <Container centerContent display={{ base: "none", lg: "inherit" }} maxW={"100%"}>
         <Stack
           alignItems={"center"}
           animate={{ opacity: 1, transition: { duration: 3, delay: 0.5 } }}
