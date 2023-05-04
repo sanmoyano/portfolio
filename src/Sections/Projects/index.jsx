@@ -4,7 +4,6 @@ import { AnimatePresence } from "framer-motion"
 
 import { ParallaxContainer, Titles } from "../../Components"
 import { floatAnimation } from "../../Utils/floatAnimation"
-
 const Projects = () => {
   return (
     <ParallaxContainer>
